@@ -8,11 +8,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.web.servlet.ModelAndView;
+
 public class ApplicationContext {
 	HttpServletRequest request = null;
 	HttpServletResponse responese = null;
 	HttpSession session = null;
 	Map<String,Object> model = null;
+	ModelAndView modelAndView = null;
 	public ApplicationContext(HttpServletRequest request,HttpServletResponse responese,HttpSession session){
 		this.request= request;
 		this.responese = responese;
@@ -46,15 +49,12 @@ public class ApplicationContext {
 		return request.getParameter(name);
 	}
 	
-	public Map<String,String> getPara(String[] names){
-		Map<String,String> paraMap = new HashMap<String, String>();
-		for(String name:names){
-			//if(request.getParameterValues(name))
-		}
-		return null;
+	@SuppressWarnings("unchecked")
+	public Map<String,String> getPara(){
+		return request.getParameterMap();
 	}
 	
-	public <T extends BaseDto> void createMoel(T dto){
+	public <T extends BaseDto> void createResult(T dto,String result,String nextPage){
 		model = new HashMap<String, Object>();
 		Field[] fs = dto.getClass().getDeclaredFields();
 		for(Field f :  fs){
