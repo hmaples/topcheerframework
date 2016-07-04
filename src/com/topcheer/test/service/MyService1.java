@@ -16,7 +16,7 @@ public class MyService1 extends BaseService {
 		InData in = context.getPara(InData.class);
 		System.out.println(in.getActionNum());
 		OutData o = new OutData();
-		context.createMoel(o);
+		//context.createMoel(o);
 	
 	}
 
