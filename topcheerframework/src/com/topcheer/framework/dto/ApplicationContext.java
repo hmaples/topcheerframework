@@ -84,21 +84,6 @@ public class ApplicationContext {
 	}
 
 	/**
-	 * @return the model
-	 */
-	public Map<String, Object> getModel() {
-		return model;
-	}
-
-	/**
-	 * @param model
-	 *            the model to set
-	 */
-	public void setModel(Map<String, Object> model) {
-		this.model = model;
-	}
-
-	/**
 	 * @return the modelAndView
 	 */
 	public ModelAndView getModelAndView() {
