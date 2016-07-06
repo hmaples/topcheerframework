@@ -2,7 +2,7 @@ package com.topcheer.framework.service;
 
 import com.topcheer.framework.dto.ApplicationContext;
 
-public class BaseService implements IService {
+public abstract class BaseService implements IService {
 
 	protected ApplicationContext context = null;
 
@@ -23,8 +23,6 @@ public class BaseService implements IService {
 
 	}
 
-	protected void doExecute() {
-
-	}
+	protected abstract void doExecute() ;
 
 }
