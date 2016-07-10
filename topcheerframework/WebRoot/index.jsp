@@ -19,7 +19,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
   </head>
-  
   <body>
   	<form action="commonAction"  method="post">
   		<input type="hidden" name="actionNum" value = "loginSub">
@@ -28,5 +27,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<input type="submit" value="点击提交">
   	</form>
     This is my JSP page. <br>
+    <form action="commonAction"  method="post">
+  		<input type="hidden" name="actionNum" value = "gotoRegister">
+  		<input type="submit" value="点击去注册">
+  	</form>
   </body>
 </html>
