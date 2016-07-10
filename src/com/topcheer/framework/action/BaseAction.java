@@ -1,10 +1,13 @@
 package com.topcheer.framework.action;
 
+import java.util.HashMap;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
@@ -13,40 +16,62 @@ import com.topcheer.framework.service.IService;
 @Controller
 public class BaseAction {
 
+	/**
+	 * 鍏卞悓action璁块棶
+	 * 
+	 * @param request
+	 * @param responese
+	 * @param session
+	 * @return
+	 */
 	@RequestMapping("commonAction")
 	public ModelAndView doAction(HttpServletRequest request,
 			HttpServletResponse responese, HttpSession session) {
 		String actionNum = request.getParameter("actionNum");
-		// 如果参数错误
 		if (actionNum == null || "".equals(actionNum)) {
 			ModelAndView errorModel = new ModelAndView();
 			errorModel.setViewName("error");
 			return errorModel;
 		}
-		// 参数初始化
 		ApplicationContext data = new ApplicationContext(request, responese,
 				session);
-		// 获取service对象
 		try {
 			IService service = getService(actionNum);
 			service.doBusiness(data);
 		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//ModelAndView rtnData = new ModelAndView();
-		//rtnData.setViewName("MyJsp");
-		//rtnData.addAllObjects(data.getModel());
 		return data.getModelAndView();
 	}
 
-	// 初始化要执行的service
+	/**
+	 * 鍏卞悓ajax璁块棶
+	 * 
+	 * @param request
+	 * @param responese
+	 * @return
+	 */
+	@RequestMapping("commonAjax")
+	@ResponseBody
+	public Map<String, Object> doAjaxAction(HttpServletRequest request,
+			HttpServletResponse responese) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		return map;
+	}
+
+	/**
+	 * 鑾峰彇service瀵硅薄
+	 * 
+	 * @param serviceNum
+	 * @return
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws ClassNotFoundException
+	 */
 	private IService getService(String serviceNum)
 			throws InstantiationException, IllegalAccessException,
 			ClassNotFoundException {
