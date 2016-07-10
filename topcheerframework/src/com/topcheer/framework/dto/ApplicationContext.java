@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * ��ͬ���ݲ���
+ * 共同参数
  * 
  * @author cxl-pc
  * 
@@ -29,6 +29,13 @@ public class ApplicationContext {
 		this.session = session;
 	}
 
+	/**
+	 * 适用于form表单提交获取参数对象,支持数组
+	 * 
+	 * @param <T>
+	 * @param c
+	 * @return
+	 */
 	@SuppressWarnings("unchecked")
 	public <T extends BaseDto> T getPara(Class<? extends BaseDto> c) {
 		try {
@@ -44,7 +51,6 @@ public class ApplicationContext {
 					} else {
 						f.set(dto, values);
 					}
-					// TODO log it
 				}
 			}
 			return (T) dto;
@@ -55,19 +61,44 @@ public class ApplicationContext {
 		}
 	}
 
+	/**
+	 * 获取单个属性值
+	 * 
+	 * @param name
+	 * @return
+	 */
 	public String getPara(String name) {
 		return request.getParameter(name);
 	}
 
+	/**
+	 * 获取数组属性值
+	 * 
+	 * @param name
+	 * @return
+	 */
 	public String[] getParas(String name) {
 		return request.getParameterValues(name);
 	}
 
+	/**
+	 * 获取map属性值
+	 * 
+	 * @return
+	 */
 	@SuppressWarnings("unchecked")
 	public Map<String, String> getPara() {
 		return request.getParameterMap();
 	}
 
+	/**
+	 * 创建共同结果对象
+	 * 
+	 * @param <T>
+	 * @param dto
+	 * @param result
+	 * @param nextPage
+	 */
 	public <T extends BaseDto> void createResult(T dto, String result,
 			String nextPage) {
 		model = new HashMap<String, Object>();
@@ -82,13 +113,10 @@ public class ApplicationContext {
 					try {
 						model.put(f.getName(), f.get(dto));
 					} catch (IllegalArgumentException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (IllegalAccessException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					// TODO log it
 				}
 			}
 			modelAndView.addAllObjects(model);
@@ -100,6 +128,8 @@ public class ApplicationContext {
 	}
 
 	/**
+	 * 获取结果对象
+	 * 
 	 * @return the modelAndView
 	 */
 	public ModelAndView getModelAndView() {
