@@ -1,8 +1,10 @@
 package com.topcheer.test.dto;
 
+import java.util.List;
+import java.util.Map;
 import com.topcheer.framework.dto.BaseDto;
 
-public class RegisterUser extends BaseDto{
+public class RegisterUser extends BaseDto {
 
 	private String userName;
 	private String phone;
@@ -11,6 +13,8 @@ public class RegisterUser extends BaseDto{
 	private String worker;
 	private String[] hobby;
 	private String note;
+	private List hb;
+	private Map map;
 
 	/**
 	 * @return the userName
@@ -115,6 +119,36 @@ public class RegisterUser extends BaseDto{
 	 */
 	public void setNote(String note) {
 		this.note = note;
+	}
+
+	/**
+	 * @return the hb
+	 */
+	public List getHb() {
+		return hb;
+	}
+
+	/**
+	 * @param hb
+	 *            the hb to set
+	 */
+	public void setHb(List hb) {
+		this.hb = hb;
+	}
+
+	/**
+	 * @return the map
+	 */
+	public Map getMap() {
+		return map;
+	}
+
+	/**
+	 * @param map
+	 *            the map to set
+	 */
+	public void setMap(Map map) {
+		this.map = map;
 	}
 
 }
