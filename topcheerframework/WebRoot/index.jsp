@@ -31,5 +31,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<input type="hidden" name="actionNum" value = "gotoRegister">
   		<input type="submit" value="点击去注册">
   	</form>
+  	<br>
+  	<form action="commonAction"  method="post">
+  		<input type="hidden" name="actionNum" value = "gotoAjax">
+  		<input type="submit" value="点击去ajax页面">
+  	</form>
   </body>
 </html>

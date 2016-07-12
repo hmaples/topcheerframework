@@ -59,8 +59,22 @@ public class BaseAction {
 	@ResponseBody
 	public Map<String, Object> doAjaxAction(HttpServletRequest request,
 			HttpServletResponse responese) {
-		Map<String, Object> map = new HashMap<String, Object>();
-		return map;
+		String actionNum = request.getParameter("actionNum");
+		if (actionNum == null || "".equals(actionNum)) {
+
+		}
+		ApplicationContext data = new ApplicationContext(request, responese);
+		try {
+			IService service = getService(actionNum);
+			service.doBusiness(data);
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return data.getMap();
 	}
 
 	/**

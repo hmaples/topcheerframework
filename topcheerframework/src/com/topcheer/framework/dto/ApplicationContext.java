@@ -21,12 +21,19 @@ public class ApplicationContext {
 	HttpSession session = null;
 	Map<String, Object> model = null;
 	ModelAndView modelAndView = null;
+	Map<String, Object> map = null;
 
 	public ApplicationContext(HttpServletRequest request,
 			HttpServletResponse responese, HttpSession session) {
 		this.request = request;
 		this.responese = responese;
 		this.session = session;
+	}
+
+	public ApplicationContext(HttpServletRequest request,
+			HttpServletResponse responese) {
+		this.request = request;
+		this.responese = responese;
 	}
 
 	/**
@@ -43,6 +50,7 @@ public class ApplicationContext {
 			Field[] fs = c.getDeclaredFields();
 			for (Field f : fs) {
 				String fNmae = f.getName();
+				System.out.println(f.getType().getName());
 				if (request.getParameter(fNmae) != null) {
 					String[] values = request.getParameterValues(fNmae);
 					f.setAccessible(true);
@@ -134,6 +142,21 @@ public class ApplicationContext {
 	 */
 	public ModelAndView getModelAndView() {
 		return modelAndView;
+	}
+
+	/**
+	 * @return the map
+	 */
+	public Map<String, Object> getMap() {
+		return map;
+	}
+
+	/**
+	 * @param map
+	 *            the map to set
+	 */
+	public void setMap(Map<String, Object> map) {
+		this.map = map;
 	}
 
 }
