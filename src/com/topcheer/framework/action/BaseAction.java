@@ -1,10 +1,15 @@
 package com.topcheer.framework.action;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import jxl.write.WriteException;
+import jxl.write.biff.RowsExceededException;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import com.topcheer.framework.dto.ApplicationContext;
+import com.topcheer.framework.dto.ExcelVo;
 import com.topcheer.framework.service.BaseService;
 import com.topcheer.framework.service.IService;
 
@@ -98,7 +104,7 @@ public class BaseAction {
 			return errorModel;
 		}
 		ApplicationContext data = new ApplicationContext(request, responese,
-				session,file);
+				session, file);
 		try {
 			IService service = getService(actionNum);
 			service.doBusiness(data);
@@ -110,6 +116,39 @@ public class BaseAction {
 			e.printStackTrace();
 		}
 		return data.getModelAndView();
+	}
+
+	/**
+	 * 共同导出excel文件
+	 * 
+	 * @param request
+	 * @param responese
+	 * @param session
+	 */
+	@RequestMapping("downLoadCommon")
+	@ResponseBody
+	public void downLoadAction(HttpServletRequest request,
+			HttpServletResponse responese, HttpSession session) {
+		String actionNum = request.getParameter("actionNum");
+		ApplicationContext data = new ApplicationContext(request, responese,
+				session);
+		try {
+			IService service = getService(actionNum);
+			service.doBusiness(data);
+			ExcelCreate.createExcel(data.getExcelVo(), responese, "utf-8");
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (RowsExceededException e) {
+			e.printStackTrace();
+		} catch (WriteException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

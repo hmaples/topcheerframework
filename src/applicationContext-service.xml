@@ -12,4 +12,5 @@
 	<bean id="gotoAjax" class="com.topcheer.test.service.GoToAjaxService"></bean>
 	<bean id="ajaxQuery" class="com.topcheer.test.service.AjaxService"></bean>
 	<bean id="uploadFile" class="com.topcheer.test.service.FileUploadService"></bean>
+	<bean id="downLoad" class="com.topcheer.test.service.DownLoadService"></bean>
 </beans>
