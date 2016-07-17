@@ -25,6 +25,7 @@ public class ApplicationContext {
 	ModelAndView modelAndView = null;
 	Map<String, Object> map = null;
 	MultipartFile file = null;
+	ExcelVo excelVo = null;
 
 	public ApplicationContext(HttpServletRequest request,
 			HttpServletResponse responese, HttpSession session) {
@@ -148,6 +149,16 @@ public class ApplicationContext {
 	}
 
 	/**
+	 * 创建导出excel结果对象
+	 * 
+	 * @param excelVo
+	 * @param responese
+	 */
+	public void createExcelExport(ExcelVo excelVo) {
+		this.excelVo = excelVo;
+	}
+
+	/**
 	 * 获取结果对象
 	 * 
 	 * @return the modelAndView
@@ -183,6 +194,13 @@ public class ApplicationContext {
 	 */
 	public HttpServletRequest getRequest() {
 		return request;
+	}
+
+	/**
+	 * @return the excelVo
+	 */
+	public ExcelVo getExcelVo() {
+		return excelVo;
 	}
 
 }
