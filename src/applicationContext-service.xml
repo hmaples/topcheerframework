@@ -11,4 +11,5 @@
 	<bean id="registerSub" class="com.topcheer.test.service.RegisterSubService"></bean>
 	<bean id="gotoAjax" class="com.topcheer.test.service.GoToAjaxService"></bean>
 	<bean id="ajaxQuery" class="com.topcheer.test.service.AjaxService"></bean>
+	<bean id="uploadFile" class="com.topcheer.test.service.FileUploadService"></bean>
 </beans>

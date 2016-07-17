@@ -6,6 +6,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -22,12 +24,22 @@ public class ApplicationContext {
 	Map<String, Object> model = null;
 	ModelAndView modelAndView = null;
 	Map<String, Object> map = null;
+	MultipartFile file = null;
 
 	public ApplicationContext(HttpServletRequest request,
 			HttpServletResponse responese, HttpSession session) {
 		this.request = request;
 		this.responese = responese;
 		this.session = session;
+	}
+
+	public ApplicationContext(HttpServletRequest request,
+			HttpServletResponse responese, HttpSession session,
+			MultipartFile file) {
+		this.request = request;
+		this.responese = responese;
+		this.session = session;
+		this.file = file;
 	}
 
 	public ApplicationContext(HttpServletRequest request,
@@ -157,6 +169,20 @@ public class ApplicationContext {
 	 */
 	public void setMap(Map<String, Object> map) {
 		this.map = map;
+	}
+
+	/**
+	 * @return the file
+	 */
+	public MultipartFile getFile() {
+		return file;
+	}
+
+	/**
+	 * @return the request
+	 */
+	public HttpServletRequest getRequest() {
+		return request;
 	}
 
 }
