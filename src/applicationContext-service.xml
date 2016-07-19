@@ -13,4 +13,5 @@
 	<bean id="ajaxQuery" class="com.topcheer.test.service.AjaxService"></bean>
 	<bean id="uploadFile" class="com.topcheer.test.service.FileUploadService"></bean>
 	<bean id="downLoad" class="com.topcheer.test.service.DownLoadService"></bean>
+	<bean id="stsServiceloginSub" class="com.topcheer.STSService.service.STSServiceLoginService"></bean>
 </beans>
