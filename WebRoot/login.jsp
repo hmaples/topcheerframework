@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	</script>
 	<body>
-		<script src="${pageContext.request.contextPath}/js/jquery-1.8.3.min.js" language="javascript"
+		<script src="${pageContext.request.contextPath}/js/jquery-1.9.1.js" language="javascript"
 			type="text/javascript" charset="UTF-8"></script>
 		<script src="${pageContext.request.contextPath}/js/frame.js" language="javascript"
 			type="text/javascript" charset="UTF-8"></script>
@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<td width="28%" align="right">
 								</td>
 								<td width="72%">
-									<input style="width:150px;" id="password" name="password"
+									<input style="width:150px;" id="passWord" name="passWord"
 										type="password" />
 								</td>
 							</tr>

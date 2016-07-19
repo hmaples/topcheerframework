@@ -10,8 +10,8 @@ public class STSServiceLoginService  extends BaseService {
 		// TODO Auto-generated method stub
 		User user = context.getPara(User.class);
 		System.out.println(user.getLoginAccount());
-		System.out.println(user.getPassword());
-		if(user.getLoginAccount().equals("loginAccount")&&user.getPassword().equals("password"))
+		System.out.println(user.getPassWord());
+		if(user.getLoginAccount().equals("loginAccount")&&user.getPassWord().equals("passWord"))
 		{
 			context.createResult(null, "success", "jsps/main");
 		}
