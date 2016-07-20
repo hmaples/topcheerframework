@@ -4,9 +4,9 @@
 <html>
 <head>
 <title>交通银行信用卡</title>
-<link href="../css/global.css" rel="stylesheet" type="text/css" />
-<link href="../css/tags.css" rel="stylesheet" type="text/css" />
-<script src="../js/jquery-1.9.1.js" language="javascript" type="text/javascript"></script>
+<link href="/topcheerframework/css/global.css" rel="stylesheet" type="text/css" />
+<link href="/topcheerframework/css/tags.css" rel="stylesheet" type="text/css" />
+<script src="/topcheerframework/js/jquery-1.9.1.js" language="javascript" type="text/javascript"></script>
 <script type="text/javascript" src="../js/divstyle2.js" charset="UTF-8"></script>
 <style>
 	#div1{ 
@@ -94,10 +94,10 @@
 					</select>
 					<input id="appName" type="text" name="appName" value="" style="border:1px solid #9a9a9a;width:130px;height:21px" />
 					<a title="搜索" >
-						<img src="../images/search.png" width="23px" height="23px" style="cursor:pointer" />
+						<img src="/topcheerframework/images/search.png" width="23px" height="23px" style="cursor:pointer" />
 					</a>
 					<a title="刷新应用图标" name="removeIsproductwebCache">
-						<img src="../images/refresh1.jpg" width="21px" height="22px" style="cursor:pointer;padding-right:7px" />
+						<img src="/topcheerframework/images/refresh1.jpg" width="21px" height="22px" style="cursor:pointer;padding-right:7px" />
 					</a>
 				</td>
 			</tr>
@@ -107,7 +107,7 @@
 						<UL>
 								<LI style="text-align:center;width:112px;height:90px">
 									<a style="color:#534872" href="" name="applist">
-										<img src="../images/applogo/32.jpg" 
+										<img src="/topcheerframework/images/applogo/32.jpg" 
 										    height="40px" width="40px"><br/>买单吧系统
 									</a>
 								</LI>																					
