@@ -14,4 +14,6 @@
 	<bean id="uploadFile" class="com.topcheer.test.service.FileUploadService"></bean>
 	<bean id="downLoad" class="com.topcheer.test.service.DownLoadService"></bean>
 	<bean id="stsServiceloginSub" class="com.topcheer.STSService.service.STSServiceLoginService"></bean>
+	<bean id="submitWorkflow" class="com.topcheer.STSService.service.SubmitWorkflowService"></bean>
+	
 </beans>
