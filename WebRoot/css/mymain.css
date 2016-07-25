@@ -1,0 +1,173 @@
+/**
+@charset "utf-8"; *{padding:0px; margin:0px; font-size:12px}
+html{*overflow-y:scroll}
+body{color:#333; padding:10px; font-size:12px;background:#fff;font-family:Verdana,Arial,Helvetica,sans-serif}
+img{border:none}
+ul,dl{list-style:none;}
+a{color:#004b8d; text-decoration:none}
+a:hover{color:#4192d9; text-decoration:none}
+.fc_red{color:#f26101}
+.fc_blue{color:#004b8d}
+.fc_gray{color:#656565}
+button, input, select{vertical-align:middle}
+button{margin-right:5px;cursor:pointer;}
+.btn1{height:22px;padding:0 6px;font-size:12px;line-height:22px;color:#333;border:1px solid #d9e8f5;background:url(../images/button_bg1.gif) repeat-x; cursor:pointer;}
+textarea{margin-left:5px!important}
+*/
+/*
+.mtitle{width:100%;margin:0px auto; height:29px; background:url(../images/mtitle_bg.gif) left top repeat-x; overflow:hidden; clear:both}
+.mtitle h1{width:48%; height:29px; float:left; line-height:27px; font-size:14px; font-weight:bold; text-indent:14px; letter-spacing:2px; color:#333;}
+.mtitle span{float:right;}
+table .title{color:#333;font-weight:bold;background:#d9e8f5;}
+table thead tr{height:24px;line-height:24px;}
+.tform{width:100%; margin:0 auto; border-bottom:1px solid #d9e8f5; height:26px;line-height:26px;text-align:right;}
+.tlist{width:100%; margin:7px auto 0px; font-family:Tahoma,Verdana,Arial,;  border-collapse:collapse}
+.tlist tbody tr{height:24px;line-height:24px;background:#fff;font-weight:normal;color:#333;border-bottom:1px dotted #ebebeb}
+.tlist tr td{line-height:15px;padding:6px;color:#333;}
+.tlist tfoot tr{text-align:right;}
+
+.pagelist{padding:10px}
+.pagelist a{overflow:hidden;display:inline; padding:4px;text-decoration:none; color:#333; border:1px solid #ebebeb;}
+.pagelist a:hover,.pagelist strong{border:1px solid #ffd375;color:#f26101;padding:4px;}
+
+/*�ұ�����*/
+/* .tlist td a{text-decoration: underline;} .tlist td 
+a:hover{text-decoration: none;}
+#tabbox{ width:600px; overflow:hidden;margin-top:10px;}
+#tabbox2{ width:100%; overflow:hidden;margin-top:10px;}
+.tab_conbox{border: 1px solid #999;border-top: none;}
+.tab_con{ display:none;}
+
+.tabs{height: 32px;border-bottom:1px solid #999;border-left: 1px solid #999;width: 100%;}
+.tabs li{height:31px;line-height:31px;float:left;border:1px solid #999;border-left:none;margin-bottom: -1px;background: #e0e0e0;overflow: hidden;position: relative;}
+.tabs li a {display: block;padding: 0 20px;border: 1px solid #fff;outline: none;}
+.tabs li a:hover {background: #ccc;}
+.tabs .thistab,.tabs .thistab a:hover{background: #fff;border-bottom: 1px solid #fff;}
+.tab_con {padding:12px;font-size: 14px; line-height:175%;}
+*/
+#addpanel {
+    width: 400px;
+    height: 380px;
+    padding: 5px 10px 0px 5px;
+    background-color: #d9e8f5;
+    border: 1px solid gray;
+}
+#addpanel h2{
+    line-height: 35px;
+    border-bottom: 1px gray dashed;
+}
+
+#addpanel table{
+    width: 300px;
+    height: 200px;
+}
+.addpanel {
+    width: 400px;
+    height: 380px;
+    padding: 5px 10px 0px 5px;
+    background-color: #d9e8f5;
+    border: 1px solid gray;
+}
+.addpanel h2{
+    line-height: 35px;
+    border-bottom: 1px gray dashed;
+}
+.addpanel table{
+    width: 300px;
+    height: 250px;
+}
+.operatepanel {
+    width: 660px;
+    height: 380px;
+    padding: 5px 10px 0px 5px;
+    background-color: #d9e8f5;
+    border: 1px solid gray;
+}
+.operatepanel h2{
+    line-height: 35px;
+    border-bottom: 1px gray dashed;
+}
+.operatepanel table{
+    width: 660px;
+    height: 350px;
+}
+.propertybasepanel {
+    width: 550px;
+    height: 380px;
+    padding: 5px 10px 0px 5px;
+    background-color: #d9e8f5;
+    border: 1px solid gray;
+}
+.propertybasepanel h2{
+    line-height: 35px;
+    border-bottom: 1px gray dashed;
+}
+.propertybasepanel table{
+    width: 550px;
+    height: 350px;
+}
+.propertypanel {
+    width: 557px;
+    height: 300px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.ztreepanel {
+    width: 300px;
+    height: 420px;
+    padding: 5px 10px 0px 5px;
+    background-color: #d9e8f5;
+    border: 1px solid gray;
+}
+.ztreepanel h2{
+    line-height: 35px;
+    border-bottom: 1px gray dashed;
+}
+.ztreepanel table{
+    width: 300px;
+    height: 330px;
+}
+.input{width:150px;}
+.btn{width: 70px; height: 35px;}
+
+.color{color:#3399CC;搜索 text-decoration:underline;font-weight:bold;}/*链接设置*/
+.color:visited{color:#3399CC; text-decoration:none;font-weight:bold;}/*访问过的链接设置*/
+.color:hover{color:#CF0000; text-decoration:underline;font-weight:bold;}/*鼠标放上的链接设置*/
+/*取消下划线只要把text-decoration:underline修改成text-decoration:none
+文字加粗font-weight:bold 如不需要加粗显示，那么删除font-weight:bold;就可以了
+其它更多的参数设置参考：css2.0手册 其中的"伪类"说明*/
+
+ 
+/*CURD操作*/
+.basic-curd{background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px;}
+.basic-add{ background: url('zTreeStyle/img/diy/add.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-update{ background: url('../images/modify.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-delete{ background: url('../images/delete.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-copy{ background: url('../images/copy.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-set{ background: url('../images/property.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-refresh{ background: url('../images/Refresh.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-roleMutual{ background: url('../images/roleMutual.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-roleGroupMutual{ background: url('../images/roleGroupMutual.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-task{ background: url('../images/task.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-func{ background: url('../images/func.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-orgtree{ background: url('../images/orgtree.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-order{ background: url('../images/SetOrder.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-upload{ background: url('../images/UploadCsv.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-propEntity{ background: url('../images/propEntity.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 25px ;height: 25px; }
+.basic-pen{ background: url('../images/pen.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 50px ;height: 50px; }
+.basic-doc_upload{ background: url('../images/upload-icon.png') no-repeat;  background-position: center; cursor: pointer;  float: left; width: 50px ;height: 50px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
