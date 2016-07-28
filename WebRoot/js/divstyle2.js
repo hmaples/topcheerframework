@@ -53,3 +53,4 @@ function panelchange(p, t) {
 	panel.style.left = "400px";
    	panel.style.top = "300px";
 }
+

@@ -14,6 +14,7 @@ public class SubmitWorkflowService  extends BaseService{
 		System.out.println(userinfo.getLoginAccount());
 		System.out.println(userinfo.getUserCode());
 		System.out.println(userinfo.getUserName());
+		System.out.println(userinfo.getQueryUserinfo_loginAccount());
 		
 	}
 
