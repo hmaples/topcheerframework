@@ -7,8 +7,9 @@
 <title>员工状态调整界面</title>
 <link href="../css/global.css" rel="stylesheet" type="text/css" />
 <link href="../css/tags.css" rel="stylesheet" type="text/css" />
-<script src="../js/jquery-1.9.1.js" language="javascript" type="text/javascript"></script>
+<script src="../js/jquery-1.9.1.js"  type="text/javascript"></script>
 <script type="text/javascript" src="../js/divstyle2.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/jquery.alertWindow.js" charset="UTF-8"></script>
 
 <link href="../css/mymain.css" rel="stylesheet" type="text/css" />
 <link href="../css/valid.css" rel="stylesheet" type="text/css" />
@@ -44,6 +45,8 @@
 	#div1{ 
 		font-family: "宋体","微软雅黑","Consolas","Courier New","Arial","Coruier","mono","serif";
 	}
+	
+
 </style>
 <script type="text/javascript">
 function submitWorkflow(){
@@ -55,9 +58,36 @@ function submitWorkflow(){
 	document.getElementById("form1").setAttribute("gender",gender);
 	document.getElementById("form1").submit();
 	}
+function getUserinfo(){
+	//alert("getUserinfo");
+	//document.getElementById("hiddenActionNum") .value = "queryUserInfo";
+	var queryUserInfo = $("#loginAccountCondition").val();
+	$.ajax( {
+		url : "/topcheerframework/commonAjax",
+		data : {
+			actionNum : 'queryUserInfo',
+			queryUserinfo_loginAccount : queryUserInfo
+		},
+		success : function(result) {
+			alert("ajax成功");
+			alert(result.userinfo.userName);
+			$("#loginAccount").val(result.userinfo.loginAccount);
+			$("#userCode").val(result.userinfo.userCode);
+			$("#userName").val(result.userinfo.userName);
+			$("#genderValue").val(result.userinfo.gender);
+			$("#auth-tabmenuPara").attr("value","T");//后面权限的添加图标判断依据
+			
+		}
+	});}
+	
+function addAuthInfo1(){
+	var para = $("auth-tabmenuPara").val();
+	jQuery.alertWindow("标题设置","内容设置");
+	}
+	
 </script>
 </head>
-<body style="min-width:1000px">
+<body style="min-width:1000px" id="body">
 
 
 <!-- 菜单部分开始 -->
@@ -164,7 +194,7 @@ $(function(){
 <div id="centerInfo" >
 <div class="change-information" id="change-information" >
 <form id="form1" action="/topcheerframework/commonAction" method="post" >
-<input type="hidden" name="actionNum" value = "submitWorkflow">
+<input id="hiddenActionNum" type="hidden" name="actionNum" value = "submitWorkflow">
 <table>
 	<tr>
 		<td align="right">OA单号：</td><td><input type="text" id="oaRecordIdManu" name="oaRecordIdManu" size="15" style="border:1px solid #9a9a9a;height: 21px;width:150px;" />&nbsp;</td>
@@ -186,6 +216,7 @@ $(function(){
 	<legend><b>明细区</b></legend>
 	<div class="tab_box">
 	<div class="tab_menu">
+	<input id="auth-tabmenuPara" type="hidden" name="auth-tabmenuPara" value = "F"/>
 	<ul>
 		<li id="user-tabmenu">员工基本信息</li>
 		<li class="selected" id="auth-tabmenu">权限信息</li>
@@ -202,7 +233,7 @@ $(function(){
 	<table id="queryCondition-tab"  class="detailTB" >
 		<tr>
 			<td>员工账号：<input id="loginAccountCondition" name="queryUserinfo_loginAccount" type="text" class="input01" />
-			<input type="button" onclick="getUserinfo(true);" value="查询" class="btn01" /></td>
+			<input type="button" onclick="getUserinfo();" value="查询" class="btn01" /></td>
 		</tr>
 	</table>
 	<table id="user-information-table1" class="detailTB2">
@@ -350,7 +381,7 @@ $(function(){
 	<font style="font-family: 隶书;font-size: 20px;">权限信息</font>
 	<hr/>
 	<div align="center">
-	<a class="basic-add" title="添加权限" id="addpermission" name="add" onclick="addAuthInfo()" style="display:none;padding-top:10px"></a>
+	<a class="basic-add" title="添加权限" id="addpermission" name="add" onclick="addAuthInfo()" style="display:block;padding-top:10px"><img src="../images/add.jpg" width="25px" /></a>
 	<div id="authority-list" style="display:block;padding-top:5px">
 		<table width="96%">
 			<tr class="table01">
@@ -667,6 +698,18 @@ $(function(){
 </div><!-- #mainframe end -->
 </div>
 </div>
+   <div id="div11" class="div11"></div><!--这是要覆盖网页的层，不必写任何东西-->  
+  
+   <div id="div22" class="div22"><!--这是弹出的模式窗口层-->  
+       <!--嵌套在层中的层，用来做标题栏，按个人需求定义-->  
+       <div id="div33" style="width:100%;height:20px; background-color:#0099FF" align="right">  
+               <label onClick="closeShow()" style="font-weight:bolder;cursor:hand">  
+                     关闭  <!--用来关闭显示，在label中加了onclick事件，与鼠标悬停手的样式-->  
+               </label>  
+        </div>  
+       <br>  
+          这个模式窗口很简单吧！就是这个意思，具体样式可以随意设置，如果想设置可拖动的模式窗体，那就再下篇技术交流文章：js鼠标拖动层/层的移动和浮动效果里交流吧！<!--层中的内容-->  
+    </div> 
 <SCRIPT type=text/javascript>	
 	//TAB页切换
 	$(function(){
@@ -688,5 +731,6 @@ $(function(){
 		})
 	});
 </SCRIPT>
+
 </body>
 </html>

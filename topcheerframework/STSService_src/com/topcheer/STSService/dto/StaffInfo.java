@@ -3,7 +3,7 @@ package com.topcheer.STSService.dto;
 import com.topcheer.framework.dto.BaseDto;
 
 public class StaffInfo  extends BaseDto{
-	
+	private String queryUserinfo_loginAccount;
 	private String loginAccount;
 	private String userCode;
 	private String userName;
@@ -31,6 +31,12 @@ public class StaffInfo  extends BaseDto{
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	public String getQueryUserinfo_loginAccount() {
+		return queryUserinfo_loginAccount;
+	}
+	public void setQueryUserinfo_loginAccount(String queryUserinfo_loginAccount) {
+		this.queryUserinfo_loginAccount = queryUserinfo_loginAccount;
 	}
 	
 }
