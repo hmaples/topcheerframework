@@ -11,5 +11,4 @@ public class RegisterSubService extends BaseService {
 		System.out.println(registerUser.getUserName());
 		context.createResult(registerUser, "success", "registerSuccess");
 	}
-
 }

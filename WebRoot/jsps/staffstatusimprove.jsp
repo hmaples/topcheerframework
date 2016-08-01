@@ -80,11 +80,6 @@ function getUserinfo(){
 		}
 	});}
 	
-function addAuthInfo1(){
-	var para = $("auth-tabmenuPara").val();
-	jQuery.alertWindow("标题设置","内容设置");
-	}
-	
 </script>
 </head>
 <body style="min-width:1000px" id="body">
@@ -393,7 +388,17 @@ $(function(){
 				<td style="display: none;">用户id</td>
 			</tr>
 		</table>
-		<table id="tab" width="96%" class="table03"></table>
+		<table id="authority-list1" width="96%"  style="display:none;">
+			<tr class="table03">
+				<td width="22%">买单吧系统</td>
+				<td width="25%">运营管理部</td>				
+				<td width="21%">买单吧管理员</td>
+				<td width="20%">admin</td>
+				<td width="12%">新增</td>
+				<td style="display: none;">用户id</td>
+			</tr>
+		</table>
+		</table>
 	</div><!-- authority-list --></div>
 	</div><!-- outherity-information end -->
 	
@@ -698,18 +703,6 @@ $(function(){
 </div><!-- #mainframe end -->
 </div>
 </div>
-   <div id="div11" class="div11"></div><!--这是要覆盖网页的层，不必写任何东西-->  
-  
-   <div id="div22" class="div22"><!--这是弹出的模式窗口层-->  
-       <!--嵌套在层中的层，用来做标题栏，按个人需求定义-->  
-       <div id="div33" style="width:100%;height:20px; background-color:#0099FF" align="right">  
-               <label onClick="closeShow()" style="font-weight:bolder;cursor:hand">  
-                     关闭  <!--用来关闭显示，在label中加了onclick事件，与鼠标悬停手的样式-->  
-               </label>  
-        </div>  
-       <br>  
-          这个模式窗口很简单吧！就是这个意思，具体样式可以随意设置，如果想设置可拖动的模式窗体，那就再下篇技术交流文章：js鼠标拖动层/层的移动和浮动效果里交流吧！<!--层中的内容-->  
-    </div> 
 <SCRIPT type=text/javascript>	
 	//TAB页切换
 	$(function(){
