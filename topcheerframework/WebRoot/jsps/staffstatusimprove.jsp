@@ -69,16 +69,36 @@ function getUserinfo(){
 			queryUserinfo_loginAccount : queryUserInfo
 		},
 		success : function(result) {
-			alert("ajax成功");
-			alert(result.userinfo.userName);
 			$("#loginAccount").val(result.userinfo.loginAccount);
 			$("#userCode").val(result.userinfo.userCode);
 			$("#userName").val(result.userinfo.userName);
 			$("#genderValue").val(result.userinfo.gender);
-			$("#auth-tabmenuPara").attr("value","T");//后面权限的添加图标判断依据
-			
+			$("#userIdTypeValue").val(result.userinfo.userIdTypeValue);
+			$("#userIdNoValue").val(result.userinfo.userIdNoValue);
+			$("#workStatusValue").val(result.userinfo.workStatusValue);
+			$("#positionName").val(result.userinfo.positionName );
+			$("#userOrganization").val(result.userinfo.userOrganization);
+			$("#entryDate").val(result.userinfo.entryDate);
+			$("#entryYear").val(result.userinfo.entryYear);
+			$("#belongAminOrg").val(result.userinfo.belongAminOrg);
+			$("#userType").val(result.userinfo.userType);
+			$("#allowNetwork").val(result.userinfo.allowNetwork);
+			$("#oa").val(result.userinfo.oa);
+			$("#handphone").val(result.userinfo.handphone);
+			$("#email").val(result.userinfo.email);
+			$("#emergencyPerson").val(result.userinfo.emergencyPerson);
+			$("#contactphone").val(result.userinfo.contactphone);
+			$("#contactaddress").val(result.userinfo.contactaddress);
+			$("#emergencyTel").val(result.userinfo.emergencyTel);
+			$("#wbCode").val(result.userinfo.wbCode);
+			$("#CName").val(result.userinfo.CName);
+			$("#officefax").val(result.userinfo.officefax);
+			$("#officetel").val(result.userinfo.officetel);
+			$("#agentId").val(result.userinfo.agentId);
 		}
 	});}
+	
+
 	
 </script>
 </head>
@@ -255,67 +275,67 @@ $(function(){
 			<td align="right" style="padding-right:10px;">证件类型：</td>
 			<td>
 			<select id="userIdTypeValue" name="userIdTypeValue" >
-				<option>身份证</option>
-				<option>港澳通行证</option>
-				<option>军官证</option>
-				<option>台胞证</option>
-				<option>身港澳居民来往内地通行证</option>
-				<option>护照</option>
-				<option>其它</option>
+				<option value="1">身份证</option>
+				<option value="2">港澳通行证</option>
+				<option value="3">军官证</option>
+				<option value="4">台胞证</option>
+				<option value="5">身港澳居民来往内地通行证</option>
+				<option value="6">护照</option>
+				<option value="7">其它</option>
 			</select>
 			<input id="userIdType" name="userinfo.userIdType" type="hidden" />
 			</td>
 			<td align="right" style="padding-right:10px;">证件号码：</td><td><input id="userIdNoValue" name="userIdNoValue" type="text" maxlength="30" />
-			<input id="userIdNo" name="userinfo.userIdNo" type="hidden" maxlength="30" />
+			<input id="userIdNo" name="userIdNo" type="hidden" maxlength="30" />
 			<label style="color:red">*必填</label></td>
 		</tr>
 		<tr>
 			<td align="right" style="padding-right:10px;">在职状态：</td>
 			<td>
 			<select id="workingStatusValue" name="workingStatusValue" >
-				<option>报道</option>
-				<option>在职</option>
-				<option>离职</option>
+				<option value="00">报道</option>
+				<option value="01">在职</option>
+				<option value="02">离职</option>
 			</select>
-			<input id="workingStatus" name="userinfo.workingStatus" type="hidden" />
+			<input id="workingStatus" name="workingStatus" type="hidden" />
 			</td>
 			<td align="right" style="padding-right:10px;">工作状态：</td>
 			<td>
 			<select id="workStatusValue" name="workStatusValue">
-				<option>在岗</option>
-				<option>预约离岗</option>
-				<option>离岗</option>
-				<option>长病假</option>
-				<option>产假</option>
-				<option>轮岗</option>
-				<option>备援</option>
-				<option>脱岗备援</option>
-				<option>跨部门备援</option>
-				<option>兼任</option>
-				<option>临时管制</option>
-				<option>跨部门异动</option>
-				<option>报道</option>
+				<option value="1">在岗</option>
+				<option value="2">预约离岗</option>
+				<option value="3">离岗</option>
+				<option value="4">长病假</option>
+				<option value="5">产假</option>
+				<option value="6">轮岗</option>
+				<option value="7">备援</option>
+				<option value="8">脱岗备援</option>
+				<option value="9">跨部门备援</option>
+				<option value="10">兼任</option>
+				<option value="11">临时管制</option>
+				<option value="12">跨部门异动</option>
+				<option value="13">报道</option>
 			</select>
 			</td>
 		</tr>
 		<tr>
-			<td align="right" style="padding-right:10px;">HR岗位名称：</td><td><input id="positionName"  name="userinfo.positionName" type="text" maxlength="100" /></td>
-			<td align="right" style="padding-right:10px;">编制：</td><td><input id="userOrganization" name="userinfo.userOrganization" type="text" maxlength="100" /></td>
+			<td align="right" style="padding-right:10px;">HR岗位名称：</td><td><input id="positionName"  name="positionName" type="text" maxlength="100" /></td>
+			<td align="right" style="padding-right:10px;">编制：</td><td><input id="userOrganization" name="userOrganization" type="text" maxlength="100" /></td>
 		</tr>
 		<tr>
-			<td align="right" style="padding-right:10px;">入职时间：</td><td><input id="entryDate" name="userinfo.entryDate" type="text"/></td>
-			<td align="right" style="padding-right:10px;">入职年限：</td><td><input id="entryYear"  name="userinfo.entryYear" type="text"/></td>
+			<td align="right" style="padding-right:10px;">入职时间：</td><td><input id="entryDate" name="entryDate" type="text"/></td>
+			<td align="right" style="padding-right:10px;">入职年限：</td><td><input id="entryYear"  name="entryYear" type="text"/></td>
 		</tr>
 		<tr>
-			<td align="right" style="padding-right:10px;">行政机构：</td><td><input id="belongAminOrg" name="userinfo.belongAdminOrg" type="text" maxlength="20" /></td>
+			<td align="right" style="padding-right:10px;">行政机构：</td><td><input id="belongAminOrg" name="belongAminOrg" type="text" maxlength="20" /></td>
 			<td align="right" style="padding-right:10px;">用户类型：</td>
 			<td>
-				<select id="userType" name="userinfo.userType" >
-					<option>请选择</option>
-					<option>分行人员</option>
-					<option>外包公司人员</option>
-					<option>卡中心人员</option>
-					<option>异地中心人员</option>
+				<select id="userType" name="userType" >
+					<option value="1">请选择</option>
+					<option value="2">分行人员</option>
+					<option value="3">外包公司人员</option>
+					<option value="4">卡中心人员</option>
+					<option value="5">异地中心人员</option>
 				</select><label style="color:red">*必填</label></td>
 		</tr>
 	</table><!--user-information-table1 end-->
@@ -323,51 +343,51 @@ $(function(){
 		<tr>
 			<td align="right" style="padding-right:10px;width:20%">允许访问网段：</td>
 			<td style="width:30%">
-				<select id="allowNetwork" name="userinfo.allowNetwork">
-					<option>请选择</option>
-					<option>办公网段</option>
-					<option>办公网段及外网网段</option>
-					<option>生产网段</option>
-					<option>办公及生产网段</option>
-					<option>办公、生产及外网网段</option>
+				<select id="allowNetwork" name="allowNetwork">
+					<option value="1">请选择</option>
+					<option value="2">办公网段</option>
+					<option value="3">办公网段及外网网段</option>
+					<option value="4">生产网段</option>
+					<option value="5">办公及生产网段</option>
+					<option value="6">办公、生产及外网网段</option>
 				</select>
 			</td>
 			<td align="right" style="padding-right:10px;width:20%">OA：</td>
-			<td style="width:30%"><input id="oa" name="userinfo.oa" type="text"/></td>
+			<td style="width:30%"><input id="oa" name="oa" type="text"/></td>
 		</tr>
 		<tr>
-			<td align="right" style="padding-right:10px;">手机号：</td><td><input id="handphone" name="userinfo.handphone" type="text" maxlength="45" />
+			<td align="right" style="padding-right:10px;">手机号：</td><td><input id="handphone" name="handphone" type="text" maxlength="45" />
 			<label style="color:red">*必填</label>
 			</td>
-			<td align="right" style="padding-right:10px;">邮箱：</td><td><input id="email" name="userinfo.email" type="text" maxlength="45" /></td>
+			<td align="right" style="padding-right:10px;">邮箱：</td><td><input id="email" name="email" type="text" maxlength="45" /></td>
 		</tr>
 		<tr>
-			<td align="right" style="padding-right:10px;">联系电话：</td><td><input id="contactphone" name="userinfo.contactPhone" type="text" maxlength="20" /></td>
-			<td align="right" style="padding-right:10px;">联系地址：</td><td><input id="contactaddress"  name="userinfo.contactAddress" type="text" maxlength="80" /></td>
+			<td align="right" style="padding-right:10px;">联系电话：</td><td><input id="contactphone" name="contactphone" type="text" maxlength="20" /></td>
+			<td align="right" style="padding-right:10px;">联系地址：</td><td><input id="contactaddress"  name="contactaddress" type="text" maxlength="80" /></td>
 		</tr>
 		<tr>
 			<td align="right" style="padding-right:10px;">紧急联系人：</td><td><input id="emergencyPerson" name="userinfo.emergencyPerson" type="text" maxlength="40" /></td>
-			<td align="right" style="padding-right:10px;">紧急联系电话：</td><td><input id="emergencyTel" name="userinfo.emergencyTel" type="text" maxlength="20" /></td>
+			<td align="right" style="padding-right:10px;">紧急联系电话：</td><td><input id="emergencyTel" name="emergencyTel" type="text" maxlength="20" /></td>
 		</tr>
 		<tr id="wbCompanyTr" style="display: none;">
 			<td align="right" style="padding-right:10px;">外包公司代码：</td>
 			<td>
-				<select id="wbCode" name="userinfo.wbCode" ></select>
+				<select id="wbCode" name="wbCode" ></select>
 			</td>
 			<td align="right" style="padding-right:10px;">外包公司名称：</td>
 			<td>
-				<input id="CName" name="userinfo.CName" type="text"  maxlength="150" />
+				<input id="CName" name="CName" type="text"  maxlength="150" />
 			</td>
 		</tr>
 		<tr>
 			<td align="right" style="padding-right:10px;">办公传真：</td>
-			<td><input id="officefax" name="userinfo.officefax" type="text" maxlength="20" /></td>
+			<td><input id="officefax" name="officefax" type="text" maxlength="20" /></td>
 			<td align="right" style="padding-right:10px;">办公电话：</td>
-			<td><input id="officetel" name="userinfo.officetel" type="text" maxlength="20" /></td>
+			<td><input id="officetel" name="officetel" type="text" maxlength="20" /></td>
 		</tr>
 		<tr>
 			<td align="right" style="padding-right:10px;">AgentId：</td>
-			<td colspan="3"><input id="mobileTel" name="userinfo.mobileTel" type="text" maxlength="20" /></td>
+			<td colspan="3"><input id="agentId" name="agentId" type="text" maxlength="20" /></td>
 		</tr>
 	</table><!--user-information-table2 end-->
 	</div><!-- user-information end -->
@@ -515,8 +535,8 @@ $(function(){
 
 <div id="addtolist" style="display:block;">
 	<div align="center">
-	<a id="addUserAllInfoToList" name="addUserAllInfoToList" style="text-decoration:none;cursor:hand;" onclick="submitWorkflow();">
-		<img id="addlistImage" alt="添加至列表" src="../images/add2list.jpg">
+	<a id="addUserAllInfoToList" name="addUserAllInfoToList" style="text-decoration:none;cursor:hand;">
+		<img id="addlistImage" alt="添加至列表" src="../images/add2list.jpg" onclick="addUserToList();">
 	</a>
 	</div>
 	<fieldset class="panel">
@@ -609,7 +629,7 @@ $(function(){
 				</span>
         	</td>
         	</tr>
-        	<tr><td><br />应用系统账号：</td><td><br /><input id="localAccount" type="text" onblur="checkLocalAccount();" /><div id = "vaLocalAccount" class="Validform_checktip divstr" style="display:none;width:160px">请输入有效的应用系统账号</div></td>
+        	<tr><td><br />应用系统账号：</td><td><br /><input id="localAccount" type="text" /><div id = "vaLocalAccount" class="Validform_checktip divstr" style="display:none;width:160px">请输入有效的应用系统账号</div></td>
         	</tr>
         	<tr>
         	<td><br />所属组织架构：</td>
@@ -714,8 +734,8 @@ $(function(){
 			$("div.frame > div")   	//选取子节点。不选取子节点的话，会引起错误。如果里面还有div 
 					.eq(index).show()   //显示 <li>元素对应的<div>元素
 					.siblings().hide(); //隐藏其它几个同辈的<div>元素
-					tag++;
-					tag= tag%2;
+					//tag++;
+					//tag= tag%2;
 					//alert(tag);
 		}).hover(function(){
 			$(this).addClass("hover");

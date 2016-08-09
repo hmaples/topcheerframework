@@ -17,6 +17,8 @@
 	<bean id="submitWorkflow" class="com.topcheer.STSService.service.SubmitWorkflowService"></bean>
 	<bean id="queryUserInfo" class="com.topcheer.STSService.service.QueryUserService"></bean>
 	<bean id="queryAppInfo" class="com.topcheer.STSService.service.QueryAppInfoService"></bean>
+	<bean id="queryOrgInfo" class="com.topcheer.STSService.service.QueryOrgInfoService"></bean>
+	<bean id="queryRoleInfo" class="com.topcheer.STSService.service.QueryRoleInfoService"></bean>
 	
 	
 </beans>
