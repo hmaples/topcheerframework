@@ -31,10 +31,11 @@ public class BaseAction {
 	 * @param responese
 	 * @param session
 	 * @return
+	 * @throws Exception 
 	 */
 	@RequestMapping("commonAction")
 	public ModelAndView doAction(HttpServletRequest request,
-			HttpServletResponse responese, HttpSession session) {
+			HttpServletResponse responese, HttpSession session) throws Exception {
 		String actionNum = request.getParameter("actionNum");
 		if (actionNum == null || "".equals(actionNum)) {
 			ModelAndView errorModel = new ModelAndView();
@@ -62,11 +63,12 @@ public class BaseAction {
 	 * @param request
 	 * @param responese
 	 * @return
+	 * @throws Exception 
 	 */
 	@RequestMapping("commonAjax")
 	@ResponseBody
 	public Map<String, Object> doAjaxAction(HttpServletRequest request,
-			HttpServletResponse responese) {
+			HttpServletResponse responese) throws Exception {
 		String actionNum = request.getParameter("actionNum");
 		if (actionNum == null || "".equals(actionNum)) {
 
@@ -91,12 +93,13 @@ public class BaseAction {
 	 * @param file
 	 * @param request
 	 * @return
+	 * @throws Exception 
 	 */
 	@RequestMapping("commonUploadFile")
 	public ModelAndView uploadAction(
 			@RequestParam(value = "file", required = false) MultipartFile file,
 			HttpServletRequest request, HttpServletResponse responese,
-			HttpSession session) {
+			HttpSession session) throws Exception {
 		String actionNum = request.getParameter("actionNum");
 		if (actionNum == null || "".equals(actionNum)) {
 			ModelAndView errorModel = new ModelAndView();
@@ -124,11 +127,12 @@ public class BaseAction {
 	 * @param request
 	 * @param responese
 	 * @param session
+	 * @throws Exception 
 	 */
 	@RequestMapping("downLoadCommon")
 	@ResponseBody
 	public void downLoadAction(HttpServletRequest request,
-			HttpServletResponse responese, HttpSession session) {
+			HttpServletResponse responese, HttpSession session) throws Exception {
 		String actionNum = request.getParameter("actionNum");
 		ApplicationContext data = new ApplicationContext(request, responese,
 				session);
