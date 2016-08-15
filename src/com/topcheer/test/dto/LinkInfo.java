@@ -1,4 +1,4 @@
-package com.topcheer.framework.dto;
+package com.topcheer.test.dto;
 
 import java.util.Date;
 
