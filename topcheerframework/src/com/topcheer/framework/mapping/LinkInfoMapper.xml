@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="topcheer" >
-  <resultMap id="BaseResultMap" type="com.topcheer.framework.dto.LinkInfo" >
+  <resultMap id="BaseResultMap" type="com.topcheer.test.dto.LinkInfo" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="address" property="address" jdbcType="VARCHAR" />
     <result column="tag_info" property="tagInfo" jdbcType="VARCHAR" />
@@ -21,13 +21,13 @@
     delete from link_info
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.topcheer.framework.dto.LinkInfo" >
+  <insert id="insert" parameterType="com.topcheer.test.dto.LinkInfo" >
     insert into link_info (id, address, tag_info, 
       note, create_time)
     values (#{id,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, #{tagInfo,jdbcType=VARCHAR}, 
       #{note,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.topcheer.framework.dto.LinkInfo" >
+  <insert id="insertSelective" parameterType="com.topcheer.test.dto.LinkInfo" >
     insert into link_info
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -64,7 +64,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.topcheer.framework.dto.LinkInfo" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.topcheer.test.dto.LinkInfo" >
     update link_info
     <set >
       <if test="address != null" >
@@ -82,7 +82,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.topcheer.framework.dto.LinkInfo" >
+  <update id="updateByPrimaryKey" parameterType="com.topcheer.test.dto.LinkInfo" >
     update link_info
     set address = #{address,jdbcType=VARCHAR},
       tag_info = #{tagInfo,jdbcType=VARCHAR},
