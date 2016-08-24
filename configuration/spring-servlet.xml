@@ -48,6 +48,12 @@
 		<property name="basePackage" value="com.topcheer.framework.dao" />
 	</bean> -->
 	
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">  
+  
+       <property name="configLocation"><value>classpath:sqlMapConfig.xml</value></property>  
+  
+    </bean>  
+	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/" />
