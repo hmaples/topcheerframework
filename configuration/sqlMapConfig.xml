@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
-<sqlMapConfig>
-
-	<settings lazyLoadingEnabled="true" useStatementNamespaces="true" />
-
-	<!-- 使用spring之后，数据源的配置移植到了spring上，所以iBATIS本身的配置可以取消 -->
-
-	<sqlMap resource="classpath:CommonMapper.xml" />
-	<sqlMap resource="classpath:LinkInfoMapper.xml" />
-
-</sqlMapConfig>  
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<mappers>
+<mapper resource="CommonMapper.xml" />
+<mapper resource="LinkInfoMapper.xml" />
+</mappers>
+</configuration>

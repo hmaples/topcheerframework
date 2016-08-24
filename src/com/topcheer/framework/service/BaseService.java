@@ -1,10 +1,16 @@
 package com.topcheer.framework.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 
 public abstract class BaseService implements IService {
 
 	protected ApplicationContext context = null;
+	
+	@Autowired
+	protected BaseDao baseDao;
 
 	public void doBusiness(ApplicationContext context) throws Exception {
 		this.context = context;
