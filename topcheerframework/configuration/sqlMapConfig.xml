@@ -6,6 +6,7 @@
 
 	<!-- 使用spring之后，数据源的配置移植到了spring上，所以iBATIS本身的配置可以取消 -->
 
-	<sqlMap resource="com/ibatis/dao/impl/ibatis/User.xml" />
+	<sqlMap resource="classpath:CommonMapper.xml" />
+	<sqlMap resource="classpath:LinkInfoMapper.xml" />
 
 </sqlMapConfig>  

@@ -2,27 +2,13 @@ package com.topcheer.framework.dao;
 
 import java.util.List;
 
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import com.topcheer.framework.action.SpringContextUtil;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
 
-public class BaseDao {
 
-	private SqlSession sqlSession;
+public class BaseDao extends SqlSessionDaoSupport  {
 
-	public BaseDao() {
-		SqlSessionFactory sqlSessionFactory = SpringContextUtil
-				.getBean("sqlsessionFactory");
-		sqlSession = sqlSessionFactory.openSession();
+
+	public List<Object> selectBySqlId(String sqlid,Object para){
+		return this.getSqlSession().selectList(sqlid, para);
 	}
-	
-	public Object selectOne(String sqlId,Object param){
-		return sqlSession.selectOne(sqlId, param);
-	}
-	
-	public List<Object> selectList(String sqlId){
-		return sqlSession.selectList(sqlId);
-	}
-	
-	
 }

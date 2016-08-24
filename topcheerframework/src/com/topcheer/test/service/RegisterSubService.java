@@ -13,7 +13,7 @@ public class RegisterSubService extends BaseService {
 		System.out.println(registerUser.getUserName());
 		// 查询单个对象
 		BaseDao baseDao = new BaseDao();
-		LinkInfo linkInfo = (LinkInfo) baseDao.selectOne(
+		LinkInfo linkInfo = (LinkInfo) baseDao.selectBySqlId(
 				"topcheer.selectByPrimaryKey", 1);
 		System.out.println(linkInfo.getAddress());
 		// // 查询列表对象
