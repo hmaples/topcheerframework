@@ -39,7 +39,7 @@
 	</bean>
 
 	<bean id="sqlsessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="mapperLocations" value="classpath:com/topcheer/framework/mapping/*.xml"></property>
+		<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
@@ -48,11 +48,6 @@
 		<property name="basePackage" value="com.topcheer.framework.dao" />
 	</bean> -->
 	
-	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">  
-  
-       <property name="configLocation"><value>classpath:sqlMapConfig.xml</value></property>  
-  
-    </bean>  
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
