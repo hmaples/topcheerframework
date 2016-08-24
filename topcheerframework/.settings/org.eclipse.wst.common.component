@@ -4,6 +4,8 @@
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/STSService_src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/configuration"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/sqlmap"/>
         <property name="context-root" value="/topcheerframework"/>
         <property name="java-output-path" value="/topcheerframework/WebRoot/WEB-INF/classes"/>
     </wb-module>
