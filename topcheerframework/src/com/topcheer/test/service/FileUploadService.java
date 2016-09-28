@@ -1,9 +1,11 @@
 package com.topcheer.test.service;
 
 import java.io.File;
+
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import com.topcheer.framework.service.BaseService;
-
+@Service
 public class FileUploadService extends BaseService {
 
 	@Override

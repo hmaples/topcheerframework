@@ -16,7 +16,7 @@
     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<context:component-scan base-package="com.topcheer.framework.action" >
-	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>  
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>  
 	</context:component-scan> 
 	<mvc:annotation-driven />
 	<mvc:default-servlet-handler />
@@ -39,21 +39,20 @@
 	</bean>
 
 	<bean id="sqlsessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
+		<property name="mapperLocations" value="classpath:com/topcheer/test/mapper/*.xml"></property>
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	<bean id="baseDao" class="com.topcheer.framework.dao.BaseDao">
-		<property name="sqlSessionFactory" ref="sqlsessionFactory"></property>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlsessionFactory" />
+		<property name="basePackage" value="com.topcheer.test.dao" />
 	</bean>
 	
-
-	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="sqlSessionFactoryBeanName" value="sqlsessionFactory" />
-		<property name="basePackage" value="com.topcheer.framework.dao" />
-	</bean> -->
-	
-	
+	<bean id="baseDao" class="com.topcheer.framework.dao.BaseDao"  >
+		<property name="sqlSessionFactory" ref="sqlsessionFactory"></property>
+	</bean>
+	 
+	 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/" />
@@ -68,39 +67,7 @@
 
 	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
-			<tx:method name="add*" propagation="REQUIRED" rollback-for="java.lang.Exception"
-				read-only="false" />
-			<tx:method name="append*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="insert*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="save*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="update*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="modify*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="edit*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="delete*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="remove*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="repair" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="doExecute" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="*" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="delAndRepair" propagation="REQUIRED"
-				rollback-for="java.lang.Exception" read-only="false" />
-			<tx:method name="get*" propagation="SUPPORTS" read-only="false" />
-			<tx:method name="find*" propagation="SUPPORTS" read-only="false" />
-			<tx:method name="load*" propagation="SUPPORTS" read-only="false" />
-			<tx:method name="search*" propagation="SUPPORTS" read-only="false" />
-			<tx:method name="datagrid*" propagation="SUPPORTS"
-				read-only="false" />
-			<tx:method name="*" propagation="SUPPORTS" />
+			<tx:method name="doBusiness" propagation="REQUIRED" read-only="false" rollback-for="Exception" />
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>

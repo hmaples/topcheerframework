@@ -1,7 +1,9 @@
 package com.topcheer.test.service;
 
-import com.topcheer.framework.service.BaseService;
+import org.springframework.stereotype.Service;
 
+import com.topcheer.framework.service.BaseService;
+@Service
 public class RegisterService extends BaseService{
 
 	@Override

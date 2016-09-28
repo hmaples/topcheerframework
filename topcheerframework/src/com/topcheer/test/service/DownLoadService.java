@@ -1,12 +1,14 @@
 package com.topcheer.test.service;
 
+import org.springframework.stereotype.Service;
+
 import jxl.write.WritableCellFormat;
 
 import com.topcheer.framework.dto.CellVo;
 import com.topcheer.framework.dto.ExcelVo;
 import com.topcheer.framework.dto.SheetVo;
 import com.topcheer.framework.service.BaseService;
-
+@Service
 public class DownLoadService extends BaseService {
 
 	@Override

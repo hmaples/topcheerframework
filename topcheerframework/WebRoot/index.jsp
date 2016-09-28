@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</form>
     This is my JSP page. <br>
     <form action="commonAction"  method="post">
-  		<input type="hidden" name="actionNum" value = "gotoRegister">
+  		<input type="hidden" name="actionNum" value = "registerService">
   		<input type="submit" value="点击去注册">
   	</form>
   	<br>
