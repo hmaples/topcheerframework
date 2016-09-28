@@ -2,8 +2,11 @@ package com.topcheer.test.service;
 
 import java.util.HashMap;
 import java.util.Map;
-import com.topcheer.framework.service.BaseService;
 
+import org.springframework.stereotype.Service;
+
+import com.topcheer.framework.service.BaseService;
+@Service
 public class AjaxService extends BaseService {
 
 	@Override

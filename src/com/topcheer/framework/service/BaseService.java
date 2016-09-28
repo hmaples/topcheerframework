@@ -1,25 +1,23 @@
 package com.topcheer.framework.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 
 public abstract class BaseService implements IService {
 
 	protected ApplicationContext context = null;
 	
-	@Autowired
-	protected BaseDao baseDao;
+	//protected BaseDao baseDao;
+	
 
 	public void doBusiness(ApplicationContext context) throws Exception {
 		this.context = context;
 		
-		beforExecute();
+		//beforExecute();
 
 		doExecute();
 
-		afterExecute();
+		//afterExecute();
 	}
 
 	private void beforExecute() {
@@ -31,6 +29,7 @@ public abstract class BaseService implements IService {
 		//sqlSession.close();
 	}
 
-	protected abstract void doExecute() throws Exception;
-
+	protected  void doExecute() throws Exception{
+		
+	}
 }

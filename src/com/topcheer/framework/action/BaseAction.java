@@ -165,7 +165,7 @@ public class BaseAction {
 	private IService getService(String serviceNum)
 			throws InstantiationException, IllegalAccessException,
 			ClassNotFoundException {
-		IService ob = (BaseService) SpringContextUtil.getBean(serviceNum);
+		IService ob = (IService) SpringContextUtil.getBean(serviceNum);
 		return ob;
 	}
 
