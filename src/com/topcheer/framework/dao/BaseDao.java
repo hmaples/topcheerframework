@@ -8,7 +8,7 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 public class BaseDao extends SqlSessionDaoSupport {
 
-	public List<Object> selectBySqlId(String sqlid, Object para) {
+	public List<Object> selectListBySqlId(String sqlid, Object para) {
 		return this.getSqlSession().selectList(sqlid, para);
 	}
 
