@@ -10,7 +10,6 @@
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 	</context:component-scan> 
 
-	<!-- 
 	<bean id="loginSub" class="com.topcheer.test.service.MyService1" scope="request"></bean>
 	<bean id="gotoRegister" class="com.topcheer.test.service.RegisterService" scope="request"></bean>
 	<bean id="registerSub" class="com.topcheer.test.service.RegisterSubService" scope="request"></bean>
@@ -24,6 +23,5 @@
 	<bean id="queryAppInfo" class="com.topcheer.STSService.service.QueryAppInfoService" scope="request"></bean>
 	<bean id="queryOrgInfo" class="com.topcheer.STSService.service.QueryOrgInfoService" scope="request"></bean>
 	<bean id="queryRoleInfo" class="com.topcheer.STSService.service.QueryRoleInfoService" scope="request"></bean>
-	-->
 	
 </beans>
