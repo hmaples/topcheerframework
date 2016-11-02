@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="topcheer">
-    <select id="getLinkList" resultType="com.topcheer.test.dto.LinkInfo">
-        SELECT
-        id,
-	address,
-	tag_info tagInfo,
-	note,
-	create_time timeString
-FROM
-	link_info
-	ORDER BY create_time desc
-    </select>
-
+	<select id="getLinkList" resultType="com.topcheer.test.dto.LinkInfo">
+		SELECT
+		id,
+		address,
+		tag_info
+		tagInfo,
+		note,
+		create_time timeString
+		FROM
+		link_info
+		ORDER BY create_time
+		desc
+	</select>
+	<select id="selectQuestionList" resultType="com.topcheer.STSService.dto.Questioninfo">
+		select
+		question_id,question_title,type,answer from question_info
+	</select>
 </mapper>

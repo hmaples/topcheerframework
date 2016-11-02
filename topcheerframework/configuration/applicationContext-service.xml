@@ -23,5 +23,8 @@
 	<bean id="queryAppInfo" class="com.topcheer.STSService.service.QueryAppInfoService" scope="request"></bean>
 	<bean id="queryOrgInfo" class="com.topcheer.STSService.service.QueryOrgInfoService" scope="request"></bean>
 	<bean id="queryRoleInfo" class="com.topcheer.STSService.service.QueryRoleInfoService" scope="request"></bean>
+	<!-- 问卷调查 -->
+	<bean id="gotoQuestionSurvey" class="com.topcheer.STSService.service.QuestionService" scope="request"></bean>
+	<bean id="questionSubmitService" class="com.topcheer.STSService.service.QuestionAnswerService" scope="request"></bean>
 	
 </beans>

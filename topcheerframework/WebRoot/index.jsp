@@ -36,5 +36,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<input type="hidden" name="actionNum" value = "gotoAjax">
   		<input type="submit" value="点击去ajax页面">
   	</form>
+  <!-- 问卷调查 -->
+  	<form action="commonAction"  method="post">
+  		<input type="hidden" name="actionNum" value = "gotoQuestionSurvey">
+  		<input type="submit" value="点击去问卷调查页面">
+  	</form>
+  	
   </body>
 </html>
