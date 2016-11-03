@@ -106,11 +106,11 @@ public class ApplicationContext {
 	 * 获取map属性值
 	 * 
 	 * @return
-	 */
-	@SuppressWarnings("unchecked")
-	public Map<String, String> getPara() {
-		return request.getParameterMap();
-	}
+//	 */
+//	@SuppressWarnings("unchecked")
+//	public Map<String, String> getPara() {
+//		return request.getParameterMap();
+//	}
 
 	/**
 	 * 创建共同结果对象
