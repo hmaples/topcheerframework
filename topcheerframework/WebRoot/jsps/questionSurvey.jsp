@@ -36,29 +36,19 @@
 		<c:forEach var="question" items="${quesList}">
 			<c:set var="type" value="${question.type }" />
 
-			<!-- 单选题  -->
-			<c:if test="${type==1}">
-			${question.question_id}、${question.question_title}<br />
-				<c:forEach var="answer" items="${question.answerlist}">
-					<input name="radio_${question.question_id}" type="radio" value="${answer}" />${answer}			
-			</c:forEach>
+		<c:if test="${type==1}">
+			${question.issue_id}、${question.content}<br />
+					<input name="radio_${question.issue_id}_${question.option_id}" type="radio" value="${question. optionContent}" />${question. optionContent}			
 			</c:if>
 			<br />
-
-			<!-- 多选题  -->
 			<c:if test="${type==2}">
-			${question.question_id}、${question.question_title}<br />
-				<c:forEach var="answer" items="${question.answerlist}">
-					<input name="checkbox_${question.question_id}" type="checkbox" value="${answer}" />${answer}			
-			</c:forEach>
+			${question.issue_id}、${question.content}<br />
+					<input name="radio_${question.issue_id}_${question.option_id}" type="checkbox" value="${question. optionContent}" />${question. optionContent}			
 			</c:if>
-			<br />
-
-			<!-- 问答题 -->
+	<!-- 问答题 -->
 			<c:if test="${type==3}">
-			${question.question_id}、${question.question_title}
-				<br />
-				<textarea rows="3" cols="80" id="${question.question_id}"  name="textarea"></textarea>
+		${question.issue_id}、${question.content}<br />
+				<textarea rows="3" cols="80" id="radio_${question.issue_id}"  name="textarea"></textarea>
 			</c:if>
 			<br />
 		</c:forEach>

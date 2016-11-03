@@ -14,8 +14,23 @@
 		ORDER BY create_time
 		desc
 	</select>
-	<select id="selectQuestionList" resultType="com.topcheer.STSService.dto.Questioninfo">
-		select
-		question_id,question_title,type,answer from question_info
+	<select id="selectQuestionList" resultType="com.topcheer.STSService.dto.OptionInfo">
+SELECT
+	ii.issue_id,
+	ii.type,
+	ii.content,
+	oi.option_id,
+	oi.content AS optionContent
+FROM
+	questionnaire_info AS qi
+LEFT JOIN questionnaire_issue AS qis ON qi.questionnaire_id = qis.questionnaire_id
+LEFT JOIN issue_info AS ii ON qis.issue_id = ii.issue_id
+LEFT JOIN issue_option AS io ON ii.issue_id = io.issue_id
+LEFT JOIN option_info AS oi ON io.option_id = oi.option_id
+WHERE
+	qi.questionnaire_id = 1
+ORDER BY
+	qis.sort,
+	io.sort
 	</select>
 </mapper>
