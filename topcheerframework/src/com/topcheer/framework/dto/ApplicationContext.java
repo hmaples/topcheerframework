@@ -147,6 +147,27 @@ public class ApplicationContext {
 		}
 		this.modelAndView = modelAndView;
 	}
+	
+	/**
+	 * 创建共同结果对象
+	 * 
+	 * @param <T>
+	 * @param dto
+	 * @param result
+	 * @param nextPage
+	 */
+	public void createMapResult(Map<String,Object> model, String result,
+			String nextPage) {
+		ModelAndView modelAndView = new ModelAndView();
+		// 如果系统内部执行正确
+		if ("success".equals(result)) {
+			modelAndView.addAllObjects(model);
+			modelAndView.setViewName(nextPage);
+		} else {
+			modelAndView.setViewName("error");
+		}
+		this.modelAndView = modelAndView;
+	}
 
 	/**
 	 * 创建导出excel结果对象

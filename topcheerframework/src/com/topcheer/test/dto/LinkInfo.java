@@ -1,8 +1,9 @@
 package com.topcheer.test.dto;
 
 import java.util.Date;
+import com.topcheer.framework.dto.BaseDto;
 
-public class LinkInfo {
+public class LinkInfo extends BaseDto{
     private Integer id;
 
     private String address;
