@@ -1,13 +1,10 @@
 package com.topcheer.STSService.service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.topcheer.STSService.dto.QuestionResult;
 import com.topcheer.STSService.dto.Questioninfo;
 import com.topcheer.framework.dao.BaseDao;
@@ -27,12 +24,12 @@ public class QuestionService implements IService {
 		// 定义一个对象，因为context.createResult(result, "success",
 		// "jsps/questionSurvey");只可以传个对象出去
 		QuestionResult result=new QuestionResult();
-		List<Object> questionlist = baseDao.selectListBySqlId(
+		List<Questioninfo> questionlist = baseDao.selectListBySqlId(
 				"topcheer.selectQuestionList", null);
 		Map<String, Object> questionMap = new HashMap<String, Object>();
 		List<Questioninfo> resultList = new ArrayList<Questioninfo>();// 定义一个对象的集合
 		for (int i = 0; i < questionlist.size(); i++) {
-			Questioninfo questioninfo = (Questioninfo) questionlist.get(i);// 得到集合的每一行给对象
+			Questioninfo questioninfo = questionlist.get(i);// 得到集合的每一行给对象
 			if ("1".equals(questioninfo.getType())) {
 				if (questionMap.containsKey(questioninfo.getIssue_id())) {
 

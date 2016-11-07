@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="topcheer">
+	<select id="getLinkList" resultType="com.topcheer.test.dto.LinkInfo">
+		SELECT
+		id,
+		address,
+		tag_info
+		tagInfo,
+		note,
+		create_time timeString
+		FROM
+		link_info
+		ORDER BY create_time
+		desc
+	</select>
+	<select id="selectQuestionList" resultType="com.topcheer.STSService.dto.OptionInfo">
+		SELECT
+		ii.issue_id,
+		ii.type,
+		ii.content,
+		oi.option_id,
+		oi.content AS optionContent
+		FROM
+		questionnaire_info AS qi
+		LEFT JOIN questionnaire_issue AS qis ON qi.questionnaire_id =
+		qis.questionnaire_id
+		LEFT JOIN issue_info AS ii ON qis.issue_id = ii.issue_id
+		LEFT JOIN issue_option AS io ON ii.issue_id = io.issue_id
+		LEFT JOIN option_info AS oi ON io.option_id = oi.option_id
+		WHERE
+		qi.questionnaire_id = 1
+		ORDER BY
+		qis.sort,
+		io.sort
+	</select>
+	<select id="loginValidate" parameterType="String" resultType="com.topcheer.STSService.dto.UserInfo">
+		SELECT
+			user_name userName,
+			pass_word passWord
+		FROM
+			user_info
+		WHERE
+			user_name = #{string}
+	</select>
+</mapper>

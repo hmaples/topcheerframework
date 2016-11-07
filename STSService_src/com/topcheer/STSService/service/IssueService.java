@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.swing.text.html.Option;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.topcheer.STSService.dto.IssueInfo;
 import com.topcheer.STSService.dto.OptionInfo;
 import com.topcheer.STSService.dto.Questioninfo;
@@ -22,11 +18,11 @@ public class IssueService implements IService {
 
 	public void doBusiness(ApplicationContext context) throws Exception {
 		// TODO Auto-generated method stub
-		List<Object> questionList = baseDao.selectListBySqlId(
+		List<Questioninfo> questionList = baseDao.selectListBySqlId(
 				"topcheer.selectQuestionList", null);
 		Map<String, Object> questionMap = new HashMap<String, Object>();
 		for (int i = 0; i < questionList.size(); i++) {
-			Questioninfo questioninfo = (Questioninfo) questionList.get(i);
+			Questioninfo questioninfo = questionList.get(i);
 			IssueInfo issueInfo = new IssueInfo();
 			issueInfo.setIssueId(questioninfo.getIssue_id());
 			issueInfo.setContent(questioninfo.getContent());
