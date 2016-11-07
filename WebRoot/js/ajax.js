@@ -3,7 +3,9 @@ function queryUser() {
 	$.ajax( {
 		url : "commonAjax",
 		data : {
-			actionNum : 'ajaxQuery'
+			actionNum : 'ajaxQuery',
+			userName : 'hmaple',
+			passWord : 'hmaple'
 		},
 		success : function(result) {
 			alert(result.status);
