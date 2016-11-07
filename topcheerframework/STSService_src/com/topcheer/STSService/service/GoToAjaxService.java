@@ -1,9 +1,9 @@
-package com.topcheer.test.service;
+package com.topcheer.STSService.service;
 
 import org.springframework.stereotype.Service;
-
 import com.topcheer.framework.service.BaseService;
-@Service
+
+@Service("gotoAjax")
 public class GoToAjaxService extends BaseService{
 
 	@Override
