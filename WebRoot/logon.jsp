@@ -20,6 +20,11 @@ function load(){
 		用户名：<input type="text" name="userName"><br />
 		密     码：<input type="password" name="passWord">
 		<input type="hidden" name="actionNum" value="loginService">
+		<input type="hidden" name="id" value="1">
+		<input type="hidden" name="inte" value="1">
+		<input type="hidden" name="date" value="2016-11-11">
+		<input type="hidden" name="lon" value="1">
+		<input type="hidden" name="lonn" value="1">
 		<input type="submit" value="登录">
 	</form>
 </body>

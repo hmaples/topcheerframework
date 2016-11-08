@@ -1,6 +1,8 @@
 package com.topcheer.framework.dto;
 
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
@@ -59,6 +61,8 @@ public class ApplicationContext {
 	@SuppressWarnings("unchecked")
 	public <T extends BaseDto> T getPara(Class<? extends BaseDto> c) {
 		try {
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			BaseDto dto = c.newInstance();
 			Field[] fs = c.getDeclaredFields();
 			for (Field f : fs) {
@@ -68,7 +72,42 @@ public class ApplicationContext {
 					String[] values = request.getParameterValues(fNmae);
 					f.setAccessible(true);
 					if (values.length == 1) {
-						f.set(dto, values[0]);
+						if (f.getGenericType().toString().equals(
+								"class java.lang.String")) {
+							f.set(dto, values[0]);
+						} else if (f.getGenericType().toString().equals(
+								"class java.lang.Integer")) {
+							f.set(dto, new Integer(Integer.parseInt(values[0])));
+						} else if (f.getGenericType().toString().equals(
+								"int")) {
+							f.set(dto, Integer.parseInt(values[0]));
+						} else if (f.getGenericType().toString().equals(
+								"double")) {
+							f.set(dto, Double.parseDouble(values[0]));
+						} else if (f.getGenericType().toString().equals(
+								"class java.lang.Double")) {
+							f.set(dto, new Double(Double.parseDouble(values[0])));
+						} else if (f.getGenericType().toString().equals(
+								"class java.lang.Boolean")) {
+							f.set(dto, Boolean.parseBoolean(values[0]));
+						} else if (f.getGenericType().toString().equals(
+								"class java.util.Date")) {
+							if(values[0].length()==10){
+								f.set(dto, df.parse(values[0]));
+							}
+							else{
+								f.set(dto, sdf.parse(values[0]));
+							}
+						} else if (f.getGenericType().toString().equals(
+								"class java.lang.Short")) {
+							f.set(dto, Short.parseShort(values[0]));
+						} else if (f.getGenericType().toString().equals(
+								"long")) {
+							f.set(dto, Long.parseLong(values[0]));
+						} else if (f.getGenericType().toString().equals(
+								"class java.lang.Long")) {
+							f.set(dto, new Long(Long.parseLong(values[0])));
+						}
 					} else {
 						f.set(dto, values);
 					}
@@ -78,6 +117,8 @@ public class ApplicationContext {
 		} catch (InstantiationException e) {
 			return null;
 		} catch (IllegalAccessException e) {
+			return null;
+		} catch (Exception e) {
 			return null;
 		}
 	}
@@ -105,12 +146,12 @@ public class ApplicationContext {
 	/**
 	 * 获取map属性值
 	 * 
-	 * @return
-//	 */
-//	@SuppressWarnings("unchecked")
-//	public Map<String, String> getPara() {
-//		return request.getParameterMap();
-//	}
+	 * @return //
+	 */
+	// @SuppressWarnings("unchecked")
+	// public Map<String, String> getPara() {
+	// return request.getParameterMap();
+	// }
 
 	/**
 	 * 创建共同结果对象
@@ -147,7 +188,7 @@ public class ApplicationContext {
 		}
 		this.modelAndView = modelAndView;
 	}
-	
+
 	/**
 	 * 创建共同结果对象
 	 * 
@@ -156,7 +197,7 @@ public class ApplicationContext {
 	 * @param result
 	 * @param nextPage
 	 */
-	public void createMapResult(Map<String,Object> model, String result,
+	public void createMapResult(Map<String, Object> model, String result,
 			String nextPage) {
 		ModelAndView modelAndView = new ModelAndView();
 		// 如果系统内部执行正确
