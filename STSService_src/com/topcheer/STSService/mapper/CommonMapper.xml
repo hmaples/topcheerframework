@@ -14,7 +14,7 @@
 		ORDER BY create_time
 		desc
 	</select>
-	<select id="selectQuestionList" resultType="com.topcheer.STSService.dto.OptionInfo">
+	<select id="selectQuestionList" resultType="com.topcheer.STSService.dto.Questioninfo">
 		SELECT
 		ii.issue_id,
 		ii.type,
@@ -43,4 +43,8 @@
 		WHERE
 			user_name = #{string}
 	</select>
+	<insert id="insertAnswer" parameterType="com.topcheer.STSService.dto.AnswerInsert">
+		insert into answer_info(research_id,issue_id,issue_answer) values(#{research_id},#{issue_id},#{issue_answer})
+	</insert>
+	
 </mapper>
