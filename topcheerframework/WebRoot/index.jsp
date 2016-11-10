@@ -38,7 +38,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</form>
   <!-- 问卷调查 -->
   	<form action="commonAction"  method="post">
-  		<input type="hidden" name="actionNum" value = "gotoQuestionSurvey">
+  		<input type="hidden" name="actionNum" value = "questionSubmitService">
   		<input type="submit" value="点击去问卷调查页面">
   	</form>
   	

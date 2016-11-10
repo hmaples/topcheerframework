@@ -23,7 +23,6 @@ function judge() {
 			} else {
 				checkValue = checkValue + "," + checkValueTemp;
 			}
-
 		}
 	}
 	for (k = 0; k < $('#MyForm').find("textarea").length; k++) {
@@ -34,7 +33,7 @@ function judge() {
 			textValue = textValue + "," + textValueTemp;
 		}
 	}
-	question_answer=radioValue+checkValue+textValue;
+	//question_answer=radioValue+checkValue+textValue;
 	//alert(question_answer);
 	$('#radioValue').attr("value",radioValue);
 	$('#checkValue').attr("value",checkValue);
