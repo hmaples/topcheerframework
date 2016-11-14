@@ -67,19 +67,24 @@ public class QuestionAnswerService extends BaseService {
 			answerOptionList.add(answerOption);
 		}
 		result.setResultList(answerOptionList);
+		
+		//将结果保存到Map中
 		Map<String, Object> resultMap=new HashMap<String, Object>();
+		String checkValue=null;
 		for (int h = 0; h < result.getResultList().size(); h++) {
 			String mapKey=result.getResultList().get(h).getIssueId();
 			String mapValue=result.getResultList().get(h).getOptionId();
+			//多选题答案提交字符串拼接
 			if (resultMap.containsKey(mapKey)) {
-				mapValue=mapValue+","+result.getResultList().get(h-1).getOptionId();
-				resultMap.put(mapKey, mapValue);
+				if (checkValue==null) {
+					checkValue=result.getResultList().get(h-1).getOptionId()+","+mapValue;
+				}else {
+					checkValue=checkValue+","+mapValue;
+				}
+				resultMap.put(mapKey, checkValue);
 			}else {
 				resultMap.put(mapKey, mapValue);
 			}	
-//			System.out.println("题号:"
-//					+ result.getResultList().get(h).getIssueId() + ";选项:"
-//					+ result.getResultList().get(h).getOptionId());
 		}
 		
 		//问卷提交数据插入
