@@ -11,7 +11,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>My JSP 'ResultTest.jsp' starting page</title>
+<title>问卷一调查结果</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	<h2 align="center">调查问卷结果</h2>
+	<h2 align="center">问卷调查结果</h2>
 	<table  align="center" width="800">
 		
 		<tr>

@@ -11,7 +11,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>My JSP 'Test2.jsp' starting page</title>
+<title>调查问卷一</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -37,27 +37,29 @@
 				<td align="center">依据</td>
 			</tr>
 			<tr>
-				<td align="center" width=100>one</td>
-				<td align="center" width=300>你认为one的人格魅力是？<br /> 
-				<input type="radio" name="score01" value="#">9 
-				<input type="radio" name="score01" value="#">8
-				<input type="radio" name="score01" value="#">7 
-				<input type="radio" name="score01" value="#">6 
+				<td align="center" width=100>金晓钰</td>
+				<td align="center" width=300> 
+				<input type="radio" name="score01" value="#">5 
+				<input type="radio" name="score01" value="#">4
+				<input type="radio" name="score01" value="#">3
+				<input type="radio" name="score01" value="#">2
 				</td>
 				<td align="center"><textarea id="testarea01" rows="5" cols="70"
 						name="evaluate01"></textarea></td>
 			</tr>
 			<tr>
-				<td align="center" width=100>two</td>
-				<td align="center" width=300>你认为two的人格魅力是？<br /> <input
-					type="radio" name="score02" value="#">9 <input type="radio"
-					name="score02" value="#">7 <input type="radio"
-					name="score02" value="#">5 <input type="radio"
-					name="score02" value="#">3
+				<td align="center" width=100>夏坤</td>
+				<td align="center" width=300> <input
+					type="radio" name="score02" value="#">5 <input type="radio"
+					name="score02" value="#">4 <input type="radio"
+					name="score02" value="#">3 <input type="radio"
+					name="score02" value="#">2
 				</td>
 				<td align="center"><textarea rows="5" cols="70"
 						name="evaluate02"></textarea></td>
 			</tr>
+			<tr><td colspan="3"><h5>问卷说明：选择评分时则必须在文本框输入评分依据、、、
+					</h5></td></tr>
 			<tr>
 				<td colspan="3" align="center"><input type="reset" value="重置">
 					<input type="button" onclick="test1()" value="提交"></td>
