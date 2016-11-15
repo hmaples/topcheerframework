@@ -36,8 +36,8 @@
 			<td align="center" onclick="show(4)">任期不足管理人员考评结果表（司龄不足）</td>
 		</tr>
 	</table>
-	<div id="result1" name="resultDiv"
-		style="width:800px;height:800px;margin: auto;">
+	<div id="result1" name="resultDiv" 
+		style="position:absolute; z-index:1;margin-left:250px; width:800px;display:block">
 		<table border=1 align="center" width="800">
 			<tr>
 				<td align="center">部门</td>
@@ -48,52 +48,189 @@
 			<tr>
 				<td rowspan="8">交付三部</td>
 				<td rowspan="4">金</td>
-				<td>1</td>
-				<td>1</td>
+				<td>5</td>
+				<td  align="center" onclick="showDetail(1)">2</td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>1</td>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">2</td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>1</td>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>1</td>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
 			</tr>
 			<tr>
 				<td rowspan="4">夏</td>
-				<td>1</td>
-				<td>1</td>
+				<td>5</td>
+				<td align="center" onclick="showDetail(1)">2</td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>1</td>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">1</td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>1</td>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>1</td>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
 			</tr>
 		</table>
 	</div>
 	<div id="result2" name="resultDiv"
-		style="width:800px;background-color:yellow;height:800px;margin: auto;display:none">
+	
+		style="position:absolute; z-index:1;margin-left:250px; width:800px;background-color:yellow;display:none">
+		<table border=1 align="center" width="800">
+			<tr>
+				<td align="center">部门</td>
+				<td align="center">姓名</td>
+				<td align="center">分数</td>
+				<td align="center">人数</td>
+			</tr>
+			<tr>
+				<td rowspan="8">交付三部</td>
+				<td rowspan="4">金</td>
+				<td>5</td>
+				<td  align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td rowspan="4">夏</td>
+				<td>5</td>
+				<td align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">1</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+		</table>
 	</div>
 	<div id="result3" name="resultDiv"
-		style="width:800px;background-color:green;height:800px;margin: auto;display:none">
+		style="position:absolute; z-index:1;margin-left:250px;width:800px;background-color:green;display:none">
+		<table border=1 align="center" width="800">
+						<tr>
+				<td align="center">部门</td>
+				<td align="center">姓名</td>
+				<td align="center">分数</td>
+				<td align="center">人数</td>
+			</tr>
+			<tr>
+				<td rowspan="8">交付三部</td>
+				<td rowspan="4">金</td>
+				<td>5</td>
+				<td  align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td rowspan="4">夏</td>
+				<td>5</td>
+				<td align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">1</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+		</table>
 	</div>
 	<div id="result4" name="resultDiv"
-		style="width:800px;background-color:gray;height:800px;margin: auto;display:none">
+		style="position:absolute; z-index:1;margin-left:250px;width:800px;background-color:gray;display:none">
+		<table border=1 align="center" width="800">
+						<tr>
+				<td align="center">部门</td>
+				<td align="center">姓名</td>
+				<td align="center">分数</td>
+				<td align="center">人数</td>
+			</tr>
+			<tr>
+				<td rowspan="8">交付三部</td>
+				<td rowspan="4">金</td>
+				<td>5</td>
+				<td  align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td rowspan="4">夏</td>
+				<td>5</td>
+				<td align="center" onclick="showDetail(1)">2</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td align="center" onclick="showDetail(1)">1</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td align="center" onclick="showDetail(1)">0</td>
+			</tr>
+		</table>
 	</div>
 	<!-- 问卷结果详情 -->
-	<div id="result4" name="resultDiv"
-		style="width:800px;background-color:gray;height:800px;margin: auto;display:none">
+	<div id="resultDetail1" name="resultDiv" onclick="notShow(1)"
+		style="position:relative; z-index:2;background-color:red; width:600px;margin:auto;display:none">
+		<h4 align="center">评分依据</h4>
+		z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br />
+		z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br />
+		z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br />
+		z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br />
+		z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br />
+		z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。<br />
 	</div>
 	
 </body>
