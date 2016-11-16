@@ -2,13 +2,11 @@ package com.topcheer.framework.dto;
 
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -263,6 +261,10 @@ public class ApplicationContext {
 	 */
 	public ExcelVo getExcelVo() {
 		return excelVo;
+	}
+
+	public HttpSession getSession() {
+		return session;
 	}
 
 }
