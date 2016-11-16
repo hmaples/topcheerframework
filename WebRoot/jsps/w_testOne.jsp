@@ -29,6 +29,7 @@
 
 <body>
 	<h2 align="center">调查问卷一</h2>
+	<%=session.getAttribute("staffId") %>
 	<form action="#" id="test1">
 		<table border=1 align="center" width=800>
 			<tr>
