@@ -66,7 +66,13 @@ public class ApplicationContext {
 			for (Field f : fs) {
 				String fNmae = f.getName();
 				System.out.println(f.getType().getName());
-				if (request.getParameter(fNmae) != null) {
+				// 如果是数组
+				if(request.getParameterValues(fNmae+"[]")!=null){
+					String[] values = request.getParameterValues(fNmae+"[]");
+					f.setAccessible(true);
+					f.set(dto, values);
+				}
+				else if (request.getParameter(fNmae) != null) {
 					String[] values = request.getParameterValues(fNmae);
 					f.setAccessible(true);
 					if (values.length == 1) {
