@@ -46,5 +46,12 @@
 	<insert id="insertAnswer" parameterType="com.topcheer.STSService.dto.AnswerInsert">
 		insert into answer_info(research_id,issue_id,issue_answer) values(#{research_id},#{issue_id},#{issue_answer})
 	</insert>
-	
+	<select id="w_staffLogin" parameterType="Integer" resultType="com.topcheer.STSService.dto.W_StaffInfo">
+		SELECT
+	id AS number,
+	user_name AS userName
+FROM
+	staff_info WHERE
+			id = #{Integer}
+	</select>
 </mapper>
