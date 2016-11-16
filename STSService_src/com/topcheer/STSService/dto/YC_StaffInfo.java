@@ -2,7 +2,7 @@ package com.topcheer.STSService.dto;
 
 import com.topcheer.framework.dto.BaseDto;
 
-public class StaffInfo  extends BaseDto{
+public class YC_StaffInfo  extends BaseDto{
 	private String queryUserinfo_loginAccount;
 	private String loginAccount;
 	private String userCode;

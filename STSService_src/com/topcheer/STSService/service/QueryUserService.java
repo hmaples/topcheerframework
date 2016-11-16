@@ -3,7 +3,7 @@ package com.topcheer.STSService.service;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.topcheer.STSService.dto.StaffInfo;
+import com.topcheer.STSService.dto.YC_StaffInfo;
 import com.topcheer.framework.service.BaseService;
 
 public class QueryUserService extends BaseService{
@@ -14,7 +14,7 @@ public class QueryUserService extends BaseService{
 		System.out.println("成功进入QueryUserService");
 		Map<String, Object> map = new HashMap<String, Object>();
 
-		StaffInfo userinfo = context.getPara(StaffInfo.class);
+		YC_StaffInfo userinfo = context.getPara(YC_StaffInfo.class);
 		System.out.println(userinfo.getQueryUserinfo_loginAccount());
 		if(userinfo.getQueryUserinfo_loginAccount().equals("A001")){
 			userinfo.setQueryUserinfo_loginAccount("A001");

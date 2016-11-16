@@ -54,4 +54,31 @@ FROM
 	staff_info WHERE
 			id = #{Integer}
 	</select>
+		<!--叶超的sql begin-->
+	<select id="getQuestionInfoList" resultType="com.topcheer.STSService.dto.YC_QuestionInfo">
+		SELECT
+		q2.questionnaire_id,q2.issue_id,i1.content,i1.type
+		FROM
+		questionnaire_info q1
+		LEFT JOIN questionnaire_issue q2 on
+		q1.questionnaire_id = q2.questionnaire_id
+		LEFT JOIN issue_info i1 on
+		q2.issue_id = i1.issue_id
+		WHERE q1.questionnaire_id = 1 ORDER BY
+		q2.questionnaire_id,q2.sort
+	</select>
+
+	<select id="getOptionInfoList" resultType="com.topcheer.STSService.dto.YC_OptionInfo">
+		SELECT
+		i1.issue_id,i1.sort,o1.content FROM issue_option i1
+		LEFT JOIN
+		option_info o1 ON i1.option_id = o1.option_id
+		ORDER BY
+		i1.issue_id,i1.sort
+	</select>
+	<select id="insertSanshaoAnswer" parameterType="com.topcheer.STSService.dto.YC_AnswerInfo">
+		INSERT INTO
+		answer_info (research_id,issue_id,issue_answer) VALUES(#{research_id},#{issue_id},#{issue_answer})
+	</select>
+	<!--叶超的sql end-->
 </mapper>
