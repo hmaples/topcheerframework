@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+body{
+background-color:#E6EAE9; 
+
+ }
+ caption{
+
+         text-align:center;
+
+         padding-bottom:10px;
+         font:14px/120% Arial, Helvetica, sans-serif
+
+         }
+.issue{
+  
+  
+ margin:0 auto;
+  
+  left:150px;
+       
+}/*调用class用. 调用id用#*/
+table.detaillist {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+    
+}
+table.detaillist th {
+    background:#b5cfd2 url('../img/cell-blue.jpg');
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #999999;
+}
+table.detaillist td {
+    background:#dcddc0 url('../img/cell-grey.jpg');
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #999999;
+    
