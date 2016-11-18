@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+	table{border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;background:#C1D9E8;}
+    th,td{border-right:1px solid #888;border-bottom:1px solid #888;padding:5px 15px;hight:3px;}
+    tr:hover{background-color:#06F;}
+	.position1{
+	width: 855px;
+	left: 300px;
+	}
+</style>
+<script type="text/javascript">
+
+
+
+	function doCheckAll(checkNode){
+		var items = document.getElementsByName("staffInfo");
+		for(var i = 0 ; i<items.length ; i++){
+			items[i].checked = checkNode.checked;
+		}
+	}
+	
+	/*
+	function doDelete(){
+		var deleteItems = document.getElementsByName("staffInfo");
+		for(var i = 0 ; i<deleteItems.length ; i++){
+			if(deleteItems[i].checked){
+				var inputNode = document.getElementsByName("staffInfo")[i];
+				var trNode = inputNode.parentNode.parentNode;
+				var tbodyNode = document.getElementsByTagName("tbody")[0];
+				tbodyNode.removeChild(trNode);
+			}	
+		}
+	}
+	*/
+
+	
+	function doAlter(){
+			var trNode = document.createElement("tr");
+			var tdNode1 =  document.createElement("td");
+			var tdNode2 =  document.createElement("td");
+			var tdNode3 =  document.createElement("td");
+			var tdNode4 =  document.createElement("td");
+			var tdNode5 =  document.createElement("td");
+			var tdNode6 =  document.createElement("td");
+			var tdNode7 =  document.createElement("td");
+			var tdNode8 =  document.createElement("td");
+			var tdNode9 =  document.createElement("td");
+			var tdNode10 =  document.createElement("td");
+			var inputNode = document.createElement("input");
+			inputNode.setAttribute("type","checkbox");
+			inputNode.setAttribute("name","staffInfo");
+			//没有加value
+			tdNode1.appendChild(inputNode);
+			trNode.appendChild(tdNode1);
+			trNode.appendChild(tdNode2);
+			trNode.appendChild(tdNode3);
+			trNode.appendChild(tdNode4);
+			trNode.appendChild(tdNode5);
+			trNode.appendChild(tdNode6);
+			trNode.appendChild(tdNode7);
+			trNode.appendChild(tdNode8);
+			trNode.appendChild(tdNode9);
+			trNode.appendChild(tdNode10);
+			var tbodyNode = document.getElementsByTagName("TBODY")[0];
+			tbodyNode.appendChild(trNode);
+	}
+</script>
+<title>员工管理表</title>
+</head>
+<body>
+	<h2 align="center">员工管理表</h2>
+	<div align="center">
+		<form action="commonAction" method="post" id="StaffInfoForm" >
+			<div align="left"  id="staffInfo" class="position1"> 
+			<input type="button" value="增加" name="addInfo" onclick="doAlter()"/>
+			<input type="button" value="修改" name="alterInfo"/>
+			<!-- <input type="button" value="删除" name="deleteInfo" onclick="doDelete()"/> -->
+			<input type="text" name="query" style="width:60px"/><input type="button" value="查询" name="query"/><br/><br/>
+				<table border="1px" align="center">
+					<tr>
+						<td><input type="checkbox" name="selectAll" value="1" onclick="doCheckAll(this)"/></td>
+						<td>id</td>
+						<td>姓名</td>
+						<td>部门</td>
+						<td>职位</td>
+						<td>所在项目</td>
+						<td>任命方式</td>
+						<td>入职时间</td>
+						<td>离职时间</td>
+						<td>备注</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="1"/></td>
+						<td>001</td>
+						<td>金老板</td>
+						<td>交付三部</td>
+						<td>项目经理</td>
+						<td>交行</td>
+						<td>公司任命</td>
+						<td>2008-9-9</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="1"/></td>
+						<td>001</td>
+						<td>金老板</td>
+						<td>交付三部</td>
+						<td>项目经理</td>
+						<td>上海银行</td>
+						<td>公司任命</td>
+						<td>2008-9-9</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="2"/></td>
+						<td>002</td>
+						<td>夏昆</td>
+						<td>交付三部</td>
+						<td>项目经理</td>
+						<td>交行</td>
+						<td>公司任命</td>
+						<td>2008-10-12</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="3"/></td>
+						<td>003</td>
+						<td>叶超</td>
+						<td>交付三部</td>
+						<td>软件工程师</td>
+						<td>交行</td>
+						<td>公司任命</td>
+						<td>2008-9-9</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="4"/></td>
+						<td>004</td>
+						<td>王大伟</td>
+						<td>交付三部</td>
+						<td>实习生</td>
+						<td>交行</td>
+						<td>内部任命</td>
+						<td>2016-9-9</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="5"/></td>
+						<td>005</td>
+						<td>马QR</td>
+						<td>交付三部</td>
+						<td>实习生</td>
+						<td>交行</td>
+						<td>内部任命</td>
+						<td>2016-9-9</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="6"/></td>
+						<td>006</td>
+						<td>廖旭</td>
+						<td>交付三部</td>
+						<td>实习生</td>
+						<td>交行</td>
+						<td>内部任命</td>
+						<td>2016-9-9</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="staffInfo" value="7"/></td>
+						<td>007</td>
+						<td>成功</td>
+						<td>交付三部</td>
+						<td>实习生</td>
+						<td>交行</td>
+						<td>内部任命</td>
+						<td>2016-9-9</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table><br/><br/>
+				<input type="button" value="保存" name="save" >
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
