@@ -14,7 +14,8 @@
 		ORDER BY create_time
 		desc
 	</select>
-	<select id="selectQuestionList" resultType="com.topcheer.STSService.dto.Questioninfo">
+	<!-- 王伟的SQL -->
+	<select id="selectQuestionList" parameterType="Integer" resultType="com.topcheer.STSService.dto.Questioninfo">
 		SELECT
 		ii.issue_id,
 		ii.type,
@@ -29,11 +30,65 @@
 		LEFT JOIN issue_option AS io ON ii.issue_id = io.issue_id
 		LEFT JOIN option_info AS oi ON io.option_id = oi.option_id
 		WHERE
-		qi.questionnaire_id = 1
+		qi.questionnaire_id =#{Integer}
 		ORDER BY
 		qis.sort,
 		io.sort
 	</select>
+	<insert id="insertAnswer" parameterType="com.topcheer.STSService.dto.AnswerInsert">
+		insert into answer_info(research_id,issue_id,issue_answer) values(#{research_id},#{issue_id},#{issue_answer})
+	</insert>
+		<select id="w_staffLogin" parameterType="Integer" resultType="com.topcheer.STSService.dto.W_StaffInfo">
+		SELECT
+	id AS number,
+	user_name AS userName
+FROM
+	staff_info WHERE
+			id = #{Integer}
+	</select>
+		<select id="w_staffManager" parameterType="Integer" resultType="com.topcheer.STSService.dto.W_StaffManagerInfo">
+		SELECT
+	si.id sId,
+	si.user_name sName,
+	si.dep_name depName,
+	mi.post_name mpostName,
+	mi.manage_coverage mCoverage,
+	si.confirm_date scDate
+FROM
+	staff_info AS si,
+	manager_info AS mi
+	
+WHERE
+	si.id IN (
+		SELECT
+			mi.user_id
+		FROM
+			manager_info AS mi
+		WHERE
+			mi.manage_coverage = (
+				SELECT
+					si.dep_name
+				FROM
+					staff_info AS si,
+					staff_project_info AS spi
+				WHERE
+					si.id = spi.user_id
+				AND si.id =  #{Integer}
+			)
+		OR mi.manage_coverage IN (
+			SELECT
+				spi.project_name
+			FROM
+				staff_info AS si,
+				staff_project_info AS spi
+			WHERE
+				si.id = spi.user_id
+			AND si.id = #{Integer}
+		)
+		OR mi.manage_coverage = '开发交付中心'
+	)AND si.id=mi.user_id GROUP BY user_id
+	</select>
+	
 	<select id="loginValidate" parameterType="String" resultType="com.topcheer.STSService.dto.UserInfo">
 		SELECT
 			user_name userName,
@@ -42,17 +97,6 @@
 			user_info
 		WHERE
 			user_name = #{string}
-	</select>
-	<insert id="insertAnswer" parameterType="com.topcheer.STSService.dto.AnswerInsert">
-		insert into answer_info(research_id,issue_id,issue_answer) values(#{research_id},#{issue_id},#{issue_answer})
-	</insert>
-	<select id="w_staffLogin" parameterType="Integer" resultType="com.topcheer.STSService.dto.W_StaffInfo">
-		SELECT
-	id AS number,
-	user_name AS userName
-FROM
-	staff_info WHERE
-			id = #{Integer}
 	</select>
 		<!--叶超的sql begin-->
 	<select id="getQuestionInfoList" resultType="com.topcheer.STSService.dto.YC_QuestionInfo">

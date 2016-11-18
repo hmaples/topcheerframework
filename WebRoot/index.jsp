@@ -18,6 +18,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/topcheerframework/js/w_result.js"></script>
   </head>
   <body>
   	<form action="commonAction"  method="post">
@@ -39,7 +41,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!-- 问卷调查 -->
   	<form action="commonAction"  method="post">
   		<input type="hidden" name="actionNum" value = "questionSubmitService">
-  		<input type="submit" value="点击去问卷调查页面">
+  		<input type="hidden" name="questionnaireID" id="questionnaireID" value="3"> 
+	<input type="submit" value="去问卷调查" onclick="staffIdSelect()" />
   	</form>
   	
   </body>

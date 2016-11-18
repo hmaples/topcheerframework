@@ -20,14 +20,22 @@
 <!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/topcheerframework/js/w_result.js"></script>
 </head>
 
 <body>
-	<form action="jsps/w_testOne.jsp">
-		<input type="submit" value="问卷一" />
+	<form action="commonAction" method="post">
+	<input type="hidden" name="actionNum" value="staffManagerSelect" />
+	<input type="hidden" name="staffManager" id="staffID" value=<%=session.getAttribute("staffId")%>> 
+	<input type="hidden" name="questionnaireID" id="questionnaireID" value="3"> 
+	<input type="submit" value="问卷一" onclick="staffIdSelect()" />
 	</form>
-	<form action="jsps/w_testTwo.jsp">
-		<input type="submit" value="问卷二" />
+	<form action="commonAction" method="post">
+	<input type="hidden" name="actionNum" value="staffManagerSelect" />
+	<input type="hidden" name="staffManager" id="staffID" value=<%=session.getAttribute("staffId")%>> 
+	<input type="hidden" name="questionnaireID" id="questionnaireID" value="1"> 
+	<input type="submit" value="问卷二" onclick="staffIdSelect()" />
 	</form>
 	<form action="jsps/w_resultTestOne.jsp">
 		<input type="submit" value="问卷一结果统计" />

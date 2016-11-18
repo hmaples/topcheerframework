@@ -29,8 +29,10 @@ public class IssueService extends BaseService {
 	
 	public void doBusiness(ApplicationContext context) throws Exception {
 		// TODO Auto-generated method stub
+		String questionnaireID=context.getPara("questionnaireID");
+		Integer questionnaireid=Integer.parseInt(questionnaireID);	
 		List<Questioninfo> questionList = baseDao.selectListBySqlId(
-				"topcheer.selectQuestionList",null );
+				"topcheer.selectQuestionList",questionnaireid );
 		Map<String, Object> questionMap = new HashMap<String, Object>();
 		List<IssueInfo> issueList = new ArrayList<IssueInfo>();
 		IssueObject issueObject = new IssueObject();
