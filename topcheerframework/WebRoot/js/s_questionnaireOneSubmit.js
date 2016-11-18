@@ -4,16 +4,17 @@ function submitone() {
 		var temp = 'score' + (i + 1);
 		var t = "document.form1." + temp + ".length";
 		var text = 'textarea' + (i + 1);
+		var a = "document.form1." + text + ".value";
 
 		for (j = 0; j < eval(t); j++) {
 
 			var tx = "document.form1." + temp + "[" + j + "].checked";
 
-			if (eval(tx)) {
-				if (document.getElementById(text).value == '') {
+			if (eval(tx) && !eval(a)) {
+//				if (document.getElementById(text).value == '') {
 					alert("请输入依据");
 					return false;
-				}
+				
 			}
 		}
 	}
