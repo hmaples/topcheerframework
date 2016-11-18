@@ -27,12 +27,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   <body>
     <h2 align="center">天正员工考评问卷</h2>
-    <h3 align="right">
+<!--     <h3 align="right">
     交付三部:
     耿建锋<br/>
     <a href="logon.jsp">登出</a>
-    </h3>
-	<form action="#">
+    </h3> -->
+	<form name="form1" action="#">
 		<table border=1 align="center" width=900>
 			<tr>
 				<td align="center" width=400>部门</td>
