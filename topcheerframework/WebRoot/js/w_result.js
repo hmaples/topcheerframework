@@ -56,3 +56,13 @@ function staffSelect() {
 		}
 	});
 }
+function staffIdSelect() {
+	$.ajax({
+		url : "commonAjax",
+		data : {
+			actionNum : 'staffManagerSelect',
+			staffManager : document.getElementById("staffID").value,
+			questionnaireID : document.getElementById("questionnaireID").value,
+		},
+	});
+}

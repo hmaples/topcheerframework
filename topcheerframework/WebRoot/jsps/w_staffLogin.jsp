@@ -28,12 +28,11 @@
 <body>
 	<form action="commonAction" method="POST">
 		<div align="center">
-			编&nbsp;号：<input type="text" name="number" id="number1"><br /> 
-			用户名：<input id="staffName">
-			<input
-				type="hidden" name="actionNum" value="w_staffLogin"><input type="submit"
-				value="登录"><input type="button" onclick="staffSelect()"
-				value="查询">
+			编&nbsp;号：<input type="text" name="number" id="number1"><br />
+			用户名：<input id="staffName"> <input type="hidden"
+				name="actionNum" value="w_staffLogin"> <br /> <input
+				type="submit" value="登录"><input type="button"
+				onclick="staffSelect()" value="查询">
 		</div>
 	</form>
 </body>
