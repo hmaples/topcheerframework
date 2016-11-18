@@ -29,14 +29,14 @@ table.detaillist {
     
 }
 table.detaillist th {
-    background:#b5cfd2 url('../img/cell-blue.jpg');
+    background:#b5cfd2 url('../m_img/cell-blue.jpg');
     border-width: 1px;
     padding: 8px;
     border-style: solid;
     border-color: #999999;
 }
 table.detaillist td {
-    background:#dcddc0 url('../img/cell-grey.jpg');
+    background:#dcddc0 url('../m_img/cell-grey.jpg');
     border-width: 1px;
     padding: 8px;
     border-style: solid;
