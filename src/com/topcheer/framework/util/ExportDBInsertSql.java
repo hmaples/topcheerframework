@@ -1,4 +1,4 @@
-package com.topcheer.tools;
+package com.topcheer.framework.util;
 
 import java.io.BufferedWriter;
 import java.io.File;
