@@ -32,23 +32,19 @@
 	<h2 align="center">调查问卷一</h2>
 	<%=session.getAttribute("staffId")%>
 	<form action="#" id="test1">
-		<table border=1 align="center" width=800>
+		<table border=1 align="center" width=80%>
 			<tr>
 				<td align="center" width=100>姓名</td>
 				<td align="center">评分</td>
 				<td align="center">依据</td>
 			</tr>
 
-
-
-
 			<c:forEach var="staffManger" items="${listStaffManger}">
 				<tr>
-					<td align="center" width=100>${staffManger.sName}</td>
-					<td align="center" width=300>
+					<td align="center" width=20%>${staffManger.sName}<br />${staffManger.scDate}</td>
+					<td align="center" width=40%>
 					
-					<c:forEach var="issue"
-							items="${listIssue}">
+					<c:forEach var="issue" items="${listIssue}">
 							<c:set var="type" value="${issue.type}" />
 							<c:if test="${type==1}">
 								<c:forEach var="option" items="${issue.optionList}">
@@ -57,28 +53,13 @@
 										value="${option.option}">${option.option}
 								</c:forEach>
 							</c:if>
-							<br />
-							<!-- 		<c:if test="${type==2}">
-			${issue.content}<br />
-								<c:forEach var="option" items="${issue.optionList}">
-									<input type="checkbox" id="${issue.issueId}_${option.optionId}"
-										name="checkbox_${issue.issueId}" value="${option.option}">${option.option}
-			</c:forEach>
-							</c:if>
-							<br />
-							<c:if test="${type==3}">
-			${issue.content}<br />
-								<textarea rows="3" id="${issue.issueId}" cols="50"
-									name="textarea_${issue.issueId}"></textarea>
-							</c:if>
-							<br /> -->
 						</c:forEach></td>
-					<td align="center"><textarea id="testarea01" rows="5"
-							cols="70" name="evaluate01"></textarea></td>
+					<td align="center"><textarea id="${staffManger.sId}" rows="5"
+							cols="70" name="text_${staffManger.sId}"></textarea></td>
 				</tr>
 			</c:forEach>
 			<tr>
-				<td colspan="3"><h5>问卷说明：选择评分时则必须在文本框输入评分依据、、、</h5></td>
+				<td colspan="3">问卷说明：选择评分时则必须在文本框输入评分依据、、、</td>
 			</tr>
 			<tr>
 				<td colspan="3" align="center"><input type="reset" value="重置">
