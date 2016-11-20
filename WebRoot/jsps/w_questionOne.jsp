@@ -11,7 +11,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>My JSP 'Test2.jsp' starting page</title>
+<title>部门管理人员考评表</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -22,74 +22,82 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-<script type="text/javascript" src="/topcheerframework/js/w_testOne.js"></script>
-<script type="text/javascript" src="/topcheerframework/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/topcheerframework/js/w_issue.js"></script>
+<script type="text/javascript"
+	src="/topcheerframework/js/jquery-1.9.1.js"></script>
 
 </head>
 
 <body>
-	<h2 align="center">调查问卷一</h2>
-	<form action="jsps/questionOne.jsp" id="test1">
-		<table border=1 align="center" width=70%>
+	<h1 align="center">部门管理人员考评表</h1>
+	<form>
+		<table align="center" width=80%>
 			<tr>
-				<td align="center" width=20%>姓名</td>
-				<td align="center">评分</td>
-				<td align="center">依据</td>
+				<td colspan="3"><b>本问卷是匿名问卷,所以评分依据里面请不要提及部门、项目组、人名等可能泄密信息!</b>
+				</td>
+			</tr>
+		</table>
+		<table border=1 align="center" width=80%>
+			<tr height=40px>
+				<td align="center" width=15%><b>姓名</b></td>
+				<td align="center" width=30%><b>评分</b></td>
+				<td align="center"><b>依据</b></td>
 			</tr>
 			<tr>
-				<td align="center" width=20%>冯军</td>
-				<td align="center" width=30%>
-				<input type="radio" name="score01" value="#">5 
-				<input type="radio" name="score01" value="#">4
-				<input type="radio" name="score01" value="#">3 
-				<input type="radio" name="score01" value="#">2
-				<input type="radio" name="score01" value="#">1
-				</td>
-				<td align="center"><textarea id="testarea01" rows="5" cols="70"
+				<td align="center">冯军</td>
+				<td align="center"><input type="radio" name="score01"
+					value="#">5 <input type="radio" name="score01" value="#">4
+					<input type="radio" name="score01" value="#">3 <input
+					type="radio" name="score01" value="#">2 <input type="radio"
+					name="score01" value="#">1</td>
+				<td align="center"><textarea id="textarea01" style="width:100%;height:60px"
 						name="evaluate01"></textarea></td>
 			</tr>
 			<tr>
-				<td align="center" width=20%>耿建锋<br/>2016-01-01</td>
-				<td align="center" width=30%>
-				<input type="radio" name="score02" value="#">5 
-				<input type="radio" name="score02" value="#">4
-				<input type="radio" name="score02" value="#">3 
-				<input type="radio" name="score02" value="#">2
-				<input type="radio" name="score02" value="#">1
-				</td>
-				<td align="center"><textarea id="testarea01" rows="5" cols="70"
+				<td align="center">耿建锋</td>
+				<td align="center"><input type="radio" name="score02"
+					value="#">5 <input type="radio" name="score02" value="#">4
+					<input type="radio" name="score02" value="#">3 <input
+					type="radio" name="score02" value="#">2 <input type="radio"
+					name="score02" value="#">1</td>
+				<td align="center"><textarea id="textarea02" style="width:100%;height:60px"
 						name="evaluate01"></textarea></td>
+
 			</tr>
 			<tr>
-				<td align="center" width=20%>金晓钰<br/>2016-01-01</td>
-				<td align="center" width=30%>
-				<input type="radio" name="score03" value="#">5 
-				<input type="radio" name="score03" value="#">4
-				<input type="radio" name="score03" value="#">3 
-				<input type="radio" name="score03" value="#">2
-				<input type="radio" name="score03" value="#">1
-				</td>
-				<td align="center"><textarea id="testarea01" rows="5" cols="70"
+				<td align="center">金晓钰</td>
+				<td align="center"><input type="radio" name="score03"
+					value="#">5 <input type="radio" name="score03" value="#">4
+					<input type="radio" name="score03" value="#">3 <input
+					type="radio" name="score03" value="#">2 <input type="radio"
+					name="score03" value="#">1</td>
+				<td align="center"><textarea id="textarea03" style="width:100%;height:60px"
 						name="evaluate01"></textarea></td>
+
 			</tr>
 			<tr>
-				<td align="center" width=20%>夏昆<br/>2016-01-01</td>
-				<td align="center" width=30%>
-				<input type="radio" name="score04" value="#">5 
-				<input type="radio" name="score04" value="#">4
-				<input type="radio" name="score04" value="#">3 
-				<input type="radio" name="score04" value="#">2
-				<input type="radio" name="score04" value="#">1
-				</td>
-				<td align="center"><textarea id="testarea01" rows="5" cols="70"
+				<td align="center">夏昆</td>
+				<td align="center"><input type="radio" name="score04"
+					value="#">5 <input type="radio" name="score04" value="#">4
+					<input type="radio" name="score04" value="#">3 <input
+					type="radio" name="score04" value="#">2 <input type="radio"
+					name="score04" value="#">1</td>
+				<td align="center"><textarea id="textarea04" style="width:100%;height:60px"
 						name="evaluate01"></textarea></td>
+
 			</tr>
+
 			<tr>
-				<td colspan="3">问卷说明：选择评分时则必须在文本框输入评分依据、、、</td>
+				<td colspan="3" bgcolor="gainsboro"><b>问卷说明:</b>本问卷是对管理人员的一次考评,当您选择了给该管理人员打分，请在依据列进行填写评分依据，否则不能提交;<br />
+					<b>依据可以这样填写：</b>我在开发过程中遇到错误，能够及时指导；跟我做多次沟通，帮助我成长......</td>
 			</tr>
+
+		</table>
+		<table align="center" width=80%>
 			<tr>
-				<td colspan="3" align="center"><input type="reset" value="重置">
-					<input type="button" onclick="test1()" value="提交"></td>
+				<td colspan="3" align="center"><input type="reset" value="重置" onclick="resetTestOne()"
+					style="width:60; height:30"> <input type="button"
+					onclick="submitTestOne()" value="提交" style="width:60; height:30"></td>
 			</tr>
 		</table>
 	</form>
