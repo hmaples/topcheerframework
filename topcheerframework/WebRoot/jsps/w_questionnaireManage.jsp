@@ -31,27 +31,36 @@
 	<div id="result0"  name="resultDiv"
 		style="position:absolute; z-index:1;width:800px;margin-left:250px;display:block">
 		<table border=1 align="center" width=800>
-			<tr align="center">
+			<tr align="center" style="height:40px">
 				<td>问卷名称</td>
 				<td>备注</td>
+				<td>问卷详情</td>
 			</tr>
 			<tr align="center">
-				<td onclick="show(1)">问卷一</td>
+				<td >问卷一</td>
 				<td>投票问卷</td>
+				<td align="center"><input type="button" onclick="show(1)""
+					style="width:100%;height:30px" value="点击查看详情"></td>
 			</tr>
 			<tr align="center">
-				<td onclick="show(1)">问卷二</td>
-				<td>考评问卷</td>
-			</tr>
-			<tr align="center">
-				<td onclick="show(1)">问卷三</td>
+				<td >问卷二</td>
 				<td>投票问卷</td>
+				<td align="center"><input type="button" onclick="show(1)""
+					style="width:100%;height:30px" value="点击查看详情"></td>
+			</tr>
+			<<tr align="center">
+				<td >问卷三</td>
+				<td>投票问卷</td>
+				<td align="center"><input type="button" onclick="show(1)""
+					style="width:100%;height:30px" value="点击查看详情"></td>
 			</tr>
 			<tr align="center">
-				<td onclick="show(1)">问卷四</td>
+				<td >问卷四</td>
 				<td>投票问卷</td>
+				<td align="center"><input type="button" onclick="show(1)""
+					style="width:100%;height:30px" value="点击查看详情"></td>
 			</tr>
-			<tr><td colspan="2" align="center"><button onclick="show(3)">添加问卷</button></td></tr>
+			<tr><td colspan="3" align="center"><button><a href="<%=path%>/jsps/window_open.jsp">返回</a></button><button onclick="show(3)">添加问卷</button></td></tr>
 		</table>
 	</div>
 	
@@ -88,6 +97,7 @@
 			试卷名称：<input type="text">
 			备注：<input type="text">
 			<button onclick="noShow(3)">确定</button>
+			<button onclick="noShow(3)">返回</button>
 			<table border=1 align="center" width=800>
 			<tr><td></td><td>题目内容</td><td>题目类型</td></tr>
 			<tr><td><input type="checkbox" name="issue"></td><td>您的爱好是？</td><td>多选题</td></tr>
@@ -136,8 +146,7 @@
 			<tr><td><input type="checkbox" name="issue"></td><td>您的意见是？</td><td>问答题</td></tr>
 			<tr><td><input type="checkbox" name="issue"></td><td>您的爱好是？</td><td>多选题</td></tr>
 			<tr><td><input type="checkbox" name="issue"></td><td>您的性别是？</td><td>单选题</td></tr>
-			<tr><td><input type="checkbox" name="issue"></td><td>您的意见是？</td><td>问答题</td></tr>
-		
+			<tr><td><input type="checkbox" name="issue"></td><td>您的意见是？</td><td>问答题</td></tr>	
 		</table>
 	</div>
 </body>
