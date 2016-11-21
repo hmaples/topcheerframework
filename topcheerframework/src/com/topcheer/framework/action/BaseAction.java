@@ -30,7 +30,7 @@ public class BaseAction {
 	 */
 	@RequestMapping("commonAction")
 	public ModelAndView doAction(HttpServletRequest request,
-			HttpServletResponse responese, HttpSession session) throws Exception {
+			HttpServletResponse responese, HttpSession session,String userName) throws Exception {
 		String actionNum = request.getParameter("actionNum");
 		if (actionNum == null || "".equals(actionNum)) {
 			ModelAndView errorModel = new ModelAndView();
