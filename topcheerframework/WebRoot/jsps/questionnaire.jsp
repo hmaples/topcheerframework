@@ -18,19 +18,19 @@
 		<meta http-equiv="expires" content="0">
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="This is my page">
-		<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+		
+	<link rel="stylesheet" type="text/css" href="css/questionnaire.css">
+	
 
 	</head>
 
 	<body>
 		<div
-			style="width: 80%; margin-left: 10%; height: 4000px; position: absolute; z-index: 1">
+			class = "div-outside">
 			<!-- 调查问卷头 -->
 			<div
-				style="width: 70%; margin:0 auto;  position: relative; z-index: 5">
-				<h1 align="center">
+				class = "div-inside">
+				<h1 class = "h1">
 					上海天正员工满意度调查问卷
 				</h1>
 				<p>
@@ -45,8 +45,8 @@
 			</div>
 			<!--回答者信息 -->
 			<div
-				style="width: 70%; margin:0 auto; border-style:solid;border-width:1pt; border-color:#CDC9C9； position: relative; z-index: 5">
-				<h2 align="center">
+				class = "div-inside2" >
+				<h2 >
 					回答者信息
 				</h2>
 				<br />
@@ -384,10 +384,9 @@
 			</table>
 			</div><br/><br />
 			<!-- 最后一题 -->
-			<div
-				style="width: 70%; margin:0 auto;  position: relative; z-index: 5">
+			<div class = "lastquestion" >
 				<b>三、	为了您和公司更好的发展，您对公司有哪些期望和建议？</b><br /><br />
-				<textarea rows="10" cols="100"></textarea>
+				<textarea  class = "inpu" rows="10" cols="100"></textarea>
 				</div>
 		</div>
 	</body>
