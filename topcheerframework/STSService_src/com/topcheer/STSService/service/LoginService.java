@@ -18,6 +18,10 @@ public class LoginService extends BaseService {
 	public void doBusiness(ApplicationContext context) throws Exception {
 		Map<String, Object> map = new HashMap<String, Object>();
 		UserInfo userInfo = context.getPara(UserInfo.class);
+		baseDao.insertBySqlId("trans.insertUserInfo", userInfo);
+		userInfo.setUserName("hhmaple");
+		baseDao.insertBySqlId("trans.insertUserInfo", userInfo);
+		int i = 1/0;
 		UserInfo user = baseDao.selectObjectBySqlId("topcheer.loginValidate",
 				userInfo.getUserName());
 		if (user != null && userInfo.getPassWord().equals(user.getPassWord())) {
