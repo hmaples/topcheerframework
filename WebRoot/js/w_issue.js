@@ -1,7 +1,7 @@
 function openHint() {
 	alert("本问卷是匿名问卷,所以评分依据里面请不要提及部门、项目组、人名等可能泄密信息!");
 }
-//问卷一提交判断依据
+//静态页面问卷一提交判断依据
 function submitTestOne() {
 	for ( var i = 0; i < document.getElementsByName('score01').length; i++) {
 		if (document.getElementsByName('score01')[i].checked) {
@@ -32,6 +32,23 @@ function submitTestOne() {
 		}
 	}
 }
+
+
+//问卷一提交检测
+
+//function submitTestOne() {
+//	for (var i = 0; i < $('#testOne').find("input[type='radio']").length; i++) {
+//		if ($('#testOne').find("input[type='radio']")[i].checked) {
+//			var radioId = $('#testOne').find("input[type='radio']")[i].id;
+//			for (var k = 0; k < $('#testOne').find("textarea").length; k++) {
+//				var textId = $('#testOne').find("textarea")[k].id;
+//				if(radioId==textId){
+//					if($('#testOne').find("textarea")[k].value==null&&+$('#testOne').find("textarea")[k].value=='')
+//						
+//				}
+//			
+//	}
+//}
 
 //问卷一重置按钮确认
 function resetTestOne(){
