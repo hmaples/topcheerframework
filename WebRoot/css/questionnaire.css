@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+body{
+background-color:#F2F7F9;
+}
+.inpu{position:relative;}
+.lastquestion{width: 70%;
+				margin:0 auto;
+				position: relative;
+				z-index: 5;
+				line-height:20px;
+		      }
+.inpu textarea{border:none;
+				text-indent:75px;
+				line-height:20px;
+				repeat;
+				overflow:auto;
+				color:#E6EAE9;}
+.h1 .h2{
+    text-align:center;
+    font-style:DFKai-SB;
+}
+.div-outside{
+         width: 80%;
+         height: 4000px;
+          z-index: 1;
+          background-color:#F2F7F9;
+          padding:20px;
+         margin: 0 auto;    
+		    border: 6px solid #8FB5C1;
+		    -moz-border-radius:15px;
+		    -webkit-border-radius:15px;
+		    border-radius:15px;
+}
+.div-inside{
+            width: 70%;
+            margin:0 auto; 
+            position: relative;
+            z-index: 5;
+
+}
+.div-inside2{
+width: 70%;
+margin:0 auto;
+
+border-width:1pt;
+position: relative;
+ z-index: 5;
+}
+.div-inside p{
+font-weight:bold;
+    color:#CCC;  
+}
