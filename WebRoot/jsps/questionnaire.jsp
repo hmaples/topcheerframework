@@ -102,7 +102,7 @@
 				<br />
 				<b>5.目前就职的部门：</b>
 				<br />
-				<ul>
+				<ul >
 					<li>
 						天正信息<br /><br />
 						<input type="radio" id="1_5_21" name="depart">行业客户部
@@ -204,10 +204,10 @@
 				
 				<!-- 一 -->
 				<tr>
-					<td rowspan="5" width=4%>对工作本身的满意度</td>
-					<td width=50%>1.	我清楚自身的工作职责与任务。</td>
-					<td width="5%"><input type = "text" class = "select" /></td>
-					<td width = 40% height = 100%><textarea class = "textarea1"></textarea></td>
+					<td rowspan="5" width=4% class = "tdd">对工作本身的满意度</td>
+					<td width=50% class = "tdd">1.	我清楚自身的工作职责与任务。</td>
+					<td width="5%" class = "tdd"><input type = "text" class = "select" /></td>
+					<td width = 40% class = "tdd"><textarea class = "textarea1"></textarea></td>
 				</tr> 
 				<tr>
 					
@@ -390,7 +390,7 @@
 			</table>
 			</div><br/><br />
 			<!-- 最后一题 -->
-			<div class = "lastquestion"style = "font-family:Microsoft YaHei;" >
+			<div class = "lastquestion" style = "font-family:Microsoft YaHei;" >
 				<b>三、	为了您和公司更好的发展，您对公司有哪些期望和建议？</b><br /><br />
 				<textarea  class = "inpu"  id="5"></textarea>
 				</div>
