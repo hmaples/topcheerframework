@@ -20,7 +20,8 @@
 		<meta http-equiv="description" content="This is my page">
 		
 	<link rel="stylesheet" type="text/css" href="css/questionnaire.css">
-	
+	<script src="/topcheerframework/js/jquery-1.9.1.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/topcheerframework/js/surveySubmit.js"></script>
 
 	</head>
 
@@ -44,6 +45,9 @@
 				</p>
 			</div>
 			<!--回答者信息 -->
+			<!-- 提交内容 -->
+			<form id="questionnaire" action="commonAction" method="post">
+				<input type="hidden" name="actionNum" value="" />
 			<div
 				class = "div-inside2" style = "font-family:MingLiU;" >
 				<h2  style = "font-family:STHeiti Light">
@@ -52,47 +56,47 @@
 				<br />
 				<b>1.年龄：</b>
 				<br /><br />
-				<input type="radio" name="age">
+				<input type="radio" name="age" id="1" value="1_6">
 				25岁以下
-				<input type="radio" name="age">
+				<input type="radio" name="age" id="1" value="1_7">
 				25(含)-30岁
-				<input type="radio" name="age">
+				<input type="radio" name="age" id="1" value="1_8">
 				30(含)-40岁
-				<input type="radio" name="age">
+				<input type="radio" name="age" id="1" value="1_9">
 				40(含)岁以上
 				<br />
 				<br />
 				<b>2.性别：</b>
 				<br /><br />
-				<input type="radio" name="sex">
+				<input type="radio" name="sex" id="1" value="2_10">
 				男
-				<input type="radio" name="sex">
+				<input type="radio" name="sex" id="1" value="2_11">
 				女
 				<br />
 				<br />
 				<b>3.学历层次：</b>
 				<br /><br />
-				<input type="radio" name="education">
+				<input type="radio" id="1" name="education" value="3_12">
 				高中及以下（含职高）
-				<input type="radio" name="education">
+				<input type="radio" id="1" name="education" value="3_13">
 				大专
-				<input type="radio" name="education">
+				<input type="radio" id="1" name="education" value="3_14">
 				本科
-				<input type="radio" name="education">
+				<input type="radio" id="1" name="education" value="3_15">
 				硕士及以上
 				<br />
 				<br />
 				<b>4.为本公司服务的年限：</b>
 				<br /><br />
-				<input type="radio" name="year">
+				<input type="radio" id="1" name="year" value="4_16">
 				不足一年
-				<input type="radio" name="year">
+				<input type="radio" id="1" name="year" value="4_17">
 				满一年不足三年
-				<input type="radio" name="year">
+				<input type="radio" id="1" name="year" value="4_18">
 				满三年不足五年
-				<input type="radio" name="year">
+				<input type="radio" id="1" name="year" value="4_19">
 				满五年不足八年
-				<input type="radio" name="year">
+				<input type="radio" id="1" name="year" value="4_20">
 				八年以上
 				<br />
 				<br />
@@ -101,26 +105,26 @@
 				<ul>
 					<li>
 						天正信息<br /><br />
-						<input type="radio" name="tcmessage">行业客户部
-						<input type="radio" name="tcmessage">大客户部
-						<input type="radio" name="tcmessage">解决方案部<br />
-						<input type="radio" name="tcmessage">技术支持中心
-						<input type="radio" name="tcmessage">行政人事部
-						<input type="radio" name="tcmessage">资产财务部
-					</li>
+						<input type="radio" id="1" name="tcmessage" value="5_21">行业客户部
+						<input type="radio" id="1" name="tcmessage" value="5_22">大客户部
+						<input type="radio" id="1" name="tcmessage" value="5_23">解决方案部<br /><br />
+						<input type="radio" id="1" name="tcmessage" value="5_24">技术支持中心
+						<input type="radio" id="1" name="tcmessage" value="5_25">行政人事部
+						<input type="radio" id="1" name="tcmessage" value="5_26">资产财务部
+					</li><br />
 					<li>
 						天正软件<br /><br />
-						<input type="radio" name="tcsoftware">开发交付中心 
-						<input type="radio" name="tcsoftware">解决方案中心 <br>
-						<input type="radio" name="tcsoftware">市场营销中心 
-						<input type="radio" name="tcsoftware">运营管理部
-					</li>
+						<input type="radio" id="1" name="tcsoftware" value="5_27">开发交付中心 
+						<input type="radio" id="1" name="tcsoftware" value="5_28">解决方案中心 <br><br />
+						<input type="radio" id="1" name="tcsoftware" value="5_29">市场营销中心 
+						<input type="radio" id="1" name="tcsoftware" value="5_30">运营管理部
+					</li><br />
 					<li>
 						天正智能<br /><br />
-						 <input type="radio" name="tcsmart">交付一部
-						 <input type="radio" name="tcsmart">交付二部
-						 <input type="radio" name="tcsmart">解决方案部
-						 <input type="radio" name="tcsmart">产品研发部
+						 <input type="radio" id="1" name="tcsmart" value="5_31">交付一部
+						 <input type="radio" id="1" name="tcsmart" value="5_32">交付二部
+						 <input type="radio" id="1" name="tcsmart" value="5_23">解决方案部
+						 <input type="radio" id="1" name="tcsmart" value="5_33">产品研发部
 					</li>
 				</ul>
 			</div><br />
@@ -128,61 +132,63 @@
 			<div class = "div-inside3" >
 				<b>一、多选题（请选出您认为最符合实际的答案，每项最多可选3个）</b><br/><br />
 				<b>1、	目前，我认为最满意的方面是：</b><br /><br/>
-				<input type="checkbox" name="checkOne">公司前景
-				<input type="checkbox" name="checkOne">锻炼与发展机会 
-				<input type="checkbox" name="checkOne">薪酬福利 
-				<input type="checkbox" name="checkOne">绩效管理 
-				<input type="checkbox" name="checkOne">培训培养<br/><br/>
-				<input type="checkbox" name="checkOne">职业方向 
-				<input type="checkbox" name="checkOne">团队配合     
-				<input type="checkbox" name="checkOne">奖惩机制
-				<input type="checkbox" name="checkOne">工作认可 
-				<input type="checkbox" name="checkOne">人际关系<br/><br/>
-				<input type="text" name="checkOne" class = "line" >其他(请注明)
+				<input type="checkbox" name="checkOne" id="3" value="1_34">公司前景
+				<input type="checkbox" name="checkOne" id="3" value="1_35">锻炼与发展机会 
+				<input type="checkbox" name="checkOne" id="3" value="1_36">薪酬福利 
+				<input type="checkbox" name="checkOne" id="3" value="1_37">绩效管理 
+				<input type="checkbox" name="checkOne" id="3" value="1_38">培训培养<br/><br/>
+				<input type="checkbox" name="checkOne" id="3" value="1_39">职业方向 
+				<input type="checkbox" name="checkOne" id="3" value="1_40">团队配合     
+				<input type="checkbox" name="checkOne" id="3" value="1_41">奖惩机制
+				<input type="checkbox" name="checkOne" id="3" value="1_42">工作认可 
+				<input type="checkbox" name="checkOne" id="3" value="1_43">人际关系<br/><br/>
+				<input type="checkbox" name="checkTwo" id="3" value="1_0">其他(请注明)
+				<input type="text" name="checkOne" class = "line" >
 				<br/><br/>
 				<b>2、	目前，我觉得需要改进的方面是：</b><br /><br/>
-				<input type="checkbox" name="checkTwo">公司前景
-				<input type="checkbox" name="checkTwo">锻炼与发展机会 
-				<input type="checkbox" name="checkTwo">薪酬福利 
-				<input type="checkbox" name="checkTwo">绩效管理 
-				<input type="checkbox" name="checkTwo">培训培养<br/><br/>
-				<input type="checkbox" name="checkTwo">职业方向 
-				<input type="checkbox" name="checkTwo">团队配合     
-				<input type="checkbox" name="checkTwo">奖惩机制
-				<input type="checkbox" name="checkTwo">工作认可 
-				<input type="checkbox" name="checkTwo">人际关系<br/><br/>
-				<input type="text" name="checkTwo" class = "line">其他(请注明)
+				<input type="checkbox" name="checkTwo" id="3" value="2_34">公司前景
+				<input type="checkbox" name="checkTwo" id="3" value="2_35">锻炼与发展机会 
+				<input type="checkbox" name="checkTwo" id="3" value="2_36">薪酬福利 
+				<input type="checkbox" name="checkTwo" id="3" value="2_37">绩效管理 
+				<input type="checkbox" name="checkTwo" id="3" value="2_38">培训培养<br/><br/>
+				<input type="checkbox" name="checkTwo" id="3" value="2_39">职业方向 
+				<input type="checkbox" name="checkTwo" id="3" value="2_40">团队配合     
+				<input type="checkbox" name="checkTwo" id="3" value="2_41">奖惩机制
+				<input type="checkbox" name="checkTwo" id="3" value="2_42">工作认可 
+				<input type="checkbox" name="checkTwo" id="3" value="2_43">人际关系<br/><br/>
+				<input type="checkbox" name="checkTwo" id="3" value="2_0">其他(请注明)
+				<input type="text"  class = "line">
 				<br/><br/>
 				<b>3、我觉得制约我取得优异工作业绩的最大因素是:</b><br /><br/>
-				<input type="checkbox" name="checkThree">上级支持
-				<input type="checkbox" name="checkThree">个人能力 
-				<input type="checkbox" name="checkThree">部门配合
-				<input type="checkbox" name="checkThree">工作氛围
-				<input type="checkbox" name="checkThree">行业环境  
+				<input type="checkbox" name="checkThree" id="3" value="3_45">上级支持
+				<input type="checkbox" name="checkThree" id="3" value="3_46">个人能力 
+				<input type="checkbox" name="checkThree" id="3" value="3_47">部门配合
+				<input type="checkbox" name="checkThree" id="3" value="3_48">工作氛围
+				<input type="checkbox" name="checkThree" id="3" value="3_49">行业环境  
 				<br/><br/>
 				<b>单选题</b><br /><br/>
 				<b>4、我认为自己的才能在目前岗位是否得以发挥:</b><br/><br />
-				<input type="radio" name="radioFour">完全没有发挥
-				<input type="radio" name="radioFour">有些方面没有发挥
-				<input type="radio" name="radioFour">发挥尚可 
-				<input type="radio" name="radioFour">已充分发挥
+				<input type="radio" name="radioFour" id="2" value="4_50">完全没有发挥
+				<input type="radio" name="radioFour" id="2" value="4_51">有些方面没有发挥
+				<input type="radio" name="radioFour" id="2" value="4_52">发挥尚可 
+				<input type="radio" name="radioFour" id="2" value="4_53">已充分发挥
 				<br/><br/>
 				<b>5、我认为目前的工作积极性为:</b><br/><br />
-				<input type="radio" name="radioFive">基本调动起来
-				<input type="radio" name="radioFive">一般
-				<input type="radio" name="radioFive">基本没有
-				<input type="radio" name="radioFive">完全没有
+				<input type="radio" name="radioFive" id="2" value="5_54">基本调动起来
+				<input type="radio" name="radioFive" id="2" value="5_55">一般
+				<input type="radio" name="radioFive" id="2" value="5_56">基本没有
+				<input type="radio" name="radioFive" id="2" value="5_57">完全没有
 				<br/><br/>
 				<b>6、我认为在天正公司的发展空间是：</b><br/><br/>
-				<input type="radio" name="radioSix">很大
-				<input type="radio" name="radioSix">比较大
-				<input type="radio" name="radioSix">不大
-				<input type="radio" name="radioSix">没有空间
+				<input type="radio" name="radioSix" id="2" value="6_58">很大
+				<input type="radio" name="radioSix" id="2" value="6_59">比较大
+				<input type="radio" name="radioSix" id="2" value="6_60">不大
+				<input type="radio" name="radioSix" id="2" value="6_61">没有空间
 				<br/><br/>
 				<b>7、我会留在天正公司，即使其他的公司有类似的空缺：</b><br/><br/>
-				<input type="radio" name="radioSeven">继续留在公司
-				<input type="radio" name="radioSeven">不确定
-				<input type="radio" name="radioSeven">已经在寻找其他机会
+				<input type="radio" name="radioSeven" id="2" value="7_62">继续留在公司
+				<input type="radio" name="radioSeven" id="2" value="7_63">不确定
+				<input type="radio" name="radioSeven" id="2" value="7_64">已经在寻找其他机会
 				<br/><br/>
 			</div>
 			<!-- 偏向选择 -->
@@ -386,8 +392,21 @@
 			<!-- 最后一题 -->
 			<div class = "lastquestion" >
 				<b>三、	为了您和公司更好的发展，您对公司有哪些期望和建议？</b><br /><br />
-				<textarea  class = "inpu" rows="10" cols="100" ></textarea>
+				<textarea  class = "inpu" rows="10" cols="100" id="5"></textarea>
 				</div>
+				<!-- 提交按钮 -->
+				<div style="width: 70%; margin:0 auto;  position: relative; z-index: 5">
+				<br />
+					<table align="center">
+						<tr>
+							<td>
+								<input type="reset" value="重置">
+								<input type="button"  value="提交" onclick="dataHandling()">
+							</td>
+						</tr>
+					</table>
+				</div> 
+				</form>
 		</div>
 	</body>
 </html>
