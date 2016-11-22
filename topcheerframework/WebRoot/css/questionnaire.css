@@ -10,11 +10,11 @@ background-color:#F2F7F9;
 				z-index: 5;
 				line-height:20px;
 		      }
-.lastquestion textarea{border:none;
-				text-indent:75px;
+.lastquestion textarea{
+				
 				line-height:20px;
 				repeat;
-				
+				border:solid 2px #E5E5E5;
 				color:#E6EAE9;
 				width: 100%;
 				hight:auto;
@@ -31,7 +31,7 @@ font-family:STHeiti;
 }
 .div-outside{
          width: 70%;
-         height: auto；
+         height: auto;
          z-index: 1;
          background-color:#F2F7F9;
          padding:20px;
@@ -70,7 +70,7 @@ font-family:STHeiti Light;
 line-height:150%;
 }
 .line{
-width:80%;
+width:60%;
 border-bottom:1px black solid;
 border-left-style:none;
 border-right-style:none;
@@ -88,14 +88,10 @@ z-index: 5
 table{
  border:1px solid black;width:100%;
 }
-.div-inside4 input { 
-    padding: 9px; 
-    border: solid 1px #E5E5E5; 
-    outline: 0; 
-    width: 200px; 
-    background: #FFFFFF; 
-    } 
-   
+.table input{
+border:2px;
+width:100% ;height:100%;
+}
 textarea { 
     width: 70%;  
     height: 150px; 
@@ -115,7 +111,16 @@ textarea {
     border:solid 1px #E5E5E5;
 
 }
-select{
+.select{
+	padding:auto;
+    border: solid 1px #E5E5E5; 
+    outline: 0; 
+
+    background: #FFFFFF; 
+
+}
+.textarea1{
 width:100%;
-height:100%;
+height:auto;
+overflow:hidden;
 }
