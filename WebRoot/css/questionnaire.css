@@ -2,62 +2,72 @@
 body{
 background-color:#F2F7F9;
 }
-.inpu{position:relative;}
-.lastquestion{width: 70%;
+
+
+.lastquestion{width: 85%;
 				margin:0 auto;
 				position: relative;
 				z-index: 5;
 				line-height:20px;
 		      }
-.inpu textarea{border:none;
+.lastquestion textarea{border:none;
 				text-indent:75px;
 				line-height:20px;
 				repeat;
-				overflow:auto;
-				color:#E6EAE9;}
-.div-outside h1 h2{
+				
+				color:#E6EAE9;
+				width: 100%;
+				hight:auto;
+				
+				}
+h1 {
     text-align:center;
+    font-family : Microsoft JhengHei;
     
-    
+}
+h2{
+
+font-family:STHeiti;
 }
 .div-outside{
-         width: 80%;
-         height: 4000px;
-          z-index: 1;
-          background-color:#F2F7F9;
-          padding:20px;
+         width: 70%;
+         height: auto；
+         z-index: 1;
+         background-color:#F2F7F9;
+         padding:20px;
          margin: 0 auto;    
-		    border: 6px solid #8FB5C1;
-		    -moz-border-radius:15px;
-		    -webkit-border-radius:15px;
-		    border-radius:15px;
+		 border: 6px solid #8FB5C1;
+		 -moz-border-radius:15px;
+		 -webkit-border-radius:15px;
+		 border-radius:15px;
 }
 .div-inside{
-            width: 70%;
+            width: 85%;
             margin:0 auto; 
             position: relative;
             z-index: 5;
 
 }
 .div-inside2{
-width: 70%;
+width: 85%;
 margin:0 auto;
-
 border-width:1pt;
 position: relative;
  z-index: 5;
- font-family:STHeiti Light;
+
 }
 .div-inside3{
-width: 70%;
+width: 85%;
 margin:0 auto;
 position: relative;
-z-index: 5
+z-index: 5;
+
 }
-.div-inside p{
+ p{
 font-weight:bold;
 color:#000022; 
-font-family:MingLiU; 
+font-family:STHeiti Light;
+line-height:150%;
 }
 .line{
 width:80%;
@@ -69,7 +79,10 @@ background-color:#F2F7F9;
 }
 .div-inside4 {
 
-width: 70%; margin:0 auto;  position: relative; z-index: 5
+width: 85%;
+margin:0 auto;
+position: relative;
+z-index: 5
    
 }
 table{
