@@ -11,18 +11,18 @@ ul{
 
 padding:0;
 }
-.lastquestion{width: 85%;
+.lastquestion{  width: 85%;
 				margin:0 auto;
 				position: relative;
 				z-index: 5;
-				line-height:20px;
+			
 		      }
 .lastquestion textarea{
 				
-				line-height:20px;
+				
+                height: 150px; 
 				repeat;
 				border:solid 2px #E5E5E5;
-				color:black;
 				width: 100%;
 				hight:auto;
 				
@@ -58,7 +58,7 @@ font-family:STHeiti;
 .div-inside2{
 width: 85%;
 margin:0 auto;
-border-width:1pt;
+
 position: relative;
  z-index: 5;
 
@@ -72,7 +72,7 @@ z-index: 5;
 }
  p{
 font-weight:bold;
-color:#000022; 
+color:#333333; 
 font-family:STHeiti Light;
 line-height:150%;
 }
@@ -84,6 +84,7 @@ border-right-style:none;
 border-top-style:none;
 background-color:#F2F7F9;
 }
+/*
 .div-inside4 {
 
 width: 85%;
@@ -92,42 +93,40 @@ position: relative;
 z-index: 5
    
 }
-table{
- border:1px solid black;width:100%;
-}
+*/
+
 .table input{
-border:1px;
-width:100% ;height:100%;
-background-color:#F2F7F9;
+	
+
+width:100% ;height:110%;
+background-color:#F5F5F5;
 font-family:Microsoft YaHei;
-    font-size:15px;
-    text-align:center;
+font-size:15px;
+text-align:center;
 }
 textarea { 
-    width: 70%;  
-    height: 150px; 
+   
     line-height: 150%; 
-     padding: 9px; 
     border: solid 1px #E5E5E5; 
     outline: 0;  
-    background: #F2F7F9; 
+    background: #F5F5F5; 
     font-family:Microsoft YaHei;
     font-size:15px;
-    overflow:hidden;
+    resize : none;
     } 
- 
+ /*
 .div-inside4 input:hover, textarea:hover, 
 .div-inside4 input:focus, textarea:focus { 
-    border-color: #FFFFFF; 
+    border-color: #F5F5F5; 
     } 
 .div-inside4 table{
     border:solid 1px #E5E5E5;
-}
+}*/
 .select{
-	padding:auto;
+	
     border: solid 1px #E5E5E5; 
-    outline: 0; 
-    background: #FFFFFF; 
+    
+  
 
 }
 .textarea1{
@@ -135,7 +134,22 @@ width:100%;
 height:auto;
 overflow:hidden;
 font-family:Microsoft YaHei;
+ border: solid 1px #E5E5E5; 
+  resize : none;
 }
 td{
-text-align:center;
+text-align:left;
+}
+.div-inside2 input{
+
+width:17px;
+height:17px;
+}
+.div-inside3 input{
+width:17px;
+height:17px;
+}
+.div-inside4 input{
+width:17px;
+height:17px;
 }
