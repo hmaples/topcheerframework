@@ -52,6 +52,8 @@
 				<input type="hidden" id="checkValue" name="checkValue"/>
 				<input type="hidden" id="subValue" name="subValue"/>
 				<input type="hidden" id="suggestValue"name="suggestValue"/>
+				<input type="hidden" id="restOne" name="restOne"/>
+				<input type="hidden" id="restTwo"name="restTwo"/>				
 			<div
 				class = "div-inside2" style = "font-family:Microsoft YaHei;">
 				<h2>
