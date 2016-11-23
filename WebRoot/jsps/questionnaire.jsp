@@ -11,7 +11,7 @@
 	<head>
 		<base href="<%=basePath%>">
 
-		<title>My JSP 'questionnaire.jsp' starting page</title>
+		<title>上海天正员工满意度调查问卷</title>
 
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -47,7 +47,11 @@
 			<!--回答者信息 -->
 			<!-- 提交内容 -->
 			<form id="questionnaire" action="commonAction" method="post">
-				<input type="hidden" name="actionNum" value="" />
+				<input type="hidden" name="actionNum" value="questionnaireSubmit" />
+				<input type="hidden" id="radioValue" name="radioValue"/>
+				<input type="hidden" id="checkValue" name="checkValue"/>
+				<input type="hidden" id="subValue" name="subValue"/>
+				<input type="hidden" id="suggestValue"name="suggestValue"/>
 			<div
 				class = "div-inside2" style = "font-family:Microsoft YaHei;">
 				<h2>
@@ -76,13 +80,13 @@
 				<br />
 				<b>3.学历层次：</b>
 				<br /><br />
-				<input type="radio" id="1_" name="education">
+				<input type="radio" id="1_3_12" name="education">
 				高中及以下（含职高）
-				<input type="radio" id="1_" name="education">
+				<input type="radio" id="1_3_13" name="education">
 				大专
-				<input type="radio" id="1_" name="education">
+				<input type="radio" id="1_3_14" name="education">
 				本科
-				<input type="radio" id="1_" name="education">
+				<input type="radio" id="1_3_15" name="education">
 				硕士及以上
 				<br />
 				<br />
@@ -102,7 +106,7 @@
 				<br />
 				<b>5.目前就职的部门：</b>
 				<br />
-				<ul >
+				<ul>
 					<li>
 						天正信息<br /><br />
 						<input type="radio" id="1_5_21" name="depart">行业客户部
@@ -142,8 +146,8 @@
 				<input type="checkbox" name="checkOne" id="3_1_41">奖惩机制<br></br>
 				<input type="checkbox" name="checkOne" id="3_1_42">工作认可 
 				<input type="checkbox" name="checkOne" id="3_1_43">人际关系
-				<input type="checkbox" name="checkTwo" id="3_1_0">其他(请注明)
-				<input type="text" name="checkOne" class = "line" >
+				<input type="checkbox" name="checkOne" id="3_1_0">其他(请注明)
+				<input type="text" class = "line" id="else_1">
 				<br/><br/>
 				<b>2、	目前，我觉得需要改进的方面是：</b><br /><br/>
 				<input type="checkbox" name="checkTwo" id="3_2_34">公司前景
@@ -157,7 +161,7 @@
 				<input type="checkbox" name="checkTwo" id="3_2_42">工作认可 
 				<input type="checkbox" name="checkTwo" id="3_2_43">人际关系
 				<input type="checkbox" name="checkTwo" id="3_2_0">其他(请注明)
-				<input type="text"  class = "line">
+				<input type="text"  class = "line"  id="else_2">
 				<br/><br/>
 				<b>3、我觉得制约我取得优异工作业绩的最大因素是:</b><br /><br/>
 				<input type="checkbox" name="checkThree" id="3_3_45">上级支持
@@ -204,195 +208,195 @@
 				
 				<!-- 一 -->
 				<tr>
-					<td rowspan="5" width=4% class = "tdd">对工作本身的满意度</td>
-					<td width=50% class = "tdd">1.	我清楚自身的工作职责与任务。</td>
-					<td width="5%" class = "tdd"><input type = "text" class = "select" /></td>
-					<td width = 40% class = "tdd"><textarea class = "textarea1"></textarea></td>
+					<td rowspan="5" width=4% class="tdd">对工作本身的满意度</td>
+					<td width=50% class="tdd">1.	我清楚自身的工作职责与任务。</td>
+					<td width="5%" class="tdd"><input type = "text" class = "select" name="1" id="4_1"/></td>
+					<td width = 40% height = 100% class="tdd"><textarea class = "textarea1" id="1"></textarea></td>
 				</tr> 
 				<tr>
 					
 					<td>2.	我清楚自身的工作内容和流程。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="2" id="4_2" /></td>
+					<td ><textarea class = "textarea1" id="2"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>3.	当前的工作职责和任务是根据我的能力设定的</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="3" id="4_3"/></td>
+					<td ><textarea class = "textarea1" id="3"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>4.	当前的工作内容会促使我的能力不断提高</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="4" id="4_4" /></td>
+					<td ><textarea class = "textarea1" id="4"></textarea></td>
 				</tr>
 				<tr>
 					<td>5.	当前的工作内容与我的期望相符，工作起来踏实。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="5" id="4_5"/></td>
+					<td ><textarea class = "textarea1" id="5"></textarea></td>
 				</tr>
 				<!-- 二 -->
 				<tr>
 					<td rowspan="5" width=4%>对工作回报的满意度</td>
 					<td width=50%>6.  我认为我的薪酬与当前的工作职责关系密切。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="6" id="4_6"/></td>
+					<td ><textarea class = "textarea1" id="6"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>7.  我的业绩能对我的收入产生重大影响。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="7" id="4_7"/></td>
+					<td ><textarea class = "textarea1" id="7"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>8.  当前的工作职责和任务是根据我的能力设定的</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="8" id="4_8"/></td>
+					<td ><textarea class = "textarea1" id="8"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>9.	就我的业绩和能力而言，我认为目前的薪资水平是公平的。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="9" id="4_9"/></td>
+					<td ><textarea class = "textarea1" id="9"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>10.	当我的工作业绩十分突出，公司会给予更大的发展空间。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="10" id="4_10"/></td>
+					<td ><textarea class = "textarea1" id="10"></textarea></td>
 				</tr>
 				<!-- 三 -->
 				<tr>
 					<td rowspan="5" width=4%>对工作指导的满意度</td>
 					<td width=50%>11.	我的上级能合理明确地给我设定工作目标以及目标达成标准。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="11" id="4_11"/></td>
+					<td ><textarea class = "textarea1" id="11"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>12.	我在工作过程中能够得到上级的跟踪和指导。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="12" id="4_12"/></td>
+					<td ><textarea class = "textarea1" id="12"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>13.	我的上级向我采用开放而诚恳的沟通方式。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="13" id="4_13"/></td>
+					<td ><textarea class = "textarea1" id="13"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>14.	我的上级在工作中会采纳我的合理意见和建议。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="14" id="4_14"/></td>
+					<td ><textarea class = "textarea1" id="14"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>15.	我认为绩效评估结果在现行的工作指导方式下有助于提高我的绩效。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="15" id="4_15"/></td>
+					<td ><textarea class = "textarea1" id="15"></textarea></td>
 				</tr>
 				<!-- 四 -->
 				<tr>
 					<td rowspan="5" width=4%>对技能提升的满意度</td>
 					<td width=50%>16.	我所在的部门会经常开展多样化培训或技术交流活动。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="16" id="4_16"/></td>
+					<td ><textarea class = "textarea1" id="16"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>17.	公司会根据业务特性开展有针对性的通用培训课程。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="17" id="4_17"/></td>
+					<td ><textarea class = "textarea1" id="17"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>18.	我认为现有的培训能有效地提高专业技能。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="18" id="4_18"/></td>
+					<td ><textarea class = "textarea1" id="18"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>19.	我满意公司培训的组织形式。（场地、授课方式、时间安排等）</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="19" id="4_19"/></td>
+					<td ><textarea class = "textarea1" id="19"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>20.	我认为公司非常重视员工培训。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="20" id="4_20"/></td>
+					<td ><textarea class = "textarea1" id="20"></textarea></td>
 				</tr>
 				<!-- 五 -->
 				<tr>
 					<td rowspan="5" width=4%>对工作群体的满意度</td>
 					<td width=50%>21.	我的同事能毫无保留地分享、传授自己的成功经验。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="21" id="4_21"/></td>
+					<td ><textarea class = "textarea1" id="21"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>22.	我可以获取必要的信息和资料，以便于顺利开展工作。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="22" id="4_22"/></td>
+					<td ><textarea class = "textarea1" id="22"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>23.	我所在的部门能够发挥集体作用，相互支持完成组织目标。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="23" id="4_23"/></td>
+					<td ><textarea class = "textarea1" id="23"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>24.	为完成同一目标，不同部门的同事能紧密合作。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="24" id="4_24"/></td>
+					<td ><textarea class = "textarea1" id="24"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>25.	我对公司的团队合作精神感到满意。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="25" id="4_25"/></td>
+					<td ><textarea class = "textarea1" id="25"></textarea></td>
 				</tr>
 				<!--六 -->
 				<tr>
 					<td rowspan="5" width=4%>对公司的满意度</td>
 					<td width=50%>26.	公司制定的各项管理制度合理。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="26" id="4_26"/></td>
+					<td ><textarea class = "textarea1" id="26"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>27.	公司各项管理制度能够得到严格执行，在执行过程中保证了公平性。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="27" id="4_27"/></td>
+					<td ><textarea class = "textarea1" id="27"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>28.	我认同公司的企业文化。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="28" id="4_28"/></td>
+					<td ><textarea class = "textarea1" id="28"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>29.	我喜欢公司的工作氛围。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="29" id="4_29"/></td>
+					<td ><textarea class = "textarea1" id="29"></textarea></td>
 				</tr>
 				<tr>
 					
 					<td>30.	我认为公司能留住表现出色的员工。</td>
-					<td width=5%><input type = "text" class = "select" /></td>
-					<td ><textarea class = "textarea1"></textarea></td>
+					<td width=5%><input type = "text" class = "select" name="30" id="4_30"/></td>
+					<td ><textarea class = "textarea1" id="30"></textarea></td>
 				</tr>
 			</table>
 			</div><br/><br />
 			<!-- 最后一题 -->
-			<div class = "lastquestion" style = "font-family:Microsoft YaHei;" >
+			<div class = "lastquestion"style = "font-family:Microsoft YaHei;" >
 				<b>三、	为了您和公司更好的发展，您对公司有哪些期望和建议？</b><br /><br />
-				<textarea  class = "inpu"  id="5"></textarea>
+				<textarea  class = "inpu"  id="5_1_null" ></textarea>
 				</div>
 				<!-- 提交按钮 -->
 				<div style="width: 85%; margin:0 auto;  position: relative; z-index: 5">
