@@ -11,7 +11,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>My JSP 's_satisfactionSurveyResult.jsp' starting page</title>
+<title>上海天正员工满意度调查统计结果</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -41,17 +41,22 @@
 			<td align="center" onclick="display(2)">单选题统计结果
 			<td align="center" onclick="display(3)">偏向选择统计结果
 			<td align="center" onclick="display(4)">员工期望与建议</td>
+			<td align="center" onclick="display(5)">数据导出</td>
 		</tr>
 	</table>
 	<p />
 
 
 	<div id="result1" name="resulttable" style="display:block" align="center">
+		1、	目前，我认为最满意的方面是：<br/>
 		<div id="multiple-choiceResult1" style="width: 1200px;height:450px;"></div>
-		<script src="js/l_resultEchart.js"></script>
-		
-	
-
+		<script src="js/l_resultEchart.js"></script><p/><br/><br/>
+		2、	目前，我觉得需要改进的方面是：<br/>
+		<div id="multiple-choiceResult2" style="width: 1200px;height:450px;"></div>
+		<script src="js/l_resultEchart.js"></script><p/><br/><br/>
+		3、 我觉得制约我取得优异工作业绩的最大因素是<br/>
+		<div id="multiple-choiceResult3" style="width: 1200px;height:450px;"></div>
+		<script src="js/l_resultEchart.js"></script><p/><br/><br/>
 
 	</div>
 
@@ -60,9 +65,9 @@
 	
 
 
-	<div id="result2" name="resulttable" style="display:none">
+	<div id="result2" name="resulttable" style="display:none" align="center">
 
-		<table border=1 align="center" width=85%>
+<!-- 		<table border=1 align="center" width=85%>
 			<tr>
 				<td align="center">部门</td>
 				<td align="center">自己的才能在目前岗位是否得以发挥</td>
@@ -77,8 +82,23 @@
 				<td align="center">很大</td>
 				<td align="center">继续留在公司</td>
 			</tr>
-		</table>
-	</div>
+		</table><br/><br/><br/> -->
+		
+				4、 我认为自己的才能在目前岗位是否得以发挥<br/>
+		<div id="single-choiceResult1" style="width: 1200px;height:450px;"></div>
+		<script src="js/l_resultEchart.js"></script><p/><br/><br/>
+				5、 我认为目前的工作积极性为<br/>
+		<div id="single-choiceResult2" style="width: 1200px;height:450px;"></div>
+		<script src="js/l_resultEchart.js"></script><p/><br/><br/>
+				6、我认为在天正公司的发展空间是<br/>
+		<div id="single-choiceResult3" style="width: 1200px;height:450px;"></div>
+		<script src="js/l_resultEchart.js"></script><p/><br/><br/>
+				7、我会留在天正公司，即使其他的公司有类似的空缺<br/>
+		<div id="single-choiceResult4" style="width: 1200px;height:450px;"></div>
+		<script src="js/l_resultEchart.js"></script><p/><br/><br/>
+	
+	</div><br/><br/>
+				
 
 
 
@@ -97,7 +117,7 @@
 
 		<div id="ques21" name="ques2table" style="display:block" width=85%>
 
-			<table border="1px" width=85% align="center">
+ 			<table border="1px" width=85% align="center">
 				<tr>
 					<td colspan="6" class="smalltd">1. 我清楚自身的工作职责与任务。</td>
 				</tr>
@@ -537,10 +557,33 @@
 			</table>
 
 		</div>
-
-
-
+		</div>
+	<div id="result4" name="resulttable" style="display:none">
+	<h3 align="center">员工的期望与建议汇总</h3>
+		<table border="1px" width=60% align="center">
+		<tr>
+			<td colspan="6" class="smalltd">为客户创造价值</td>
+		</tr>
+		<tr>
+			<td colspan="6" class="smalltd">为社会创造进步</td>
+		</tr>
+		<tr>
+			<td colspan="6" class="smalltd">为广大客户提供及时、周到、专业、优质、一流的产品、技术和服务。</td>
+		</tr>
+		<tr>
+			<td colspan="6" class="smalltd">上海天正信息科技有限公司是浙江天正信息科技有限公司（前身为浙江省计算技术研究所，省内最早从事计算机技术及应用开发的专业研究所）在上海设立的，面向上海及周边地区用户的IT公司。公司凭借雄厚的技术实力和优质的客户服务，赢得了大量客户的广泛信任与支持。公司正处于一个稳健、高速发展的势态，公司先后设立了浙江办事处，山东办事处，江苏办事处、成都办事处等机构。
+</td>
+		</tr>
+		</table>
 	</div>
+	
+	
+	<div id="result5" name="resulttable" style="display:none">
+    <h2 align="center">
+    <a href="jsps/s_tobecontinued.jsp"><input type="button" name="ExportExcel" value="导出所有数据为Excel文件" style="font-size:20px"></a>
+    </h2>
+	</div>
+
 
 
 
