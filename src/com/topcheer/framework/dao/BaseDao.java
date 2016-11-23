@@ -20,5 +20,9 @@ public class BaseDao extends SqlSessionDaoSupport {
 	public <T extends BaseDto> T selectObjectBySqlId(String sqlId, Object param) {
 		return this.getSqlSession().selectOne(sqlId, param);
 	}
+	
+	public String selectStringBySqlId(String sqlId,Object param){
+		return this.getSqlSession().selectOne(sqlId, param);
+	}
 
 }
