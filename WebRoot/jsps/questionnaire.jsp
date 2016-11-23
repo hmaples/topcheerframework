@@ -401,7 +401,7 @@
 				<!-- 提交按钮 -->
 				<div style="width: 85%; margin:0 auto;  position: relative; z-index: 5">
 				<br />
-					<table style = "border:none;"align="center">
+					<table class="tb"style = "border:none;"align="center">
 						<tr>
 							<td align = "right">
 								<input type="reset" value="重置">
