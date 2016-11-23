@@ -8,8 +8,11 @@ function dataHandling(){
 	
 	//多选题其他取值
 	if(document.getElementById('3_1_0').checked){
-		var rest=3_1_document.getElementById('value_3_1_0').value;
-		alert(rest);
+		var restOne=3+"_"+1+"_"+0+"_"+document.getElementById('else_1').value;	
+		
+	}
+	if(document.getElementById('3_2_0').checked){
+		var restTwo=3+"_"+2+"_"+0+"_"+document.getElementById('else_2').value;
 	}
 	
 	//单选题答案
@@ -25,23 +28,56 @@ function dataHandling(){
 	}
 	//多选题答案
 	for (var j = 0; j < $('#questionnaire').find("input[type='checkbox']").length; j++) {
-		if($('#questionnaire').find("input[id='3_1_0']").checked){
+		if ($('#questionnaire').find("input[type='checkbox']")[j].checked) {
+			//判断多选题选其他选项
+//			if($('#questionnaire').find("input[type='checkbox']")[j].id=='3_1_0'){
+//				checkValueTemp=3+"_"+1+"_"+0+"_"+document.getElementById('else_1').value;
+//			}else if($('#questionnaire').find("input[type='checkbox']")[j].id=='3_2_0'){
+//				checkValueTemp=3+"_"+1+"_"+0+"_"+document.getElementById('else_2').value;
+//			}else{
+//				checkValueTemp = $('#questionnaire').find("input[type='checkbox']")[j].id+"_";
+//			}
+			if($('#questionnaire').find("input[type='checkbox']")[j].id=='3_1_0'|
+					$('#questionnaire').find("input[type='checkbox']")[j].id=='3_2_0'){
+				//checkValueTemp=checkValueTemp;
+			}else{
+				var checkValueTemp = $('#questionnaire').find("input[type='checkbox']")[j].id;
+				if (checkValue == null) {
+					checkValue = checkValueTemp;
+				} else {
+					checkValue = checkValue + "," + checkValueTemp;
+				}
+			}
 			
 		}
-		if ($('#questionnaire').find("input[type='checkbox']")[j].checked) {
-			var checkValueTemp = $('#questionnaire').find("input[type='checkbox']")[j].id;
-			if (checkValue == null) {
-				checkValue = checkValueTemp;
-			} else {
-				checkValue = checkValue + "," + checkValueTemp;
+	}
+	alert(checkValue);
+	//偏向选择字符串拼接
+	for(var k=0; k < $('#questionnaire').find("input[type='text']").length;k++){
+	//	alert("helloworld"+"_"+$('#questionnaire').find("input[type='text']")[k].value);
+		for(var h=0; h<$('#questionnaire').find('textarea').length;h++){
+		//alert($('#questionnaire').find('textarea')[h].value+"45667899");
+			if($('#questionnaire').find("input[type='text']")[k].name==
+				$('#questionnaire').find('textarea')[h].id){
+				var subValueTemp=$('#questionnaire').find("input[type='text']")[k].id+"_"+"0"+
+				$('#questionnaire').find("input[type='text']")[k].value+"_"+"."+
+				$('#questionnaire').find('textarea')[h].value;
+				if(subValue==null){
+					subValue=subValueTemp;
+				}else{
+					subValue=subValue+"#"+subValueTemp;
+				}
 			}
 		}
-	}	
+	}
+	alert(subValue);
 	//建议与意见题
-	suggestValue=document.getElementById('5').value;
+	suggestValue="5_1_''"+"_"+document.getElementById('5_1_null').value;
 	
 	//alert(radioValue+checkValue+suggestValue);
 	//绑定到jsp
+	$('#restOne').attr("value",restOne);
+	$('#restTwo').attr("value",restTwo);
 	$('#radioValue').attr("value",radioValue);
 	$('#checkValue').attr("value",checkValue);
 	$('#subValue').attr("value",subValue);
