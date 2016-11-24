@@ -15,35 +15,6 @@ function checkchoice() {
 			}			
 		}		
 	}
-	
-	//单选题选中判断
-	for (i = 0; i < 4; i++) {
-		for (j = 0; j < 16; j++){
-			var info2 = "2_"+(i + 4)+"_"+(j + 50);
-			var infoobj2 = $("#" + info2);
-			var infoname2 = $("input[id='" + info2 + "']").attr("name");
-			var infocheck2 = $("input:radio[name='" + infoname2 + "']:checked");
-			if (infocheck2.length == 0) {
-				if(infoname2 != null){
-				alert("有选项未填!题目编号为单选题:" + (i + 4));
-				$("#"+info2).focus();
-				return false;
-			}
-			}			
-		}		
-	}
-	
-
-//偏向选择判断是否选择	
-		for (i = 0; i < 30; i++) {
-		var name = "m_radio_" + (i + 1)
-		var radios = $("input:radio[name='" + name + "']:checked");
-			if (radios.length==0) {
-				alert("请填写偏向选择!题目编号:" + (i + 1));
-				return false;
-			}
-	}
-	
 
 	// 判断多选题是否选中以及个数是否超标
 	var mul1 = $("input[name=checkOne]:checked").length;
@@ -111,6 +82,39 @@ function checkchoice() {
 			return false;
 		}
 	}
+	
+	//单选题选中判断
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 16; j++){
+			var info2 = "2_"+(i + 4)+"_"+(j + 50);
+			var infoobj2 = $("#" + info2);
+			var infoname2 = $("input[id='" + info2 + "']").attr("name");
+			var infocheck2 = $("input:radio[name='" + infoname2 + "']:checked");
+			if (infocheck2.length == 0) {
+				if(infoname2 != null){
+				alert("有选项未填!题目编号为单选题:" + (i + 4));
+				$("#"+info2).focus();
+				return false;
+			}
+			}			
+		}		
+	}
+	
+
+//偏向选择判断是否选择	
+		for (i = 0; i < 30; i++) {
+		var name = "m_radio_" + (i + 1)
+		var radios = $("input:radio[name='" + name + "']:checked");
+		var infoname = $("input[name='" + name + "']").attr("id");
+			if (radios.length==0) {
+				alert("请填写偏向选择!题目编号:" + (i + 1));
+				$("#"+infoname).focus();
+				return false;
+			}
+	}
+	
+
+
 
 	// 判断偏向选择5,6,7分是否写注明
 	for (i = 1; i < 31; i++) {
@@ -125,7 +129,7 @@ function checkchoice() {
 				if (j >= 5) {
 					if ($.trim(document.getElementById('subb_' + i).value) == '') {
 
-						alert("偏向选择分数高于5分请注明原因,题号:"+(i + 1));
+						alert("偏向选择分数高于5分请注明原因,题号:"+(i);
 						$("#subb_"+i).focus();
 						return false;
 					}
