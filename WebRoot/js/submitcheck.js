@@ -108,5 +108,5 @@ function checkchoice() {
 		$("5_1_null").focus();
 		return false;
 	}
-
+	return true;
 }
