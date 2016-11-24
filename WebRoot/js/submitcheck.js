@@ -1,21 +1,36 @@
-function checkchoice() {
-//单选判断是否选择
-	var val1 = $('input:radio[name="age"]:checked').val();
-	var val2 = $('input:radio[name="sex"]:checked').val();
-	var val3 = $('input:radio[name="education"]:checked').val();
-	var val4 = $('input:radio[name="year"]:checked').val();
-	var val5 = $('input:radio[name="depart"]:checked').val();
-	var val6 = $('input:radio[name="radioFour"]:checked').val();
-	var val7 = $('input:radio[name="radioFive"]:checked').val();
-	var val8 = $('input:radio[name="radioSix"]:checked').val();
-	var val9 = $('input:radio[name="radioSeven"]:checked').val();
-	for (i = 1; i < 10; i++) {
-		var valx = 'val' + i;
-
-		if (eval(valx) == null) {
-			alert("有题目未填写!");
-			return false;
-		}
+function checkchoice() {	
+//个人信息选中判断	
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 28; j++){
+			var info = "1_"+(i + 1)+"_"+(j + 6);
+			var infoobj = $("#" + info);
+			var infoname = $("input[id='" + info + "']").attr("name");
+			var infocheck = $("input:radio[name='" + infoname + "']:checked");
+			if (infocheck.length == 0) {
+				if(infoname != null){
+				alert("有选项未填!题目编号为个人信息:" + (i + 1));
+				$("#"+info).focus();
+				return false;
+			}
+			}			
+		}		
+	}
+	
+	//单选题选中判断
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 16; j++){
+			var info2 = "2_"+(i + 4)+"_"+(j + 50);
+			var infoobj2 = $("#" + info2);
+			var infoname2 = $("input[id='" + info2 + "']").attr("name");
+			var infocheck2 = $("input:radio[name='" + infoname2 + "']:checked");
+			if (infocheck2.length == 0) {
+				if(infoname2 != null){
+				alert("有选项未填!题目编号为单选题:" + (i + 4));
+				$("#"+info2).focus();
+				return false;
+			}
+			}			
+		}		
 	}
 	
 
@@ -34,27 +49,50 @@ function checkchoice() {
 	var mul1 = $("input[name=checkOne]:checked").length;
 	var mul2 = $("input[name=checkTwo]:checked").length;
 	var mul3 = $("input[name=checkThree]:checked").length;
-	for (i = 0; i < 3; i++) {
-		var t = eval('mul' + (i + 1));
-		if (t > 3) {
-			alert("多选题最多只能选3个!");
+	var t1 = eval('mul1');
+	var t2 = eval('mul2');
+	var t3 = eval('mul3');
+		if (t1 > 3) {
+			alert("多选题最多只能选3个!题目编号:1");
+			$("#3_1_34").focus();
 			return false;
 		}
-		if (t == 0) {
-			alert("多选题未选!");
+		if (t1 == 0) {
+			alert("多选题未选!题目编号:1");
+			$("#3_1_34").focus();
 			return false;
 		}
-	}
+		if (t2 > 3) {
+			alert("多选题最多只能选3个!题目编号:2");
+			$("#3_2_34").focus();
+			return false;
+		}
+		if (t2 == 0) {
+			alert("多选题未选!题目编号:2");
+			$("#3_2_34").focus();
+			return false;
+		}
+		if (t3 > 3) {
+			alert("多选题最多只能选3个!题目编号:3");
+			$("#3_3_45").focus();
+			return false;
+		}
+		if (t3 == 0) {
+			alert("多选题未选!题目编号:3");
+			$("#3_3_45").focus();
+			return false;
+		}
+
 	// 判断多选题中其他一栏勾选后是否输入说明以及字数是否超标
 	var checkelse1 = $("#3_1_0");
 	if (checkelse1[0].checked) {
 		if ($.trim(document.getElementById('else_1').value) == '') {
-			alert("请输入注明");
+			alert("请输入注明,多选题号:1");
 			$("#else_1").focus()
 			return false;
 		}
 		if (document.getElementById('else_1').value.length > 1000) {
-			alert("您输入的字数超过限制啦,感谢您的配合^_^");
+			alert("您输入的字数超过限制,感谢您的配合");
 			$("#else_1").focus()
 			return false;
 		}
@@ -63,12 +101,12 @@ function checkchoice() {
 	var checkelse2 = $("#3_2_0");
 	if (checkelse2[0].checked) {
 		if ($.trim(document.getElementById('else_2').value) == '') {
-			alert("请输入注明");
+			alert("请输入注明,多选题号:2");
 			$("#else_2").focus()
 			return false;
 		}
 		if (document.getElementById('else_2').value.length > 1000) {
-			alert("您输入的字数超过限制啦,感谢您的配合^_^");
+			alert("您输入的字数超过限制,感谢您的配合");
 			$("#else_2").focus()
 			return false;
 		}
@@ -87,7 +125,7 @@ function checkchoice() {
 				if (j >= 5) {
 					if ($.trim(document.getElementById('subb_' + i).value) == '') {
 
-						alert("请输入");
+						alert("偏向选择分数高于5分请注明原因,题号:"+(i + 1));
 						$("#subb_"+i).focus();
 						return false;
 					}
