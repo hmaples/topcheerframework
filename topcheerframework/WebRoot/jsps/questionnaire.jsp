@@ -55,7 +55,7 @@
 				<input type="hidden" id="restOne" name="restOne"/>
 				<input type="hidden" id="restTwo"name="restTwo"/>				
 			<div
-				class = "div-inside2" style = "font-family:Microsoft YaHei;">
+				class = "div-inside2" style = "color:#34352C;font-family:Microsoft YaHei;">
 				<h2>
 					回答者信息
 				</h2>
@@ -135,7 +135,7 @@
 				</ul>
 			</div><br />
 			<!--多选题 -->
-			<div class = "div-inside3" style="font-family:Microsoft YaHei;" >
+			<div class = "div-inside3" style="color:#34352C;font-family:Microsoft YaHei;" >
 				<b>一、多选题（请选出您认为最符合实际的答案，每项最多可选3个）</b><br/><br />
 				<b>1、	目前，我认为最满意的方面是：</b><br /><br/>
 				<input type="checkbox" name="checkOne" id="3_1_34">公司前景
@@ -202,7 +202,8 @@
 					         height: auto;
 					         background-color:#F2F7F9;
 					         margin: 0 auto; " >
-   <table style = " border-spacing:10px;  font-family:Microsoft YaHei;text-align:center;width:100%" >
+	<b style = "color:#34352C;">二、偏向选择（分值范围为1-7分，其中1分为“非常满意”，3分为比较满意，5分为“不满意”，7分为“极其不满意”，请在空格内填写具体分值。如果您的打分为5-7分，请务必在说明栏中说明原因，以便我们能做进一步的改善。）</b>
+   <table style = " color:#34352C;border-spacing:10px;  font-family:Microsoft YaHei;text-align:center;width:100%" >
    <tr>
     <td   colspan=2 align = center ><b>对工作本身的满意度</b></td>
    </tr>
@@ -581,7 +582,7 @@
   
    
 			<!-- 最后一题 -->
-			<div class = "lastquestion"style = "font-family:Microsoft YaHei;" >
+			<div class = "lastquestion"style = "color:#34352C;font-family:Microsoft YaHei;" >
 				<b>三、	为了您和公司更好的发展，您对公司有哪些期望和建议？</b><br /><br />
 				<textarea  class = "inpu"  id="5_1_null" ></textarea>
 				</div>
@@ -599,5 +600,13 @@
 				</div> 
 				</form>
 		</div>
+		<!-- 开发者信息 -->
+			<div style = "background-color:EFF0DC;width:90%;padding:20px; margin: 0 auto;">
+			<div align = center style = "color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >开发者信息:<br/>总负责：夏昆  美化特效：马琦睿  开发：王伟 沈丞恭 廖旭</div>
+			 
+			</div>
+					
+					
+				
 	</body>
 </html>
