@@ -4,11 +4,11 @@ import com.topcheer.framework.dto.BaseDto;
 
 public class AnswerDetailInfo extends BaseDto{
 	
-	private String result_id;
-	private Integer type;
-	private Integer number;
-	private String value;
-	private String content;
+	private String result_id;//提交信息编号
+	private Integer type;//题目类型
+	private Integer number;//题目编号
+	private String value;//答案选项或分数
+	private String content;//答案备注或其他
 
 	
 	

@@ -4,15 +4,15 @@ import com.topcheer.framework.dto.BaseDto;
 
 public class AnswerInfo extends BaseDto {
 
-	private String radioValue;
-	private String checkValue;
-	private String subValue;
-	private String suggestValue;
-	private String restOne;
-	private String restTwo;
+	private String radioValue;//单选框字符串
+	private String checkValue;//复选框字符串
+	private String subValue;//偏向选择
+	private String suggestValue;//建议与意见
+	private String restOne;//复选其他一
+	private String restTwo;//复选其他二
 	
-	private String userId;
-	private String userName;
+	private String userId;//用户编号
+	private String userName;//用户姓名
 	
 
 	
