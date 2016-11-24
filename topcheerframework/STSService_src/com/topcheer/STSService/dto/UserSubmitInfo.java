@@ -6,12 +6,12 @@ import com.topcheer.framework.dto.BaseDto;
 
 public class UserSubmitInfo extends BaseDto{
 	
-	private String user_id;
-	private String user_name;
-	private int questionnaire_id;
-	private String is_submit;
-	private String id;
-	private Date submit_time;
+	private String user_id;//用户编号
+	private String user_name;//用户姓名
+	private int questionnaire_id;//试卷编号
+	private String is_submit;//提交状态
+	private String id;//提交信息表主键
+	private Date submit_time;//提交时间
 	public String getId() {
 		return id;
 	}
