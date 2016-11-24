@@ -137,7 +137,7 @@ public class QuestionnaireService extends BaseService {
 		userSubmitInfo.setSubmit_time(new Date());
 		baseDao.insertBySqlId("topcheer.submitMessage", userSubmitInfo);
 		
-		context.createResult(null, "success", "index");
+		context.createResult(null, "success", "jsps/commonActionQuestionnaire");
 	}
 
 }
