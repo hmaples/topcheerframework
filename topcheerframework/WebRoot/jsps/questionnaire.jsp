@@ -484,7 +484,7 @@
     </td>
    </tr>
                             <!-- fifth -->
-                              <tr>
+   <tr>
     <td  colspan=2><b>对技能提升的满意度</b></td>
    </tr>
    <tr>
@@ -575,7 +575,192 @@
 						background-color:#F2F7F9;" type = "text"/>
     </td>
    </tr>
+                                     <!-- sixth -->
+                                     
+       <tr>
+    <td  colspan=2><b>对工作群体的满意度</b></td>
+   </tr>
+   <tr>
+    <td align = left>21.	我的同事能毫无保留地分享、传授自己的成功经验。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+   <tr>
    
+   </tr>
+   
+   <tr>
+    <td align = left>22.	我可以获取必要的信息和资料，以便于顺利开展工作。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+   <tr>
+   
+   </tr>
+   
+   <tr>
+    <td align = left>23.	我所在的部门能够发挥集体作用，相互支持完成组织目标。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+    
+   <tr>
+    <td align = left>24.	为完成同一目标，不同部门的同事能紧密合作。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+   <tr>
+   
+   </tr>
+   
+   <tr>
+    <td align = left>25.	我对公司的团队合作精神感到满意。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+                                  <!-- WELL DONE -->
+                                      <tr>
+    <td  colspan=2><b>对公司的满意度</b></td>
+   </tr>
+   <tr>
+    <td align = left>26.	公司制定的各项管理制度合理。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+   <tr>
+   
+   </tr>
+   
+   <tr>
+    <td align = left>27.	公司各项管理制度能够得到严格执行，在执行过程中保证了公平性。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+   <tr>
+   
+   </tr>
+   
+   <tr>
+    <td align = left>28.	我认同公司的企业文化。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+    
+   <tr>
+    <td align = left>29.	我喜欢公司的工作氛围。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+   <tr>
+   
+   </tr>
+   
+   <tr>
+    <td align = left>30.	我认为公司能留住表现出色的员工。</td>
+    <td><input  name = "m_radio_1" id="4_1_1" type = "radio"/>1<input name = "m_radio_1" id="4_1_1"  type = "radio"/>2<input name = "m_radio_1" id="4_1_1"  type = "radio"/>3<input name = "m_radio_1" id="4_1_1"  type = "radio"/>4<input name = "m_radio_1" id="4_1_1"  type = "radio"/>5<input name = "m_radio_1" id="4_1_1"   type = "radio"/>6<input name = "m_radio_1" id="4_1_1"  type = "radio"/>7</td>
+   </tr>
+    <!-- 说明输入 -->
+   <tr>
+    <td style = "text-align:left;" colspan = 2>
+          说明 <input style = "width:95%;
+						border-bottom:1px black solid;
+						border-left-style:none;
+						border-right-style:none;
+						border-top-style:none;
+						background-color:#F2F7F9;" type = "text"/>
+    </td>
+   </tr>
+        
    
    </table>
    </div>
