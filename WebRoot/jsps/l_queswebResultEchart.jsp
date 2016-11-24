@@ -580,7 +580,7 @@
 	
 	<div id="result5" name="resulttable" style="display:none">
     <h2 align="center">
-    <a href="jsps/s_tobecontinued.jsp"><input type="button" name="ExportExcel" value="导出所有数据为Excel文件" style="font-size:20px"></a>
+    <a href="servlet/l_PoiExportTest"><input type="button" name="ExportExcel" value="导出所有数据为Excel文件" style="font-size:20px"></a>
     </h2>
 	</div>
 
