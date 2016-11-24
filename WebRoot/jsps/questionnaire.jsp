@@ -41,7 +41,7 @@
 					<br />
 					员工是天正最宝贵的财富，公司的业绩提升来源于员工的敬业与勤奋，员工的满意度取决于对公司和就职部门各项工作改善的认可。我们鼓励大家对公司和部门的发展及管理做出及时客观的评价，以使公司和部门与您在事业上共同成长和进步。
 					<br />
-					我们非常重视您的合理建议，烦请配合填写以下内容：
+					本次调查采取匿名收集数据，我们非常重视您的合理建议，请您不要有任何顾虑配合填写以下内容：
 				</p>
 			</div>
 			<!--回答者信息 -->
@@ -588,6 +588,7 @@
    </tr>
    
    <tr>
+    <td align = left>17.	公司会根据业务特性开展有针对性的通用培训课程。</td>
 <td><input name = "m_radio_17" id="4_17_1"  type = "radio"/>1
     	<input name = "m_radio_17" id="4_17_2"  type = "radio"/>2
     	<input name = "m_radio_17" id="4_17_3"  type = "radio"/>3
@@ -938,7 +939,7 @@
 		</div>
 		<!-- 开发者信息 -->
 			<div style = "background-color:EFF0DC;width:90%;padding:20px; margin: 0 auto;">
-			<div align = center style = "color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >开发者信息:<br/>总负责：夏昆  美化特效：马琦睿  开发：王伟 沈丞恭 廖旭</div>
+			<div align = center style = "color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >开发者信息:<br/>部门：开发三部   开发：王伟 沈丞恭 廖旭 美化：马琦睿 指导：夏昆 </div>
 			 
 			</div>
 					
