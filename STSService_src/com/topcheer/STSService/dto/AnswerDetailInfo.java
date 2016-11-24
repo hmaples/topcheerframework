@@ -4,24 +4,18 @@ import com.topcheer.framework.dto.BaseDto;
 
 public class AnswerDetailInfo extends BaseDto{
 	
-//	private Integer id;
-	private Integer result_id;
+	private String result_id;
 	private Integer type;
 	private Integer number;
 	private String value;
 	private String content;
+
 	
 	
-//	public Integer getId() {
-//		return id;
-//	}
-//	public void setId(Integer id) {
-//		this.id = id;
-//	}
-	public Integer getResult_id() {
+	public String getResult_id() {
 		return result_id;
 	}
-	public void setResult_id(Integer result_id) {
+	public void setResult_id(String result_id) {
 		this.result_id = result_id;
 	}
 	public Integer getType() {

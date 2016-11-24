@@ -1,13 +1,14 @@
 package com.topcheer.STSService.service;
 
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.topcheer.STSService.dto.AnswerDetailInfo;
 import com.topcheer.STSService.dto.AnswerInfo;
+import com.topcheer.STSService.dto.UserSubmitInfo;
 import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
@@ -19,37 +20,79 @@ public class QuestionnaireService extends BaseService {
 	private BaseDao baseDao;
 
 	public void doBusiness(ApplicationContext context) throws Exception {
-		
-		String answerId=baseDao.selectStringBySqlId("topcheer.selectAnswerId", null);
-		int result_id=Integer.parseInt(answerId)+1;
+
 		AnswerInfo answerInfo = context.getPara(AnswerInfo.class);
 		String[] radioArray = answerInfo.getRadioValue().split(",");
 		String[] checkArray = answerInfo.getCheckValue().split(",");
 		String[] subArray = answerInfo.getSubValue().split("#");
-		List<AnswerDetailInfo> answerDetailList = new ArrayList<AnswerDetailInfo>();
+		String userId=answerInfo.getUserId();
+		String userName=answerInfo.getUserName();
+		//用户提交信息状态表插入
+		UserSubmitInfo userSubmitInfo=new UserSubmitInfo();
+		userSubmitInfo.setUser_id(userId);
+		userSubmitInfo.setUser_name(userName);
+		userSubmitInfo.setQuestionnaire_id(1);
+		userSubmitInfo.setIs_submit("1");
+		baseDao.insertBySqlId("topcheer.userSubmit", userSubmitInfo);		
+		//提交信息表
+		userSubmitInfo.setId(UUID.randomUUID().toString().replaceAll("-", ""));
+		userSubmitInfo.setSubmit_time(new Date());
+		baseDao.insertBySqlId("topcheer.submitMessage", userSubmitInfo);
+		//submit_id赋值
+		String result_id=UUID.randomUUID().toString().replaceAll("-", "");
 		// 单选题
-		List<AnswerDetailInfo> radioList = new ArrayList<AnswerDetailInfo>();
 		for (int i = 0; i < radioArray.length; i++) {
 			String[] radioDetailArray = radioArray[i].split("_");
-			AnswerDetailInfo answerDetailInfo = new AnswerDetailInfo();
-			if (radioDetailArray[0] == null || radioDetailArray[0] == "") {
-			} else {
-				answerDetailInfo.setType(Integer.parseInt(radioDetailArray[0]));
+			// 单选题及用户信息
+			if (radioArray[0] == "1" || radioArray[0] == "2") {
+				AnswerDetailInfo answerDetailInfo = new AnswerDetailInfo();
+				if (radioDetailArray[0] == null || radioDetailArray[0] == "") {
+				} else {
+					answerDetailInfo.setType(Integer
+							.parseInt(radioDetailArray[0]));
+				}
+				if (radioDetailArray[1] == null || radioDetailArray[1] == "") {
+				} else {
+					answerDetailInfo.setNumber(Integer
+							.parseInt(radioDetailArray[1]));
+				}
+				answerDetailInfo.setValue(radioDetailArray[2]);
+				answerDetailInfo.setContent("");
+				answerDetailInfo.setResult_id(result_id);
+				baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
+			} else {// 偏向选择数据处理
+				AnswerDetailInfo answerDetailInfo = new AnswerDetailInfo();
+				if (radioDetailArray[0] == null || radioDetailArray[0] == "") {
+				} else {
+					answerDetailInfo.setType(Integer
+							.parseInt(radioDetailArray[0]));
+				}
+				if (radioDetailArray[1] == null || radioDetailArray[1] == "") {
+				} else {
+					answerDetailInfo.setNumber(Integer
+							.parseInt(radioDetailArray[1]));
+				}
+				answerDetailInfo.setValue(radioDetailArray[2]);
+				answerDetailInfo.setResult_id(result_id);
+				// 取出偏向选择说明
+				for (int k = 0; k < subArray.length; k++) {
+					String[] subDetailArray = subArray[k].split("_");
+					if (radioDetailArray[1] == subDetailArray[1]) {
+						if (subDetailArray[2] != null
+								&& subDetailArray[2] != "") {
+							answerDetailInfo.setContent(subDetailArray[2]);
+						} else {
+							answerDetailInfo.setContent("");
+						}
+					} else {
+						answerDetailInfo.setContent("");
+					}
+				}
+				baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
 			}
-			if (radioDetailArray[1] == null || radioDetailArray[1] == "") {
-			} else {
-				answerDetailInfo.setNumber(Integer
-						.parseInt(radioDetailArray[1]));
-			}
-			answerDetailInfo.setValue(radioDetailArray[2]);
-			answerDetailInfo.setContent("");
-			answerDetailInfo.setResult_id(result_id);
-			baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
-			radioList.add(answerDetailInfo);
 		}
 
 		// 多选题
-		List<AnswerDetailInfo> checkList = new ArrayList<AnswerDetailInfo>();
 		Map<String, AnswerDetailInfo> checkMap = new HashMap<String, AnswerDetailInfo>();
 		for (int j = 0; j < checkArray.length; j++) {
 			String[] checkDetailArray = checkArray[j].split("_");
@@ -58,7 +101,7 @@ public class QuestionnaireService extends BaseService {
 			if (checkMap.containsKey(mapKey)) {
 				AnswerDetailInfo answerDetailInfo = checkMap.get(mapKey);
 				if (answerDetailInfo.getValue() == null) {
-					answerDetailInfo.setValue(nowValue);//虽然answerDetailInfo但是answerDetailInfo.getValue()可能为null
+					answerDetailInfo.setValue(nowValue);// 虽然answerDetailInfo但是answerDetailInfo.getValue()可能为null
 				} else {
 					answerDetailInfo.setValue(answerDetailInfo.getValue() + ","
 							+ nowValue);
@@ -75,7 +118,7 @@ public class QuestionnaireService extends BaseService {
 		}
 		for (Map.Entry<String, AnswerDetailInfo> entry : checkMap.entrySet()) {
 			AnswerDetailInfo answerDetailInfo = new AnswerDetailInfo();
-			answerDetailInfo.setType(2);
+			answerDetailInfo.setType(3);
 			answerDetailInfo.setNumber(entry.getValue().getNumber());
 			answerDetailInfo.setValue(entry.getValue().getValue());
 			if (answerInfo.getRestOne() != null
@@ -83,6 +126,8 @@ public class QuestionnaireService extends BaseService {
 				String[] restOneArray = answerInfo.getRestOne().split("_");
 				if (Integer.parseInt(restOneArray[1]) == entry.getValue()
 						.getNumber()) {
+					answerDetailInfo.setValue(entry.getValue().getValue() + ","
+							+ "0");
 					answerDetailInfo.setContent(restOneArray[3]);
 				}
 			} else if (answerInfo.getRestTwo() != null
@@ -90,28 +135,15 @@ public class QuestionnaireService extends BaseService {
 				String[] restTwoArray = answerInfo.getRestTwo().split("_");
 				if (Integer.parseInt(restTwoArray[1]) == entry.getValue()
 						.getNumber()) {
+					answerDetailInfo.setValue(entry.getValue().getValue() + ","
+							+ "0");
 					answerDetailInfo.setContent(restTwoArray[3]);
 				}
-			}else {
+			} else {
 				answerDetailInfo.setContent(null);
 			}
 			answerDetailInfo.setResult_id(result_id);
 			baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
-			checkList.add(answerDetailInfo);
-		}
-
-		// 偏向选择
-		List<AnswerDetailInfo> subList = new ArrayList<AnswerDetailInfo>();
-		for (int k = 0; k < subArray.length; k++) {
-			String[] subDetailArray = subArray[k].split("_");
-			AnswerDetailInfo answerDetailInfo = new AnswerDetailInfo();
-			answerDetailInfo.setType(Integer.parseInt(subDetailArray[0]));
-			answerDetailInfo.setNumber(Integer.parseInt(subDetailArray[1]));
-			answerDetailInfo.setValue(subDetailArray[2]);
-			answerDetailInfo.setContent(subDetailArray[3]);
-			answerDetailInfo.setResult_id(result_id);
-			baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
-			subList.add(answerDetailInfo);
 		}
 		// 建议意见
 		String[] suggestArray = answerInfo.getSuggestValue().split("_");
@@ -122,8 +154,7 @@ public class QuestionnaireService extends BaseService {
 		answerDetailInfo.setContent(suggestArray[3]);
 		answerDetailInfo.setResult_id(result_id);
 		baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
-		answerDetailList.add(answerDetailInfo);
-		context.createResult(null,"success", "index");
+		context.createResult(null, "success", "index");
 	}
 
 }
