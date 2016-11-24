@@ -63,7 +63,7 @@ function dataHandling() {
 		}
 	}
 	// 建议与意见题
-	suggestValue = "5_1_" + "_" + document.getElementById('5_1_null').value;
+	suggestValue = "5_1_''" + "_" + document.getElementById('5_1_null').value;
 	// 绑定到jsp
 	$('#restOne').attr("value", restOne);
 	$('#restTwo').attr("value", restTwo);

@@ -41,8 +41,8 @@ public class QuestionnaireService extends BaseService {
 			answerDetailInfo.setNumber(Integer.parseInt(radioDetailArray[1]));
 			answerDetailInfo.setValue(radioDetailArray[2]);
 			
-			// 单选题及用户信息
-			if (radioDetailArray[0].equals("4")) {
+			// 偏向选择
+			if ("4".equals(radioDetailArray[0])) {
 				for (int k = 0; k < subArray.length; k++) {
 					String[] subDetailArray = subArray[k].split("_");
 					if (radioDetailArray[1].equals(subDetailArray[1])) {
@@ -68,48 +68,60 @@ public class QuestionnaireService extends BaseService {
 				answerDetailInfo = checkMap.get(mapKey);
 			} else {
 				answerDetailInfo = new AnswerDetailInfo();
+				answerDetailInfo.setResult_id(result_id);
 				answerDetailInfo.setType(Integer.parseInt(checkDetailArray[0]));
 				answerDetailInfo.setNumber(Integer.parseInt(checkDetailArray[1]));
 				//answerDetailInfo.setValue(checkDetailArray[2]);
 			}
 			if (answerDetailInfo.getValue() == null) {
-				answerDetailInfo.setValue(nowValue);// 虽然answerDetailInfo但是answerDetailInfo.getValue()可能为null
+				answerDetailInfo.setValue(nowValue);
 			} else {
 				answerDetailInfo.setValue(answerDetailInfo.getValue() + ","+ nowValue);
 			}
+			//多选题其他选项
+			if ("1".equals(mapKey)) {
+				if (answerInfo.getRestOne() != null&& answerInfo.getRestOne() != "") {
+					String[] restOneArray = answerInfo.getRestOne().split("_");
+					answerDetailInfo.setContent(restOneArray[3]);
+				}
+			}
+			if ("2".equals(mapKey)) {
+				if (answerInfo.getRestTwo() != null&& answerInfo.getRestTwo() != "") {
+					String[] restTwoArray = answerInfo.getRestTwo().split("_");
+						answerDetailInfo.setContent(restTwoArray[3]);
+				}
+			}
+//			if (answerInfo.getRestOne() != null&& answerInfo.getRestOne() != "") {
+//				String[] restOneArray = answerInfo.getRestOne().split("_");
+//				if (mapKey==null||mapKey=="") {
+//					answerDetailInfo.setContent(restOneArray[3]);
+//				}else if(restOneArray[1].equals(mapKey)){
+//					answerDetailInfo.setContent(restOneArray[3]);
+//				}
+//			}
+//			if (answerInfo.getRestTwo() != null&& answerInfo.getRestTwo() != "") {
+//				String[] restTwoArray = answerInfo.getRestTwo().split("_");
+//				if (mapKey==null||mapKey=="") {
+//					answerDetailInfo.setContent(restTwoArray[3]);
+//				}else if(restTwoArray[1].equals(mapKey)){
+//					answerDetailInfo.setContent(restTwoArray[3]);
+//				}
+//			}
+			
 			checkMap.put(mapKey, answerDetailInfo);
 		}
 		//循环map将数据插入数据库
 		for (Map.Entry<String, AnswerDetailInfo> entry : checkMap.entrySet()) {
-			AnswerDetailInfo answerDetailInfo = new AnswerDetailInfo();
-			answerDetailInfo.setType(3);
-			answerDetailInfo.setNumber(entry.getValue().getNumber());
-			answerDetailInfo.setValue(entry.getValue().getValue());
-			if (answerInfo.getRestOne() != null&& answerInfo.getRestOne() != "") {
-				String[] restOneArray = answerInfo.getRestOne().split("_");
-				if (Integer.parseInt(restOneArray[1]) == entry.getValue().getNumber()) {
-					answerDetailInfo.setValue(entry.getValue().getValue() + ","+ "0");
-					answerDetailInfo.setContent(restOneArray[3]);
-				}
-			} else if (answerInfo.getRestTwo() != null&& answerInfo.getRestTwo() != "") {
-				String[] restTwoArray = answerInfo.getRestTwo().split("_");
-				if (Integer.parseInt(restTwoArray[1]) == entry.getValue().getNumber()) {
-					answerDetailInfo.setValue(entry.getValue().getValue() + ","+ "0");
-					answerDetailInfo.setContent(restTwoArray[3]);
-				}
-			} else {
-				answerDetailInfo.setContent(null);
-			}
-			answerDetailInfo.setResult_id(result_id);
-			baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
+			baseDao.insertBySqlId("topcheer.AnswerInster", entry.getValue());
 		}
 		// 建议意见
 		String[] suggestArray = answerInfo.getSuggestValue().split("_");
 		AnswerDetailInfo answerDetailInfo = new AnswerDetailInfo();
 		answerDetailInfo.setType(Integer.parseInt(suggestArray[0]));
 		answerDetailInfo.setNumber(Integer.parseInt(suggestArray[1]));
-		answerDetailInfo.setValue(suggestArray[2]);
+		if(suggestArray.length==4){
 		answerDetailInfo.setContent(suggestArray[3]);
+		}
 		answerDetailInfo.setResult_id(result_id);
 		baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
 
