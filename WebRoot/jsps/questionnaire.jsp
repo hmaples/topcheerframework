@@ -4,6 +4,7 @@
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	String userName = request.getParameter("userName");
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -62,7 +63,7 @@
 				<input type="hidden" id="restOne" name="restOne"/>
 				<input type="hidden" id="restTwo"name="restTwo"/>	
 				<input type="hidden" name="userId" value="1"> 		
-				<input type="hidden" name="userName" value="davey"> 				
+				<input type="hidden" name="userName" value="<%=userName%>>"> 				
 			<div
 				class = "div-inside2" style = "color:#34352C;font-family:Microsoft YaHei;">
 				<h2>
