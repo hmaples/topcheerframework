@@ -129,7 +129,7 @@ function checkchoice() {
 				if (j >= 5) {
 					if ($.trim(document.getElementById('subb_' + i).value) == '') {
 
-						alert("偏向选择分数高于5分请注明原因,题号:"+(i);
+						alert("偏向选择分数高于5分请注明原因,题号:"+(i));
 						$("#subb_"+i).focus();
 						return false;
 					}
