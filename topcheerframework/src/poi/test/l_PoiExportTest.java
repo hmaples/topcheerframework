@@ -39,7 +39,7 @@ public class l_PoiExportTest extends HttpServlet {
 		
 		
 		
-System.out.println("already OK ok ok");
+		System.out.println("already OK ok ok");
 		
 		// 声明一个工作薄
         HSSFWorkbook wb = new HSSFWorkbook();
@@ -57,56 +57,28 @@ System.out.println("already OK ok ok");
         //样式字体居中
         style.setAlignment(HSSFCellStyle.ALIGN_CENTER);
         //给表头第一行一次创建单元格
-        HSSFCell cell = row.createCell(0);
-        cell.setCellValue("编号"); 
-        cell.setCellStyle(style);
-        cell = row.createCell(1);  
-                cell.setCellValue("年龄");  
-                cell.setCellStyle(style);  
-                cell = row.createCell(2);  
-                cell.setCellValue("性别");  
-                cell.setCellStyle(style); 
-                cell = row.createCell(3);  
-                cell.setCellValue("学历层次");  
-                cell.setCellStyle(style); 
-                cell = row.createCell(4);  
-                cell.setCellValue("服务年限");  
-                cell.setCellStyle(style); 
-                cell = row.createCell(5);  
-                cell.setCellValue("就职部门");  
-                cell.setCellStyle(style); 
+        
+        String[] name1=new String[6];
+        name1[0]="编号";name1[1]="年龄";name1[2]="性别";
+        name1[3]="学历层次";name1[4]="服务年限";name1[5]="就职部门";
+        HSSFCell[] cell = new HSSFCell[name1.length];
+        
+        for(int i=0;i<name1.length;i++){
+        	cell[i] = row.createCell(i);
+        	cell[i].setCellValue(name1[i]);
+        	cell[i].setCellStyle(style);	
+        }
+        
+        String[] name2=new String[10];
+        name2[0]="编号";name2[1]="多选题1";name2[2]="多选题1注明";name2[3]="多选题2";name2[4]="多选题2注明";
+        name2[5]="多选题3";name2[6]="单选题4";name2[7]="单选题";name2[8]="单选题6";name2[9]="单选题7";
+        HSSFCell[] cell2 = new HSSFCell[name2.length];        
+        for(int i=0;i<name2.length;i++){
+        	cell2[i] = row2.createCell(i);
+        	cell2[i].setCellValue(name2[i]);
+        	cell2[i].setCellStyle(style);
+        }        
                 
-                
-                HSSFCell cell2 = row2.createCell(0);
-                cell2.setCellValue("编号"); 
-                cell2.setCellStyle(style);
-                cell2 = row2.createCell(1);  
-                        cell2.setCellValue("多选题1");  
-                        cell2.setCellStyle(style);  
-                        cell2 = row2.createCell(2);  
-                        cell2.setCellValue("多选题1注明");  
-                        cell2.setCellStyle(style); 
-                        cell2 = row2.createCell(3);  
-                        cell2.setCellValue("多选题2");  
-                        cell2.setCellStyle(style); 
-                        cell2 = row2.createCell(4);  
-                        cell2.setCellValue("多选题2注明");  
-                        cell2.setCellStyle(style); 
-                        cell2 = row2.createCell(5);  
-                        cell2.setCellValue("多选题3");  
-                        cell2.setCellStyle(style);
-                        cell2 = row2.createCell(6);  
-                        cell2.setCellValue("单选题4");  
-                        cell2.setCellStyle(style);
-                        cell2 = row2.createCell(7);  
-                        cell2.setCellValue("单选题5");  
-                        cell2.setCellStyle(style);
-                        cell2 = row2.createCell(8);  
-                        cell2.setCellValue("单选题6");  
-                        cell2.setCellStyle(style);
-                        cell2 = row2.createCell(9);  
-                        cell2.setCellValue("单选题7");  
-                        cell2.setCellStyle(style);
                 
                 
                 
@@ -118,6 +90,14 @@ System.out.println("already OK ok ok");
                 list.add(new l_StaffInfo(1005,"25(含)-30岁","女","硕士及以上","不足一年","交付一部"));
                 list.add(new l_StaffInfo(1006,"25(含)-30岁","女","本科","八年以上","交付三部"));
                 
+                List<l_SelectedInfo> list2=new ArrayList<l_SelectedInfo>();
+                list2.add(new l_SelectedInfo(1001,"公司前景，团队配合，奖惩机制","女生多","薪酬福利，工作认可","","部门配合，工作氛围，行业环境","完全没有发挥","一般 ","没有空间","继续留在公司"));
+                list2.add(new l_SelectedInfo(1002,"工作认可","","工作认可","","部门配合，工作氛围，行业环境","完全没有发挥","一般 ","发挥尚可","继续留在公司"));
+                list2.add(new l_SelectedInfo(1003,"团队配合，奖惩机制","","公司前景，团队配合","奖惩机制","部门配合，工作氛围，行业环境","完全没有发挥","一般 ","没有空间","继续留在公司"));
+                list2.add(new l_SelectedInfo(1004,"职业方向，公司前景","","薪酬福利","","个人能力","完全没有发挥","一般 ","发挥尚可","继续留在公司"));
+                list2.add(new l_SelectedInfo(1005,"公司前景","有吃的","薪酬福利，工作认可","","行业环境","完全没有发挥","一般 ","发挥尚可","继续留在公司"));
+                
+                
                 for (short i = 0; i < list.size(); i++) {
                     row = sheet.createRow(i + 1);
                     row.createCell(0).setCellValue(list.get(i).getId());
@@ -128,12 +108,26 @@ System.out.println("already OK ok ok");
                     row.createCell(5).setCellValue(list.get(i).getDepartment());
                 }
                 
+                for(int i=0;i<list2.size();i++){
+                	row2 = sheet2.createRow(i + 1);
+                	row2.createCell(0).setCellValue(list2.get(i).getId());
+                	row2.createCell(1).setCellValue(list2.get(i).getMul1());
+                	row2.createCell(2).setCellValue(list2.get(i).getMul1des());
+                	row2.createCell(3).setCellValue(list2.get(i).getMul2());
+                	row2.createCell(4).setCellValue(list2.get(i).getMul2des());
+                	row2.createCell(5).setCellValue(list2.get(i).getMul3());
+                	row2.createCell(6).setCellValue(list2.get(i).getSingle4());
+                	row2.createCell(7).setCellValue(list2.get(i).getSingle5());
+                	row2.createCell(8).setCellValue(list2.get(i).getSingle6());
+                	row2.createCell(9).setCellValue(list2.get(i).getSingle7());
+                }
+                
                 try {
               //默认导出到E盘下
                 FileOutputStream out = new FileOutputStream("E://Excel报表.xls");
                 wb.write(out);
                 out.close();
-                JOptionPane.showMessageDialog(null, "导出成功!");
+                JOptionPane.showMessageDialog(null, "文件已经成功导出到E盘下");
             } catch (FileNotFoundException e) {
                 JOptionPane.showMessageDialog(null, "导出失败!");
                 e.printStackTrace();
