@@ -35,8 +35,15 @@
 		qis.sort,
 		io.sort
 	</select>
+	
+	<select id="selectAnswerId"  resultType="String">
+			SELECT MAX(result_id) FROM result
+	</select>
 	<insert id="insertAnswer" parameterType="com.topcheer.STSService.dto.AnswerInsert">
 		insert into answer_info(research_id,issue_id,issue_answer) values(#{research_id},#{issue_id},#{issue_answer})
+	</insert>
+	<insert id="AnswerInster" parameterType="com.topcheer.STSService.dto.AnswerDetailInfo">
+		insert into result(result_id,type,number,value,content) values(#{result_id},#{type},#{number},#{value},#{content})
 	</insert>
 		<select id="w_staffLogin" parameterType="Integer" resultType="com.topcheer.STSService.dto.W_StaffInfo">
 		SELECT

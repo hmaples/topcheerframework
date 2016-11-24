@@ -94,6 +94,7 @@ public class QuestionAnswerService extends BaseService {
 			answerInsert.setResearch_id(1);
 			answerInsert.setIssue_id(Integer.parseInt(entry.getKey()));
 			answerInsert.setIssue_answer((String) entry.getValue());
+			
 			baseDao.insertBySqlId("topcheer.insertAnswer", answerInsert);
 		//	System.out.println(entry.getKey()+":"+entry.getValue());
 		}
