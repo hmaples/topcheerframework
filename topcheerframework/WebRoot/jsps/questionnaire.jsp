@@ -949,7 +949,7 @@
 		</div>
 		<!-- 开发者信息 -->
 			<div style = "background-color:EFF0DC;width:90%;padding:20px; margin: 0 auto;">
-			<div align = center style = "color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >开发三部<br/>开发：王伟 沈丞恭 廖旭 美化：马琦睿 指导：夏昆 </div>
+			<div align = center style = "color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >交付三部<br/>开发：王伟 沈丞恭 廖旭 美化：马琦睿 指导：夏昆 </div>
 			 
 			</div>
 					
