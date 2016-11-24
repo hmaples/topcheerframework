@@ -1,5 +1,7 @@
 function dataHandling() {
-
+	if(!checkchoice()){
+		return false;
+	}
 	var radioValue = null;
 	var checkValue = null;
 	var subValue = null;

@@ -12,7 +12,14 @@
 		<base href="<%=basePath%>">
 
 		<title>上海天正员工满意度调查问卷</title>
-
+		<link rel="shortcut icon" type="image/x-icon" href="/topcheerframework/images/favicon.ico" media="screen" />
+		<script type="text/javascript">
+		console.log("开发部门：交付三部");
+		console.log("开发：王伟");
+		console.log("开发：沈丞恭");
+		console.log("开发：廖旭");
+		console.log("美工：马琦睿");
+		</script>
 		<meta http-equiv="pragma" content="no-cache">
 		<meta http-equiv="cache-control" content="no-cache">
 		<meta http-equiv="expires" content="0">
@@ -22,7 +29,7 @@
 	<link rel="stylesheet" type="text/css" href="css/questionnaire.css">
 	<script src="/topcheerframework/js/jquery-1.9.1.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/topcheerframework/js/surveySubmit.js"></script>
-
+	<script type="text/javascript" src="/topcheerframework/js/submitcheck.js"></script>
 	</head>
 
 	<body>
