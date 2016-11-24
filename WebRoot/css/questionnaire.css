@@ -67,7 +67,7 @@ position: relative;
 width: 85%;
 margin:0 auto;
 position: relative;
-z-index: 5;
+white-space:nowrap;
 
 }
  p{
@@ -77,12 +77,14 @@ font-family:STHeiti Light;
 line-height:150%;
 }
 .line{
-width:60%;
+width:100%;
 border-bottom:1px black solid;
 border-left-style:none;
 border-right-style:none;
 border-top-style:none;
 background-color:#F2F7F9;
+ font-family:Microsoft YaHei;
+ font-size:23px
 }
 /*
 .div-inside4 {
@@ -139,17 +141,19 @@ font-family:Microsoft YaHei;
 }
 td{
 text-align:left;
+white-space:nowrap;
+ font-family:Microsoft YaHei;
 }
 .div-inside2 input{
 
 width:18px;
 height:18px;
 }
-.div-inside3 input{
+.input-2{
 width:18px;
 height:18px;
 }
-.div-inside4 input{
+.input-3{
 width:18px;
 height:18px;
 }
