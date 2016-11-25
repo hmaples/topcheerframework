@@ -6,6 +6,11 @@ function dataHandling() {
 	var checkValue = null;
 	var subValue = null;
 	var suggestValue = null;
+	
+	
+	//判断用户是否是第二次提交
+	
+	
 
 	// 多选题其他取值
 	if (document.getElementById('3_1_0').checked) {
@@ -33,9 +38,6 @@ function dataHandling() {
 	// 多选题答案
 	for (var j = 0; j < $('#questionnaire').find("input[type='checkbox']").length; j++) {
 		if ($('#questionnaire').find("input[type='checkbox']")[j].checked) {
-			if ($('#questionnaire').find("input[type='checkbox']")[j].id == '3_1_0'
-					| $('#questionnaire').find("input[type='checkbox']")[j].id == '3_2_0') {
-			} else {
 				var checkValueTemp = $('#questionnaire').find(
 						"input[type='checkbox']")[j].id;
 				if (checkValue == null) {
@@ -44,8 +46,6 @@ function dataHandling() {
 					checkValue = checkValue + "," + checkValueTemp;
 				}
 			}
-
-		}
 	}
 	// 偏向选择字符串拼接
 	for (var k = 0; k < $('#questionnaire').find("input[id*='subb']").length; k++) {

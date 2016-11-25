@@ -79,35 +79,19 @@ public class QuestionnaireService extends BaseService {
 				answerDetailInfo.setValue(answerDetailInfo.getValue() + ","+ nowValue);
 			}
 			//多选题其他选项
-			if ("1".equals(mapKey)) {
+			if ("1".equals(mapKey)&&"0".equals(nowValue)) {
 				if (answerInfo.getRestOne() != null&& answerInfo.getRestOne() != "") {
 					String[] restOneArray = answerInfo.getRestOne().split("_");
 					answerDetailInfo.setContent(restOneArray[3]);
 				}
 			}
-			if ("2".equals(mapKey)) {
+			if ("2".equals(mapKey)&&"0".equals(nowValue)) {
 				if (answerInfo.getRestTwo() != null&& answerInfo.getRestTwo() != "") {
 					String[] restTwoArray = answerInfo.getRestTwo().split("_");
-						answerDetailInfo.setContent(restTwoArray[3]);
+					answerDetailInfo.setContent(restTwoArray[3]);
 				}
 			}
-//			if (answerInfo.getRestOne() != null&& answerInfo.getRestOne() != "") {
-//				String[] restOneArray = answerInfo.getRestOne().split("_");
-//				if (mapKey==null||mapKey=="") {
-//					answerDetailInfo.setContent(restOneArray[3]);
-//				}else if(restOneArray[1].equals(mapKey)){
-//					answerDetailInfo.setContent(restOneArray[3]);
-//				}
-//			}
-//			if (answerInfo.getRestTwo() != null&& answerInfo.getRestTwo() != "") {
-//				String[] restTwoArray = answerInfo.getRestTwo().split("_");
-//				if (mapKey==null||mapKey=="") {
-//					answerDetailInfo.setContent(restTwoArray[3]);
-//				}else if(restTwoArray[1].equals(mapKey)){
-//					answerDetailInfo.setContent(restTwoArray[3]);
-//				}
-//			}
-			
+
 			checkMap.put(mapKey, answerDetailInfo);
 		}
 		//循环map将数据插入数据库
