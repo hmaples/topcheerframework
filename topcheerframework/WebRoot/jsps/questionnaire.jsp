@@ -42,14 +42,14 @@
 				<h1  >
 					上海天正员工满意度调查问卷
 				</h1>
-			   <div style="font-family:Microsoft YaHei;display:none;"><p>
+			   <p>
 					亲爱的同事，您好！
 					<br />
 					新的一年即将来临，感谢您在2016年度为公司发展做出的贡献！
 					<br />
 					员工是天正最宝贵的财富，公司的业绩提升来源于员工的敬业与勤奋，员工的满意度取决于对公司和就职部门各项工作改善的认可。我们鼓励大家对公司和部门的发展及管理做出及时客观的评价，以使公司和部门与您在事业上共同成长和进步。
-					<br /></div>
-					<p>本次调查采取匿名收集数据，我们非常重视您的合理建议，请您不要有任何顾虑配合填写以下内容：
+					<br />
+					本次调查采取匿名收集数据，我们非常重视您的合理建议，请您不要有任何顾虑配合填写以下内容：
 				</p>
 			</div>
 			<!--回答者信息 -->
@@ -73,47 +73,47 @@
 				<b>1.年龄：</b>
 				<br /><br />
 				<input type="radio" name="age" id="1_1_6">
-				25岁以下
+				<label for="1_1_6">25岁以下</label>
 				<input type="radio" name="age" id="1_1_7">
-				25(含)-30岁
+				<label for="1_1_7">25(含)-30岁</label>
 				<input type="radio" name="age" id="1_1_8">
-				30(含)-40岁
+				<label for="1_1_8">30(含)-40岁</label>
 				<input type="radio" name="age" id="1_1_9">
-				40(含)岁以上
+				<label for="1_1_9">40(含)岁以上</label>
 				<br />
 				<br />
 				<b>2.性别：</b>
 				<br /><br />
 				<input type="radio" name="sex" id="1_2_10">
-				男
+				<label for="1_2_10">男</label>
 				<input type="radio" name="sex" id="1_2_11">
-				女
+				<label for="1_2_11">女</label>
 				<br />
 				<br />
 				<b>3.学历层次：</b>
 				<br /><br />
 				<input type="radio" id="1_3_12" name="education">
-				高中及以下（含职高）
+				<label for="1_3_12">高中及以下（含职高）</label>
 				<input type="radio" id="1_3_13" name="education">
-				大专
+				<label for="1_3_13">大专</label>
 				<input type="radio" id="1_3_14" name="education">
-				本科
+				<label for="1_3_14">本科</label>
 				<input type="radio" id="1_3_15" name="education">
-				硕士及以上
+				<label for="1_3_15">硕士及以上</label>
 				<br />
 				<br />
 				<b>4.为本公司服务的年限：</b>
 				<br /><br />
 				<input type="radio" id="1_4_16" name="year">
-				不足一年
+				<label for="1_4_16">不足一年</label>
 				<input type="radio" id="1_4_17" name="year">
-				满一年不足三年
+				<label for="1_4_17">满一年不足三年</label>
 				<input type="radio" id="1_4_18" name="year">
-				满三年不足五年
+				<label for="1_4_18">满三年不足五年</label>
 				<input type="radio" id="1_4_19" name="year">
-				满五年不足八年
+				<label for="1_4_19">满五年不足八年</label>
 				<input type="radio" id="1_4_20" name="year">
-				八年以上
+				<label for="1_4_20">八年以上</label>
 				<br />
 				<br />
 				<b>5.目前就职的部门：</b>
@@ -121,26 +121,26 @@
 				<ul>
 					<li>
 						天正信息<br /><br />
-						<input type="radio" id="1_5_21" name="depart">行业客户部
-						<input type="radio" id="1_5_22" name="depart">大客户部
-						<input type="radio" id="1_5_23" name="depart">解决方案部
-						<input type="radio" id="1_5_24" name="depart">技术支持中心
-						<input type="radio" id="1_5_25" name="depart">行政人事部
-						<input type="radio" id="1_5_26" name="depart">资产财务部
+						<input type="radio" id="1_5_21" name="depart"><label for="1_5_21">行业客户部</label>
+						<input type="radio" id="1_5_22" name="depart"><label for="1_5_22">大客户部</label>
+						<input type="radio" id="1_5_23" name="depart"><label for="1_5_23">解决方案部</label>
+						<input type="radio" id="1_5_24" name="depart"><label for="1_5_24">技术支持中心</label>
+						<input type="radio" id="1_5_25" name="depart"><label for="1_5_25">行政人事部</label>
+						<input type="radio" id="1_5_26" name="depart"><label for="1_5_26">资产财务部</label>
 					</li><br/>
 					<li>
 						天正软件<br /><br />
-						<input type="radio" id="1_5_27" name="depart">开发交付中心 
-						<input type="radio" id="1_5_28" name="depart">解决方案中心 
-						<input type="radio" id="1_5_29" name="depart">市场营销中心 
-						<input type="radio" id="1_5_30" name="depart">运营管理部
+						<input type="radio" id="1_5_27" name="depart"><label for="1_5_27">开发交付中心</label> 
+						<input type="radio" id="1_5_28" name="depart"><label for="1_5_28">解决方案中心 </label>
+						<input type="radio" id="1_5_29" name="depart"><label for="1_5_29">市场营销中心 </label>
+						<input type="radio" id="1_5_30" name="depart"><label for="1_5_30">运营管理部</label>
 					</li><br />
 					<li>
 						天正智能<br /><br />
-						 <input type="radio" id="1_5_31" name="depart">交付一部
-						 <input type="radio" id="1_5_32" name="depart">交付二部
-						 <input type="radio" id="1_5_23" name="depart">解决方案部
-						 <input type="radio" id="1_5_33" name="depart">产品研发部
+						 <input type="radio" id="1_5_31" name="depart"><label for="1_5_31">交付一部</label>
+						 <input type="radio" id="1_5_32" name="depart"><label for="1_5_32">交付二部</label>
+						 <input type="radio" id="1_5_23" name="depart"><label for="1_5_23">解决方案部</label>
+						 <input type="radio" id="1_5_33" name="depart"><label for="1_5_33">产品研发部</label>
 					</li>
 				</ul>
 			</div><br />
@@ -148,63 +148,63 @@
 			<div class = "div-inside3" style="color:#34352C;font-family:Microsoft YaHei;" >
 				<b>一、多选题（请选出您认为最符合实际的答案，每项最多可选3个）</b><br/><br />
 				<b>1、	目前，我认为最满意的方面是：</b><br /><br/>
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_34">公司前景
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_35">锻炼与发展机会 
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_36">薪酬福利 
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_37">绩效管理 
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_38">培训培养
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_39">职业方向 
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_40">团队配合     
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_41">奖惩机制<br></br>
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_42">工作认可 
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_43">人际关系
-				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_0">其他(请注明)<br/>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_34"><label for="3_1_34">公司前景</label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_35"><label for="3_1_35">锻炼与发展机会 </label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_36"><label for="3_1_36">薪酬福利 </label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_37"><label for="3_1_37">绩效管理 </label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_38"><label for="3_1_38">培训培养</label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_39"><label for="3_1_39">职业方向 </label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_40"><label for="3_1_40">团队配合     </label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_41"><label for="3_1_41">奖惩机制</label><br></br>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_42"><label for="3_1_42">工作认可 </label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_43"><label for="3_1_43">人际关系</label>
+				<input type="checkbox"class = "input-2"  name="checkOne" id="3_1_0"><label for="3_1_0">其他(请注明)</label><br/>
 				<input type="text" class = "line" id="else_1">
 				<br/><br/>
 				<b>2、	目前，我觉得需要改进的方面是：</b><br /><br/>
-				<input type="checkbox"class = "input-2"  name="checkTwo" id="3_2_34">公司前景
-				<input type="checkbox"class = "input-2" name="checkTwo" id="3_2_35">锻炼与发展机会 
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_36">薪酬福利 
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_37">绩效管理 
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_38">培训培养
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_39">职业方向 
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_40">团队配合     
-				<input type="checkbox"class = "input-2" name="checkTwo" id="3_2_41">奖惩机制<br></br>
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_42">工作认可 
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_43">人际关系
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_0">其他(请注明)<br/>
+				<input type="checkbox"class = "input-2"  name="checkTwo" id="3_2_34"><label for="3_2_34">公司前景</label>
+				<input type="checkbox"class = "input-2" name="checkTwo" id="3_2_35"><label for="3_2_35">锻炼与发展机会 </label>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_36"><label for="3_2_36">薪酬福利 </label>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_37"><label for="3_2_37">绩效管理 </label>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_38"><label for="3_2_38">培训培养</label>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_39"><label for="3_2_39">职业方向</label> 
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_40"><label for="3_2_40">团队配合</label>     
+				<input type="checkbox"class = "input-2" name="checkTwo" id="3_2_41"><label for="3_2_41">奖惩机制</label><br></br>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_42"><label for="3_2_42">工作认可 </label>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_43"><label for="3_2_43">人际关系</label>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_0"><label for="3_2_44">其他(请注明)</label><br/>
 				<input type="text"  class = "line"  id="else_2">
 				<br/><br/>
 				<b>3、我觉得制约我取得优异工作业绩的最大因素是:</b><br /><br/>
-				<input type="checkbox" class = "input-2"name="checkThree" id="3_3_45">上级支持
-				<input type="checkbox" class = "input-2"name="checkThree" id="3_3_46">个人能力 
-				<input type="checkbox" class = "input-2"name="checkThree" id="3_3_47">部门配合
-				<input type="checkbox"class = "input-2" name="checkThree" id="3_3_48">工作氛围
-				<input type="checkbox"class = "input-2" name="checkThree" id="3_3_49">行业环境  
+				<input type="checkbox" class = "input-2"name="checkThree" id="3_3_45"><label for="3_3_45">上级支持</label>
+				<input type="checkbox" class = "input-2"name="checkThree" id="3_3_46"><label for="3_3_46">个人能力 </label>
+				<input type="checkbox" class = "input-2"name="checkThree" id="3_3_47"><label for="3_3_47">部门配合</label>
+				<input type="checkbox"class = "input-2" name="checkThree" id="3_3_48"><label for="3_3_48">工作氛围</label>
+				<input type="checkbox"class = "input-2" name="checkThree" id="3_3_49"><label for="3_3_49">行业环境  </label>
 				<br/><br/>
 				<b>单选题</b><br /><br/>
 				<b>4、我认为自己的才能在目前岗位是否得以发挥:</b><br/><br />
-				<input type="radio"class = "input-2" name="radioFour" id="2_4_50">完全没有发挥
-				<input type="radio"class = "input-2"  name="radioFour" id="2_4_51">有些方面没有发挥
-				<input type="radio"class = "input-2"  name="radioFour" id="2_4_52">发挥尚可 
-				<input type="radio"class = "input-2"  name="radioFour" id="2_4_53">已充分发挥
+				<input type="radio"class = "input-2" name="radioFour" id="2_4_50"><label for="2_4_50">完全没有发挥</label>
+				<input type="radio"class = "input-2"  name="radioFour" id="2_4_51"><label for="2_4_51">有些方面没有发挥</label>
+				<input type="radio"class = "input-2"  name="radioFour" id="2_4_52"><label for="2_4_52">发挥尚可 </label>
+				<input type="radio"class = "input-2"  name="radioFour" id="2_4_53"><label for="2_4_53">已充分发挥</label>
 				<br/><br/>
 				<b>5、我认为目前的工作积极性为:</b><br/><br />
-				<input type="radio"class = "input-2"  name="radioFive" id="2_5_54">基本调动起来
-				<input type="radio"class = "input-2"  name="radioFive" id="2_5_55">一般
-				<input type="radio"class = "input-2"  name="radioFive" id="2_5_56">基本没有
-				<input type="radio"class = "input-2"  name="radioFive" id="2_5_57">完全没有
+				<input type="radio"class = "input-2"  name="radioFive" id="2_5_54"><label for="2_5_54">基本调动起来</label>
+				<input type="radio"class = "input-2"  name="radioFive" id="2_5_55"><label for="2_5_55">一般</label>
+				<input type="radio"class = "input-2"  name="radioFive" id="2_5_56"><label for="2_5_56">基本没有</label>
+				<input type="radio"class = "input-2"  name="radioFive" id="2_5_57"><label for="2_5_57">完全没有</label>
 				<br/><br/>
 				<b>6、我认为在天正公司的发展空间是：</b><br/><br/>
-				<input type="radio"class = "input-2"  name="radioSix" id="2_6_58">很大
-				<input type="radio"class = "input-2"  name="radioSix" id="2_6_59">比较大
-				<input type="radio"class = "input-2"  name="radioSix" id="2_6_60">不大
-				<input type="radio"class = "input-2"  name="radioSix" id="2_6_61">没有空间
+				<input type="radio"class = "input-2"  name="radioSix" id="2_6_58"><label for="2_6_58">很大</label>
+				<input type="radio"class = "input-2"  name="radioSix" id="2_6_59"><label for="2_6_59">比较大</label>
+				<input type="radio"class = "input-2"  name="radioSix" id="2_6_60"><label for="2_6_60">不大</label>
+				<input type="radio"class = "input-2"  name="radioSix" id="2_6_61"><label for="2_6_61">没有空间</label>
 				<br/><br/>
 				<b>7、我会留在天正公司，即使其他的公司有类似的空缺：</b><br/><br/>
-				<input type="radio"class = "input-2"  name="radioSeven" id="2_7_62">继续留在公司
-				<input type="radio"class = "input-2"  name="radioSeven" id="2_7_63">不确定
-				<input type="radio"class = "input-2"  name="radioSeven" id="2_7_64">已经在寻找其他机会
+				<input type="radio"class = "input-2"  name="radioSeven" id="2_7_62"><label for="2_7_62">继续留在公司</label>
+				<input type="radio"class = "input-2"  name="radioSeven" id="2_7_63"><label for="2_7_63">不确定</label>
+				<input type="radio"class = "input-2"  name="radioSeven" id="2_7_64"><label for="2_7_64">已经在寻找其他机会</label>
 				<br/><br/>
 			</div>
 			<!-- 偏向选择 -->
@@ -220,13 +220,13 @@
    
    <tr>
     <td align = left>1.	我清楚自身的工作职责与任务。</td>
-    <td><input name = "m_radio_1" id="4_1_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_1" id="4_1_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_1" id="4_1_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_1" id="4_1_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_1" id="4_1_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_1" id="4_1_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_1" id="4_1_7"   class = "input-3"type = "radio"/>7</td>
+    <td><input name = "m_radio_1" id="4_1_1"  class = "input-3"type = "radio"/><label for="4_1_1">1</label>
+    	<input name = "m_radio_1" id="4_1_2"  class = "input-3"type = "radio"/><label for="4_1_2">2</label>
+    	<input name = "m_radio_1" id="4_1_3"  class = "input-3"type = "radio"/><label for="4_1_3">3</label>
+    	<input name = "m_radio_1" id="4_1_4"   class = "input-3"type = "radio"/><label for="4_1_4">4</label>
+    	<input name = "m_radio_1" id="4_1_5"   class = "input-3"type = "radio"/><label for="4_1_5">5</label>
+    	<input name = "m_radio_1" id="4_1_6"    class = "input-3"type = "radio"/><label for="4_1_6">6</label>
+    	<input name = "m_radio_1" id="4_1_7"   class = "input-3"type = "radio"/><label for="4_1_7">7</label></td>
    </tr>
     <!-- 说明输入 -->
    <tr>
@@ -245,13 +245,13 @@
    
    <tr>
     <td align = left>2.	我清楚自身的工作内容和流程。</td>
-<td><input name = "m_radio_2" id="4_2_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_2" id="4_2_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_2" id="4_2_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_2" id="4_2_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_2" id="4_2_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_2" id="4_2_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_2" id="4_2_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_2" id="4_2_1"  class = "input-3"type = "radio"/><label for="4_2_1">1</label>
+    	<input name = "m_radio_2" id="4_2_2"  class = "input-3"type = "radio"/><label for="4_2_2">2</label>
+    	<input name = "m_radio_2" id="4_2_3"  class = "input-3"type = "radio"/><label for="4_2_3">3</label>
+    	<input name = "m_radio_2" id="4_2_4"   class = "input-3"type = "radio"/><label for="4_2_4">4</label>
+    	<input name = "m_radio_2" id="4_2_5"   class = "input-3"type = "radio"/><label for="4_2_5">5</label>
+    	<input name = "m_radio_2" id="4_2_6"    class = "input-3"type = "radio"/><label for="4_2_6">6</label>
+    	<input name = "m_radio_2" id="4_2_7"   class = "input-3"type = "radio"/><label for="4_2_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -269,13 +269,13 @@
    
    <tr>
     <td align = left>3.	当前的工作职责和任务是根据我的能力设定的。</td>
-<td><input name = "m_radio_3" id="4_3_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_3" id="4_3_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_3" id="4_3_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_3" id="4_3_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_3" id="4_3_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_3" id="4_3_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_3" id="4_3_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_3" id="4_3_1"  class = "input-3"type = "radio"/><label for="4_3_1">1</label>
+    	<input name = "m_radio_3" id="4_3_2"  class = "input-3"type = "radio"/><label for="4_3_2">2</label>
+    	<input name = "m_radio_3" id="4_3_3"  class = "input-3"type = "radio"/><label for="4_3_3">3</label>
+    	<input name = "m_radio_3" id="4_3_4"   class = "input-3"type = "radio"/><label for="4_3_4">4</label>
+    	<input name = "m_radio_3" id="4_3_5"   class = "input-3"type = "radio"/><label for="4_3_5">5</label>
+    	<input name = "m_radio_3" id="4_3_6"    class = "input-3"type = "radio"/><label for="4_3_6">6</label>
+    	<input name = "m_radio_3" id="4_3_7"   class = "input-3"type = "radio"/><label for="4_3_7">7</label></td></tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -290,13 +290,13 @@
     
    <tr>
     <td align = left>4.	当前的工作内容会促使我的能力不断提高</td>
-<td><input name = "m_radio_4" id="4_4_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_4" id="4_4_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_4" id="4_4_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_4" id="4_4_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_4" id="4_4_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_4" id="4_4_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_4" id="4_4_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_4" id="4_4_1"  class = "input-3"type = "radio"/><label for="4_4_1">1</label>
+    	<input name = "m_radio_4" id="4_4_2"  class = "input-3"type = "radio"/><label for="4_4_2">2</label>
+    	<input name = "m_radio_4" id="4_4_3"  class = "input-3"type = "radio"/><label for="4_4_3">3</label>
+    	<input name = "m_radio_4" id="4_4_4"   class = "input-3"type = "radio"/><label for="4_4_4">4</label>
+    	<input name = "m_radio_4" id="4_4_5"   class = "input-3"type = "radio"/><label for="4_4_5">5</label>
+    	<input name = "m_radio_4" id="4_4_6"    class = "input-3"type = "radio"/><label for="4_4_6">6</label>
+    	<input name = "m_radio_4" id="4_4_7"   class = "input-3"type = "radio"/><label for="4_4_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -314,13 +314,13 @@
    
    <tr>
     <td align = left>5.	当前的工作内容与我的期望相符，工作起来踏实。</td>
-<td><input name = "m_radio_5" id="4_5_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_5" id="4_5_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_5" id="4_5_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_5" id="4_5_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_5" id="4_5_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_5" id="4_5_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_5" id="4_5_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_5" id="4_5_1"  class = "input-3"type = "radio"/><label for="4_5_1">1</label>
+    	<input name = "m_radio_5" id="4_5_2"  class = "input-3"type = "radio"/><label for="4_5_2">2</label>
+    	<input name = "m_radio_5" id="4_5_3"  class = "input-3"type = "radio"/><label for="4_5_3">3</label>
+    	<input name = "m_radio_5" id="4_5_4"   class = "input-3"type = "radio"/><label for="4_5_4">4</label>
+    	<input name = "m_radio_5" id="4_5_5"   class = "input-3"type = "radio"/><label for="4_5_5">5</label>
+    	<input name = "m_radio_5" id="4_5_6"    class = "input-3"type = "radio"/><label for="4_5_6">6</label>
+    	<input name = "m_radio_5" id="4_5_7"   class = "input-3"type = "radio"/><label for="4_5_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -341,13 +341,13 @@
    </tr>
    <tr>
     <td align = left>6.	我认为我的薪酬与当前的工作职责关系密切。</td>
-<td><input name = "m_radio_6" id="4_6_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_6" id="4_6_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_6" id="4_6_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_6" id="4_6_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_6" id="4_6_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_6" id="4_6_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_6" id="4_6_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_6" id="4_6_1"  class = "input-3"type = "radio"/><label for="4_6_1">1</label>
+    	<input name = "m_radio_6" id="4_6_2"  class = "input-3"type = "radio"/><label for="4_6_2">2</label>
+    	<input name = "m_radio_6" id="4_6_3"  class = "input-3"type = "radio"/><label for="4_6_3">3</label>
+    	<input name = "m_radio_6" id="4_6_4"   class = "input-3"type = "radio"/><label for="4_6_4">4</label>
+    	<input name = "m_radio_6" id="4_6_5"   class = "input-3"type = "radio"/><label for="4_6_5">5</label>
+    	<input name = "m_radio_6" id="4_6_6"    class = "input-3"type = "radio"/><label for="4_6_6">6</label>
+    	<input name = "m_radio_6" id="4_6_7"   class = "input-3"type = "radio"/><label for="4_6_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -365,13 +365,13 @@
    
    <tr>
     <td align = left>7.	我的业绩能对我的收入产生重大影响。</td>
-<td><input name = "m_radio_7" id="4_7_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_7" id="4_7_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_7" id="4_7_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_7" id="4_7_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_7" id="4_7_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_7" id="4_7_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_7" id="4_7_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_7" id="4_7_1"  class = "input-3"type = "radio"/><label for="4_7_1">1</label>
+    	<input name = "m_radio_7" id="4_7_2"  class = "input-3"type = "radio"/><label for="4_7_2">2</label>
+    	<input name = "m_radio_7" id="4_7_3"  class = "input-3"type = "radio"/><label for="4_7_3">3</label>
+    	<input name = "m_radio_7" id="4_7_4"   class = "input-3"type = "radio"/><label for="4_7_4">4</label>
+    	<input name = "m_radio_7" id="4_7_5"   class = "input-3"type = "radio"/><label for="4_7_5">5</label>
+    	<input name = "m_radio_7" id="4_7_6"    class = "input-3"type = "radio"/><label for="4_7_6">6</label>
+    	<input name = "m_radio_7" id="4_7_7"   class = "input-3"type = "radio"/><label for="4_7_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -389,13 +389,13 @@
    
    <tr>
     <td align = left>8.	就我的业绩和能力而言，我认为目前的薪资水平是公平的。</td>
-<td><input name = "m_radio_8" id="4_8_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_8" id="4_8_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_8" id="4_8_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_8" id="4_8_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_8" id="4_8_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_8" id="4_8_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_8" id="4_8_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_8" id="4_8_1"  class = "input-3"type = "radio"/><label for="4_8_1">1</label>
+    	<input name = "m_radio_8" id="4_8_2"  class = "input-3"type = "radio"/><label for="4_8_2">2</label>
+    	<input name = "m_radio_8" id="4_8_3"  class = "input-3"type = "radio"/><label for="4_8_3">3</label>
+    	<input name = "m_radio_8" id="4_8_4"   class = "input-3"type = "radio"/><label for="4_8_4">4</label>
+    	<input name = "m_radio_8" id="4_8_5"   class = "input-3"type = "radio"/><label for="4_8_5">5</label>
+    	<input name = "m_radio_8" id="4_8_6"    class = "input-3"type = "radio"/><label for="4_8_6">6</label>
+    	<input name = "m_radio_8" id="4_8_7"   class = "input-3"type = "radio"/><label for="4_8_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -410,13 +410,13 @@
     
    <tr>
     <td align = left>9.	与外单位同行相比，我对自己的收入感觉很满意。</td>
-<td><input name = "m_radio_9" id="4_9_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_9" id="4_9_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_9" id="4_9_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_9" id="4_9_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_9" id="4_9_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_9" id="4_9_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_9" id="4_9_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_9" id="4_9_1"  class = "input-3"type = "radio"/><label for="4_9_1">1</label>
+    	<input name = "m_radio_9" id="4_9_2"  class = "input-3"type = "radio"/><label for="4_9_2">2</label>
+    	<input name = "m_radio_9" id="4_9_3"  class = "input-3"type = "radio"/><label for="4_9_3">3</label>
+    	<input name = "m_radio_9" id="4_9_4"   class = "input-3"type = "radio"/><label for="4_9_4">4</label>
+    	<input name = "m_radio_9" id="4_9_5"   class = "input-3"type = "radio"/><label for="4_9_5">5</label>
+    	<input name = "m_radio_9" id="4_9_6"    class = "input-3"type = "radio"/><label for="4_9_6">6</label>
+    	<input name = "m_radio_9" id="4_9_7"   class = "input-3"type = "radio"/><label for="4_9_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -434,13 +434,13 @@
    
    <tr>
     <td align = left>10. 当我的工作业绩十分突出，公司会给予更大的发展空间。</td>
-<td><input name = "m_radio_10" id="4_10_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_10" id="4_10_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_10" id="4_10_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_10" id="4_10_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_10" id="4_10_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_10" id="4_10_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_10" id="4_10_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_10" id="4_10_1"  class = "input-3"type = "radio"/><label for="4_10_1">1</label>
+    	<input name = "m_radio_10" id="4_10_2"  class = "input-3"type = "radio"/><label for="4_10_2">2</label>
+    	<input name = "m_radio_10" id="4_10_3"  class = "input-3"type = "radio"/><label for="4_10_3">3</label>
+    	<input name = "m_radio_10" id="4_10_4"   class = "input-3"type = "radio"/><label for="4_10_4">4</label>
+    	<input name = "m_radio_10" id="4_10_5"   class = "input-3"type = "radio"/><label for="4_10_5">5</label>
+    	<input name = "m_radio_10" id="4_10_6"    class = "input-3"type = "radio"/><label for="4_10_6">6</label>
+    	<input name = "m_radio_10" id="4_10_7"   class = "input-3"type = "radio"/><label for="4_10_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -458,13 +458,13 @@
    </tr>
    <tr>
     <td align = left>11.	我的上级能合理明确地给我设定工作目标以及目标达成标准</td>
-<td><input name = "m_radio_11" id="4_11_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_11" id="4_11_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_11" id="4_11_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_11" id="4_11_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_11" id="4_11_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_11" id="4_11_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_11" id="4_11_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_11" id="4_11_1"  class = "input-3"type = "radio"/><label for="4_10_1">1</label>
+    	<input name = "m_radio_11" id="4_11_2"  class = "input-3"type = "radio"/><label for="4_10_2">2</label>
+    	<input name = "m_radio_11" id="4_11_3"  class = "input-3"type = "radio"/><label for="4_10_3">3</label>
+    	<input name = "m_radio_11" id="4_11_4"   class = "input-3"type = "radio"/><label for="4_10_4">4</label>
+    	<input name = "m_radio_11" id="4_11_5"   class = "input-3"type = "radio"/><label for="4_10_5">5</label>
+    	<input name = "m_radio_11" id="4_11_6"    class = "input-3"type = "radio"/><label for="4_10_6">6</label>
+    	<input name = "m_radio_11" id="4_11_7"   class = "input-3"type = "radio"/><label for="4_11_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -482,13 +482,13 @@
    
    <tr>
     <td align = left>12.	我在工作过程中能够得到上级的跟踪和指导。</td>
-<td><input name = "m_radio_12" id="4_12_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_12" id="4_12_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_12" id="4_12_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_12" id="4_12_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_12" id="4_12_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_12" id="4_12_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_12" id="4_12_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_12" id="4_12_1"  class = "input-3"type = "radio"/><label for="4_12_1">1</label>
+    	<input name = "m_radio_12" id="4_12_2"  class = "input-3"type = "radio"/><label for="4_12_2">2</label>
+    	<input name = "m_radio_12" id="4_12_3"  class = "input-3"type = "radio"/><label for="4_12_3">3</label>
+    	<input name = "m_radio_12" id="4_12_4"   class = "input-3"type = "radio"/><label for="4_12_4">4</label>
+    	<input name = "m_radio_12" id="4_12_5"   class = "input-3"type = "radio"/><label for="4_12_5">5</label>
+    	<input name = "m_radio_12" id="4_12_6"    class = "input-3"type = "radio"/><label for="4_12_6">6</label>
+    	<input name = "m_radio_12" id="4_12_7"   class = "input-3"type = "radio"/><label for="4_12_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -506,13 +506,13 @@
    
    <tr>
     <td align = left>13.	我的上级向我采用开放而诚恳的沟通方式。</td>
-<td><input name = "m_radio_13" id="4_13_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_13" id="4_13_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_13" id="4_13_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_13" id="4_13_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_13" id="4_13_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_13" id="4_13_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_13" id="4_13_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_13" id="4_13_1"  class = "input-3"type = "radio"/><label for="4_13_1">1</label>
+    	<input name = "m_radio_13" id="4_13_2"  class = "input-3"type = "radio"/><label for="4_13_2">2</label>
+    	<input name = "m_radio_13" id="4_13_3"  class = "input-3"type = "radio"/><label for="4_13_3">3</label>
+    	<input name = "m_radio_13" id="4_13_4"   class = "input-3"type = "radio"/><label for="4_13_4">4</label>
+    	<input name = "m_radio_13" id="4_13_5"   class = "input-3"type = "radio"/><label for="4_13_5">5</label>
+    	<input name = "m_radio_13" id="4_13_6"    class = "input-3"type = "radio"/><label for="4_13_6">6</label>
+    	<input name = "m_radio_13" id="4_13_7"   class = "input-3"type = "radio"/><label for="4_13_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -527,13 +527,13 @@
     
    <tr>
     <td align = left>14.	我的上级在工作中会采纳我的合理意见和建议。</td>
-<td><input name = "m_radio_14" id="4_14_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_14" id="4_14_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_14" id="4_14_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_14" id="4_14_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_14" id="4_14_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_14" id="4_14_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_14" id="4_14_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_14" id="4_14_1"  class = "input-3"type = "radio"/><label for="4_14_1">1</label>
+    	<input name = "m_radio_14" id="4_14_2"  class = "input-3"type = "radio"/><label for="4_14_2">2</label>
+    	<input name = "m_radio_14" id="4_14_3"  class = "input-3"type = "radio"/><label for="4_14_3">3</label>
+    	<input name = "m_radio_14" id="4_14_4"   class = "input-3"type = "radio"/><label for="4_14_4">4</label>
+    	<input name = "m_radio_14" id="4_14_5"   class = "input-3"type = "radio"/><label for="4_14_5">5</label>
+    	<input name = "m_radio_14" id="4_14_6"    class = "input-3"type = "radio"/><label for="4_14_6">6</label>
+    	<input name = "m_radio_14" id="4_14_7"   class = "input-3"type = "radio"/><label for="4_14_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -551,13 +551,13 @@
    
    <tr>
     <td align = left>15.	我认为绩效评估结果在现行的工作指导方式下有助于提高我的绩效。</td>
-<td><input name = "m_radio_15" id="4_15_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_15" id="4_15_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_15" id="4_15_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_15" id="4_15_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_15" id="4_15_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_15" id="4_15_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_15" id="4_15_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_15" id="4_15_1"  class = "input-3"type = "radio"/><label for="4_15_1">1</label>
+    	<input name = "m_radio_15" id="4_15_2"  class = "input-3"type = "radio"/><label for="4_15_2">2</label>
+    	<input name = "m_radio_15" id="4_15_3"  class = "input-3"type = "radio"/><label for="4_15_3">3</label>
+    	<input name = "m_radio_15" id="4_15_4"   class = "input-3"type = "radio"/><label for="4_15_4">4</label>
+    	<input name = "m_radio_15" id="4_15_5"   class = "input-3"type = "radio"/><label for="4_15_5">5</label>
+    	<input name = "m_radio_15" id="4_15_6"    class = "input-3"type = "radio"/><label for="4_15_6">6</label>
+    	<input name = "m_radio_15" id="4_15_7"   class = "input-3"type = "radio"/><label for="4_15_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -575,13 +575,13 @@
    </tr>
    <tr>
     <td align = left>16.	我所在的部门会经常开展多样化培训或技术交流活动。</td>
-<td><input name = "m_radio_16" id="4_16_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_16" id="4_16_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_16" id="4_16_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_16" id="4_16_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_16" id="4_16_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_16" id="4_16_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_16" id="4_16_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_16" id="4_16_1"  class = "input-3"type = "radio"/><label for="4_15_1">1</label>
+    	<input name = "m_radio_16" id="4_16_2"  class = "input-3"type = "radio"/><label for="4_15_2">2</label>
+    	<input name = "m_radio_16" id="4_16_3"  class = "input-3"type = "radio"/><label for="4_15_3">3</label>
+    	<input name = "m_radio_16" id="4_16_4"   class = "input-3"type = "radio"/><label for="4_15_4">4</label>
+    	<input name = "m_radio_16" id="4_16_5"   class = "input-3"type = "radio"/><label for="4_15_5">5</label>
+    	<input name = "m_radio_16" id="4_16_6"    class = "input-3"type = "radio"/><label for="4_15_">6</label>
+    	<input name = "m_radio_16" id="4_16_7"   class = "input-3"type = "radio"/><label for="4_16_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -599,13 +599,13 @@
    
    <tr>
     <td align = left>17.	公司会根据业务特性开展有针对性的通用培训课程。</td>
-<td><input name = "m_radio_17" id="4_17_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_17" id="4_17_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_17" id="4_17_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_17" id="4_17_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_17" id="4_17_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_17" id="4_17_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_17" id="4_17_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_17" id="4_17_1"  class = "input-3"type = "radio"/><label for="4_17_1">1</label>
+    	<input name = "m_radio_17" id="4_17_2"  class = "input-3"type = "radio"/><label for="4_17_2">2</label>
+    	<input name = "m_radio_17" id="4_17_3"  class = "input-3"type = "radio"/><label for="4_17_3">3</label>
+    	<input name = "m_radio_17" id="4_17_4"   class = "input-3"type = "radio"/><label for="4_17_4">4</label>
+    	<input name = "m_radio_17" id="4_17_5"   class = "input-3"type = "radio"/><label for="4_17_5">5</label>
+    	<input name = "m_radio_17" id="4_17_6"    class = "input-3"type = "radio"/><label for="4_17_6">6</label>
+    	<input name = "m_radio_17" id="4_17_7"   class = "input-3"type = "radio"/><label for="4_17_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -623,13 +623,13 @@
    
    <tr>
     <td align = left>18.	我认为现有的培训能有效地提高专业技能。</td>
-<td><input name = "m_radio_18" id="4_18_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_18" id="4_18_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_18" id="4_18_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_18" id="4_18_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_18" id="4_18_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_18" id="4_18_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_18" id="4_18_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_18" id="4_18_1"  class = "input-3"type = "radio"/><label for="4_18_1">1</label>
+    	<input name = "m_radio_18" id="4_18_2"  class = "input-3"type = "radio"/><label for="4_18_2">2</label>
+    	<input name = "m_radio_18" id="4_18_3"  class = "input-3"type = "radio"/><label for="4_18_3">3</label>
+    	<input name = "m_radio_18" id="4_18_4"   class = "input-3"type = "radio"/><label for="4_18_4">4</label>
+    	<input name = "m_radio_18" id="4_18_5"   class = "input-3"type = "radio"/><label for="4_18_5">5</label>
+    	<input name = "m_radio_18" id="4_18_6"    class = "input-3"type = "radio"/><label for="4_18_6">6</label>
+    	<input name = "m_radio_18" id="4_18_7"   class = "input-3"type = "radio"/><label for="4_18_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -644,13 +644,13 @@
     
    <tr>
     <td align = left>19.	我满意公司培训的组织形式。（场地、授课方式、时间安排等）</td>
-<td><input name = "m_radio_19" id="4_19_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_19" id="4_19_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_19" id="4_19_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_19" id="4_19_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_19" id="4_19_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_19" id="4_19_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_19" id="4_19_7"   class = "input-3"type = "radio"/>7</td>   </tr>
+<td><input name = "m_radio_19" id="4_19_1"  class = "input-3"type = "radio"/><label for="4_19_1">1</label>
+    	<input name = "m_radio_19" id="4_19_2"  class = "input-3"type = "radio"/><label for="4_19_2">2</label>
+    	<input name = "m_radio_19" id="4_19_3"  class = "input-3"type = "radio"/><label for="4_19_3">3</label>
+    	<input name = "m_radio_19" id="4_19_4"   class = "input-3"type = "radio"/><label for="4_19_4">4</label>
+    	<input name = "m_radio_19" id="4_19_5"   class = "input-3"type = "radio"/><label for="4_19_5">5</label>
+    	<input name = "m_radio_19" id="4_19_6"    class = "input-3"type = "radio"/><label for="4_19_6">6</label>
+    	<input name = "m_radio_19" id="4_19_7"   class = "input-3"type = "radio"/><label for="4_19_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -668,13 +668,13 @@
    
    <tr>
     <td align = left>20.	我认为公司非常重视员工培训。</td>
-<td><input name = "m_radio_20" id="4_20_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_20" id="4_20_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_20" id="4_20_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_20" id="4_20_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_20" id="4_20_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_20" id="4_20_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_20" id="4_20_7"   class = "input-3"type = "radio"/>7</td>     </tr>
+<td><input name = "m_radio_20" id="4_20_1"  class = "input-3"type = "radio"/><label for="4_20_1">1</label>
+    	<input name = "m_radio_20" id="4_20_2"  class = "input-3"type = "radio"/><label for="4_20_2">2</label>
+    	<input name = "m_radio_20" id="4_20_3"  class = "input-3"type = "radio"/><label for="4_20_3">3</label>
+    	<input name = "m_radio_20" id="4_20_4"   class = "input-3"type = "radio"/><label for="4_20_4">4</label>
+    	<input name = "m_radio_20" id="4_20_5"   class = "input-3"type = "radio"/><label for="4_20_5">5</label>
+    	<input name = "m_radio_20" id="4_20_6"    class = "input-3"type = "radio"/><label for="4_20_6">6</label>
+    	<input name = "m_radio_20" id="4_20_7"   class = "input-3"type = "radio"/><label for="4_20_7">7</label></td>     </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -693,13 +693,13 @@
    </tr>
    <tr>
     <td align = left>21.	我的同事能毫无保留地分享、传授自己的成功经验。</td>
-<td><input name = "m_radio_21" id="4_21_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_21" id="4_21_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_21" id="4_21_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_21" id="4_21_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_21" id="4_21_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_21" id="4_21_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_21" id="4_21_7"   class = "input-3"type = "radio"/>7</td>     </tr>
+<td><input name = "m_radio_21" id="4_21_1"  class = "input-3"type = "radio"/><label for="4_21_1">1</label>
+    	<input name = "m_radio_21" id="4_21_2"  class = "input-3"type = "radio"/><label for="4_21_2">2</label>
+    	<input name = "m_radio_21" id="4_21_3"  class = "input-3"type = "radio"/><label for="4_21_3">3</label>
+    	<input name = "m_radio_21" id="4_21_4"   class = "input-3"type = "radio"/><label for="4_21_4">4</label>
+    	<input name = "m_radio_21" id="4_21_5"   class = "input-3"type = "radio"/><label for="4_21_5">5</label>
+    	<input name = "m_radio_21" id="4_21_6"    class = "input-3"type = "radio"/><label for="4_21_6">6</label>
+    	<input name = "m_radio_21" id="4_21_7"   class = "input-3"type = "radio"/><label for="4_21_7">7</label></td>     </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -717,13 +717,13 @@
    
    <tr>
     <td align = left>22.	我可以获取必要的信息和资料，以便于顺利开展工作。</td>
-<td><input name = "m_radio_22" id="4_22_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_22" id="4_22_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_22" id="4_22_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_22" id="4_22_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_22" id="4_22_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_22" id="4_22_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_22" id="4_22_7"   class = "input-3"type = "radio"/>7</td>     </tr>
+<td><input name = "m_radio_22" id="4_22_1"  class = "input-3"type = "radio"/><label for="4_22_1">1</label>
+    	<input name = "m_radio_22" id="4_22_2"  class = "input-3"type = "radio"/><label for="4_22_2">2</label>
+    	<input name = "m_radio_22" id="4_22_3"  class = "input-3"type = "radio"/><label for="4_22_3">3</label>
+    	<input name = "m_radio_22" id="4_22_4"   class = "input-3"type = "radio"/><label for="4_22_4">4</label>
+    	<input name = "m_radio_22" id="4_22_5"   class = "input-3"type = "radio"/><label for="4_22_5">5</label>
+    	<input name = "m_radio_22" id="4_22_6"    class = "input-3"type = "radio"/><label for="4_22_6">6</label>
+    	<input name = "m_radio_22" id="4_22_7"   class = "input-3"type = "radio"/><label for="4_22_7">7</label></td>     </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -741,13 +741,13 @@
    
    <tr>
     <td align = left>23.	我所在的部门能够发挥集体作用，相互支持完成组织目标。</td>
-<td><input name = "m_radio_23" id="4_23_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_23" id="4_23_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_23" id="4_23_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_23" id="4_23_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_23" id="4_23_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_23" id="4_23_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_23" id="4_23_7"   class = "input-3"type = "radio"/>7</td>     </tr>
+<td><input name = "m_radio_23" id="4_23_1"  class = "input-3"type = "radio"/><label for="4_23_1">1</label>
+    	<input name = "m_radio_23" id="4_23_2"  class = "input-3"type = "radio"/><label for="4_23_2">2</label>
+    	<input name = "m_radio_23" id="4_23_3"  class = "input-3"type = "radio"/><label for="4_23_3">3</label>
+    	<input name = "m_radio_23" id="4_23_4"   class = "input-3"type = "radio"/><label for="4_23_4">4</label>
+    	<input name = "m_radio_23" id="4_23_5"   class = "input-3"type = "radio"/><label for="4_23_5">5</label>
+    	<input name = "m_radio_23" id="4_23_6"    class = "input-3"type = "radio"/><label for="4_23_6">6</label>
+    	<input name = "m_radio_23" id="4_23_7"   class = "input-3"type = "radio"/><label for="4_23_7">7</label></td>     </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -762,13 +762,13 @@
     
    <tr>
     <td align = left>24.	为完成同一目标，不同部门的同事能紧密合作。</td>
-    <td><input name = "m_radio_24" id="4_24_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_24" id="4_24_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_24" id="4_24_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_24" id="4_24_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_24" id="4_24_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_24" id="4_24_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_24" id="4_24_7"   class = "input-3"type = "radio"/>7</td>     </tr>
+    <td><input name = "m_radio_24" id="4_24_1"  class = "input-3"type = "radio"/><label for="4_24_1">1</label>
+    	<input name = "m_radio_24" id="4_24_2"  class = "input-3"type = "radio"/><label for="4_24_2">2</label>
+    	<input name = "m_radio_24" id="4_24_3"  class = "input-3"type = "radio"/><label for="4_24_3">3</label>
+    	<input name = "m_radio_24" id="4_24_4"   class = "input-3"type = "radio"/><label for="4_24_4">4</label>
+    	<input name = "m_radio_24" id="4_24_5"   class = "input-3"type = "radio"/><label for="4_24_5">5</label>
+    	<input name = "m_radio_24" id="4_24_6"    class = "input-3"type = "radio"/><label for="4_24_6">6</label>
+    	<input name = "m_radio_24" id="4_24_7"   class = "input-3"type = "radio"/><label for="4_24_7">7</label></td>     </tr>
 
     <!-- 说明输入 -->
    <tr>
@@ -787,13 +787,13 @@
    
    <tr>
     <td align = left>25.	我对公司的团队合作精神感到满意。</td>
-<td><input name = "m_radio_25" id="4_25_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_25" id="4_25_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_25" id="4_25_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_25" id="4_25_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_25" id="4_25_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_25" id="4_25_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_25" id="4_25_7"   class = "input-3"type = "radio"/>7</td>     </tr>
+<td><input name = "m_radio_25" id="4_25_1"  class = "input-3"type = "radio"/><label for="4_25_1">1</label>
+    	<input name = "m_radio_25" id="4_25_2"  class = "input-3"type = "radio"/><label for="4_25_2">2</label>
+    	<input name = "m_radio_25" id="4_25_3"  class = "input-3"type = "radio"/><label for="4_25_3">3</label>
+    	<input name = "m_radio_25" id="4_25_4"   class = "input-3"type = "radio"/><label for="4_25_4">4</label>
+    	<input name = "m_radio_25" id="4_25_5"   class = "input-3"type = "radio"/><label for="4_25_5">5</label>
+    	<input name = "m_radio_25" id="4_25_6"    class = "input-3"type = "radio"/><label for="4_25_6">6</label>
+    	<input name = "m_radio_25" id="4_25_7"   class = "input-3"type = "radio"/><label for="4_25_7">7</label></td>     </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -811,13 +811,13 @@
    </tr>
    <tr>
     <td align = left>26.	公司制定的各项管理制度合理。</td>
-<td><input name = "m_radio_26" id="4_26_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_26" id="4_26_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_26" id="4_26_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_26" id="4_26_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_26" id="4_26_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_26" id="4_26_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_26" id="4_26_7"   class = "input-3"type = "radio"/>7</td>     </tr>
+<td><input name = "m_radio_26" id="4_26_1"  class = "input-3"type = "radio"/><label for="4_26_1">1</label>
+    	<input name = "m_radio_26" id="4_26_2"  class = "input-3"type = "radio"/><label for="4_26_2">2</label>
+    	<input name = "m_radio_26" id="4_26_3"  class = "input-3"type = "radio"/><label for="4_26_3">3</label>
+    	<input name = "m_radio_26" id="4_26_4"   class = "input-3"type = "radio"/><label for="4_26_4">4</label>
+    	<input name = "m_radio_26" id="4_26_5"   class = "input-3"type = "radio"/><label for="4_26_5">5</label>
+    	<input name = "m_radio_26" id="4_26_6"    class = "input-3"type = "radio"/><label for="4_26_6">6</label>
+    	<input name = "m_radio_26" id="4_26_7"   class = "input-3"type = "radio"/><label for="4_26_7">7</label></td>     </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -835,13 +835,13 @@
    
    <tr>
     <td align = left>27.	公司各项管理制度能够得到严格执行，在执行过程中保证了公平性。</td>
-<td><input name = "m_radio_27" id="4_27_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_27" id="4_27_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_27" id="4_27_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_27" id="4_27_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_27" id="4_27_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_27" id="4_27_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_27" id="4_27_7"   class = "input-3"type = "radio"/>7</td>        </tr>
+<td><input name = "m_radio_27" id="4_27_1"  class = "input-3"type = "radio"/><label for="4_27_1">1</label>
+    	<input name = "m_radio_27" id="4_27_2"  class = "input-3"type = "radio"/><label for="4_27_2">2</label>
+    	<input name = "m_radio_27" id="4_27_3"  class = "input-3"type = "radio"/><label for="4_27_3">3</label>
+    	<input name = "m_radio_27" id="4_27_4"   class = "input-3"type = "radio"/><label for="4_27_4">4</label>
+    	<input name = "m_radio_27" id="4_27_5"   class = "input-3"type = "radio"/><label for="4_27_5">5</label>
+    	<input name = "m_radio_27" id="4_27_6"    class = "input-3"type = "radio"/><label for="4_27_6">6</label>
+    	<input name = "m_radio_27" id="4_27_7"   class = "input-3"type = "radio"/><label for="4_27_7">7</label></td>        </tr>
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -859,13 +859,13 @@
    
    <tr>
     <td align = left>28.	我认同公司的企业文化。</td>
-<td><input name = "m_radio_28" id="4_28_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_28" id="4_28_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_28" id="4_28_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_28" id="4_28_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_28" id="4_28_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_28" id="4_28_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_28" id="4_28_7"   class = "input-3"type = "radio"/>7</td>     </tr> 
+<td><input name = "m_radio_28" id="4_28_1"  class = "input-3"type = "radio"/><label for="4_28_1">1</label>
+    	<input name = "m_radio_28" id="4_28_2"  class = "input-3"type = "radio"/><label for="4_28_2">2</label>
+    	<input name = "m_radio_28" id="4_28_3"  class = "input-3"type = "radio"/><label for="4_28_3">3</label>
+    	<input name = "m_radio_28" id="4_28_4"   class = "input-3"type = "radio"/><label for="4_28_4">4</label>
+    	<input name = "m_radio_28" id="4_28_5"   class = "input-3"type = "radio"/><label for="4_28_5">5</label>
+    	<input name = "m_radio_28" id="4_28_6"    class = "input-3"type = "radio"/><label for="4_28_6">6</label>
+    	<input name = "m_radio_28" id="4_28_7"   class = "input-3"type = "radio"/><label for="4_28_7">7</label></td>     </tr> 
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -880,13 +880,13 @@
     
    <tr>
     <td align = left>29.	我喜欢公司的工作氛围。</td>
-<td><input name = "m_radio_29" id="4_29_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_29" id="4_29_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_29" id="4_29_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_29" id="4_29_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_29" id="4_29_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_29" id="4_29_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_29" id="4_29_7"   class = "input-3"type = "radio"/>7</td>     </tr>   
+<td><input name = "m_radio_29" id="4_29_1"  class = "input-3"type = "radio"/><label for="4_29_1">1</label>
+    	<input name = "m_radio_29" id="4_29_2"  class = "input-3"type = "radio"/><label for="4_29_2">2</label>
+    	<input name = "m_radio_29" id="4_29_3"  class = "input-3"type = "radio"/><label for="4_29_3">3</label>
+    	<input name = "m_radio_29" id="4_29_4"   class = "input-3"type = "radio"/><label for="4_29_4">4</label>
+    	<input name = "m_radio_29" id="4_29_5"   class = "input-3"type = "radio"/><label for="4_29_5">5</label>
+    	<input name = "m_radio_29" id="4_29_6"    class = "input-3"type = "radio"/><label for="4_29_6">6</label>
+    	<input name = "m_radio_29" id="4_29_7"   class = "input-3"type = "radio"/><label for="4_29_7">7</label></td>     </tr>   
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -904,13 +904,13 @@
    
    <tr>
     <td align = left>30.	我认为公司能留住表现出色的员工。</td>
-<td><input name = "m_radio_30" id="4_30_1"  class = "input-3"type = "radio"/>1
-    	<input name = "m_radio_30" id="4_30_2"  class = "input-3"type = "radio"/>2
-    	<input name = "m_radio_30" id="4_30_3"  class = "input-3"type = "radio"/>3
-    	<input name = "m_radio_30" id="4_30_4"   class = "input-3"type = "radio"/>4
-    	<input name = "m_radio_30" id="4_30_5"   class = "input-3"type = "radio"/>5
-    	<input name = "m_radio_30" id="4_30_6"    class = "input-3"type = "radio"/>6
-    	<input name = "m_radio_30" id="4_30_7"   class = "input-3"type = "radio"/>7</td>     </tr>  
+<td><input name = "m_radio_30" id="4_30_1"  class = "input-3"type = "radio"/><label for="4_30_1">1</label>
+    	<input name = "m_radio_30" id="4_30_2"  class = "input-3"type = "radio"/><label for="4_30_2">2</label>
+    	<input name = "m_radio_30" id="4_30_3"  class = "input-3"type = "radio"/><label for="4_30_3">3</label>
+    	<input name = "m_radio_30" id="4_30_4"   class = "input-3"type = "radio"/><label for="4_30_4">4</label>
+    	<input name = "m_radio_30" id="4_30_5"   class = "input-3"type = "radio"/><label for="4_30_5">5</label>
+    	<input name = "m_radio_30" id="4_30_6"    class = "input-3"type = "radio"/><label for="4_30_6">6</label>
+    	<input name = "m_radio_30" id="4_30_7"   class = "input-3"type = "radio"/><label for="4_30_7">7</label></td>     </tr>  
     <!-- 说明输入 -->
    <tr>
     <td style = "text-align:left;" colspan = 2>
@@ -939,7 +939,7 @@
 					<table class="tb"style = "border:none;"align="center">
 						<tr>
 							<td align = "right">
-								<input type="reset" value="重置">
+								<input type="reset" onclick="if(confirm('您确定重置撤销所有答案？')){questionnaire.reset();}return false;" value="重置">
 								<input type="button"  value="提交" onclick="dataHandling()">
 							</td>
 						</tr>
