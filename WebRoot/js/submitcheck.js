@@ -1,7 +1,7 @@
 function checkchoice() {	
 //个人信息选中判断	
 	for (i = 0; i < 5; i++) {
-		for (j = 0; j < 28; j++){
+		for (j = 0; j < 60; j++){
 			var info = "1_"+(i + 1)+"_"+(j + 6);
 			var infoobj = $("#" + info);
 			var infoname = $("input[id='" + info + "']").attr("name");
