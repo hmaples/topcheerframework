@@ -459,12 +459,12 @@
    </tr>
    <tr>
     <td align = left>11.	我的上级能合理明确地给我设定工作目标以及目标达成标准</td>
-<td><input name = "m_radio_11" id="4_11_1"  class = "input-3"type = "radio"/><label for="4_10_1">1</label>
-    	<input name = "m_radio_11" id="4_11_2"  class = "input-3"type = "radio"/><label for="4_10_2">2</label>
-    	<input name = "m_radio_11" id="4_11_3"  class = "input-3"type = "radio"/><label for="4_10_3">3</label>
-    	<input name = "m_radio_11" id="4_11_4"   class = "input-3"type = "radio"/><label for="4_10_4">4</label>
-    	<input name = "m_radio_11" id="4_11_5"   class = "input-3"type = "radio"/><label for="4_10_5">5</label>
-    	<input name = "m_radio_11" id="4_11_6"    class = "input-3"type = "radio"/><label for="4_10_6">6</label>
+<td><input name = "m_radio_11" id="4_11_1"  class = "input-3"type = "radio"/><label for="4_11_1">1</label>
+    	<input name = "m_radio_11" id="4_11_2"  class = "input-3"type = "radio"/><label for="4_11_2">2</label>
+    	<input name = "m_radio_11" id="4_11_3"  class = "input-3"type = "radio"/><label for="4_11_3">3</label>
+    	<input name = "m_radio_11" id="4_11_4"   class = "input-3"type = "radio"/><label for="4_11_4">4</label>
+    	<input name = "m_radio_11" id="4_11_5"   class = "input-3"type = "radio"/><label for="4_11_5">5</label>
+    	<input name = "m_radio_11" id="4_11_6"    class = "input-3"type = "radio"/><label for="4_11_6">6</label>
     	<input name = "m_radio_11" id="4_11_7"   class = "input-3"type = "radio"/><label for="4_11_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
