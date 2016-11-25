@@ -13,7 +13,7 @@
 		<base href="<%=basePath%>">
 
 		<title>上海天正员工满意度调查问卷</title>
-		<link rel="shortcut icon" type="image/x-icon" href="/topcheerframework/images/favicon.ico" media="screen" />
+		<link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/images/favicon.ico" media="screen" />
 		<script type="text/javascript">
 		console.log("开发部门：交付三部");
 		console.log("开发：王伟");
@@ -27,10 +27,10 @@
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="This is my page">
 		
-	<link rel="stylesheet" type="text/css" href="css/questionnaire.css">
-	<script src="/topcheerframework/js/jquery-1.9.1.js" type="text/javascript"></script>
-	<script type="text/javascript" src="/topcheerframework/js/surveySubmit.js"></script>
-	<script type="text/javascript" src="/topcheerframework/js/submitcheck.js"></script>
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/questionnaire.css">
+	<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.js" type="text/javascript"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/surveySubmit.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/submitcheck.js"></script>
 	</head>
 
 	<body>
@@ -54,7 +54,7 @@
 			</div>
 			<!--回答者信息 -->
 			<!-- 提交内容 -->
-			<form id="questionnaire" action="commonAction" method="post">
+			<form id="questionnaire" action="commonAction.do" method="post">
 				<input type="hidden" name="actionNum" value="questionnaireSubmit" />
 				<input type="hidden" id="radioValue" name="radioValue"/>
 				<input type="hidden" id="checkValue" name="checkValue"/>
