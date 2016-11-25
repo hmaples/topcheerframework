@@ -173,7 +173,7 @@
 				<input type="checkbox"class = "input-2" name="checkTwo" id="3_2_41"><label for="3_2_41">奖惩机制</label><br></br>
 				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_42"><label for="3_2_42">工作认可 </label>
 				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_43"><label for="3_2_43">人际关系</label>
-				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_0"><label for="3_2_44">其他(请注明)</label><br/>
+				<input type="checkbox" class = "input-2"name="checkTwo" id="3_2_0"><label for="3_2_0">其他(请注明)</label><br/>
 				<input type="text"  class = "line"  id="else_2">
 				<br/><br/>
 				<b>3、我觉得制约我取得优异工作业绩的最大因素是:</b><br /><br/>
