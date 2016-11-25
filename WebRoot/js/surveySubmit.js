@@ -29,10 +29,35 @@ function userIdJudge(){
 }
 
 function dataHandling() {
-	if(!checkchoice()){
+	
+	var userId = document.getElementById('userId').value;
+	if(userId ==null||userId ==""||userId =="null"){
+		alert("信息丢失，请重新进入，谢谢！");
 		return false;
 	}
-	dataSubmit();
+	//判断用户是否是第二次提交
+	$.ajax({
+		url : "commonAjax.do",
+		async: false,
+		data : {
+			actionNum : 'userJudge',
+			userID : userId,
+			questionnaireID :$('#questionnaireId').val()
+		},
+		success : function(result) {
+			if(result.message!=null&&''!=result.message){
+				alert("您已经参与过本次问卷调查，感谢您的参与，谢谢！");
+				return false;
+			}
+
+			dataSubmit();
+		},
+		failure : function(error){
+			alert("系统错误，请联系管理员！");
+			return false;
+		}
+	});
+	
 };	
 
 
@@ -44,6 +69,12 @@ function dataSubmit(){
 	var restOne=null;
 	var restTwo=null;
 	
+	
+	if(!checkchoice()){
+		return false;
+	}
+	document.getElementById('resetA').disabled=true;
+	document.getElementById('resetB').disabled=true;
 	// 多选题其他取值
 	if (document.getElementById('3_1_0').checked) {
 		restOne = 3 + "_" + 1 + "_" + 0 + "_"+ document.getElementById('else_1').value;
@@ -95,6 +126,7 @@ function dataSubmit(){
 	// 建议与意见题
 	suggestValue = "5_1_''" + "_" + document.getElementById('5_1_null').value;
 	// 绑定到jsp
+	
 	$('#restOne').attr("value", restOne);
 	$('#restTwo').attr("value", restTwo);
 	$('#radioValue').attr("value", radioValue);
