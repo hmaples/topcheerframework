@@ -35,7 +35,7 @@ String userId = request.getParameter("userId");
   
   <body style = "background-color:F5F6EB;font-family : 微软雅黑;">
    <div style = "height:500px;font-size:25px;"align = "center"> <h2>欢迎进入问卷调查系统</h2> 
-        <div style = "font-size:25px;color:#34352C;font-weight:900;font-family:微软雅黑;" align = "center"><font color="#ff0000"><b>本系统采用匿名方式收集信息，我们不收集您的个人信息，请放心作答。</b></font></div>
+        <div style = "font-size:25px;color:#34352C;font-weight:900;font-family:微软雅黑;" align = "center"><font color="#ff0000"><b>本次调查采用匿名方式，请放心作答。</b></font></div>
        <br/>
        <br/>
        <br/>
