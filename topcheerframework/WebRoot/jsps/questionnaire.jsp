@@ -940,8 +940,8 @@
 					<table class="tb"style = "border:none;"align="center">
 						<tr>
 							<td align = "right">
-								<input type="reset" onclick="if(confirm('您确定清空所有答案？')){questionnaire.reset();}return false;" value="重置">
-								<input type="button"  value="提交" onclick="dataHandling()">
+								<input type="reset" onclick="if(confirm('您确定清空所有答案？')){questionnaire.reset();}return false;"id="resetA" value="重置">
+								<input type="button" id="resetB"  value="提交" onclick="dataHandling()">
 							</td>
 						</tr>
 					</table>
