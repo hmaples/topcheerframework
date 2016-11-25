@@ -18,6 +18,9 @@ String userId = request.getParameter("userId");
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 	<style type="text/css">
+	a{
+		text-decoration:none;
+		}
 	h2{
 	font-size:30px;
 	}
@@ -50,7 +53,7 @@ String userId = request.getParameter("userId");
     <tr >
         <td>2016年度上海天正员工满意度调查问卷</td>
         <td>2016.01.01-2016.12.31</td>
-        <td align = "center"><input  value="开始填写" type = "button" onclick="userIdJudge()"/></td>
+        <td align = "center"><a href="javascript:userIdJudge()">开始填写</a></td><!--  <input  value="开始填写" type = "button" onclick="userIdJudge()"/>-->
         
     </tr>
     
