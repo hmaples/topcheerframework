@@ -580,7 +580,7 @@
 	
 	<div id="result5" name="resulttable" style="display:none">
     <h2 align="center">
-    <form action="downLoadCommon" method="post">  
+    <form action="downLoadCommon.do" method="post">  
 		<input type="hidden" name="actionNum" value = "downLoad">
 		<input type="submit" value="导出数据" />
 	</form> 
