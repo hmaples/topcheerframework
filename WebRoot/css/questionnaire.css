@@ -25,6 +25,8 @@ padding:0;
 				border:solid 2px #E5E5E5;
 				width: 100%;
 				hight:auto;
+				margin:0 25px;
+				
 				
 				}
 h1 {
@@ -42,18 +44,19 @@ font-family:STHeiti;
          z-index: 1;
          background-color:#F2F7F9;
          padding:20px;
-         margin: 0 auto;    
+         margin: 0 200px;    
 		 border: 6px solid #8FB5C1;
 		 -moz-border-radius:15px;
 		 -webkit-border-radius:15px;
 		 border-radius:15px;
+		 text-align:center;
 }
 .div-inside{
             width: 85%;
-            margin:0 auto; 
+            margin:0 auto;
             position: relative;
             z-index: 5;
-            font-family:Microsoft YaHei;;
+            font-family:Microsoft YaHei;
 }
 .div-inside2{
 width: 85%;
@@ -65,9 +68,10 @@ position: relative;
 }
 .div-inside3{
 width: 85%;
-margin:0 auto;
+margin:0 75px;
 position: relative;
 white-space:nowrap;
+text-align:left;
 
 }
  p{
@@ -75,6 +79,7 @@ font-weight:bold;
 color:#333333; 
 font-family:STHeiti Light;
 line-height:150%;
+text-align:left;
 }
 .line{
 width:100%;
