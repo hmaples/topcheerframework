@@ -140,7 +140,7 @@
 						天正智能<br /><br />
 						 <input type="radio" id="1_5_31" name="depart"><label for="1_5_31">交付一部</label>
 						 <input type="radio" id="1_5_32" name="depart"><label for="1_5_32">交付二部</label>
-						 <input type="radio" id="1_5_23" name="depart"><label for="1_5_23">解决方案部</label>
+						 <input type="radio" id="1_5_23" name="depart"><label for="1_5_33">解决方案部</label>
 						 <input type="radio" id="1_5_33" name="depart"><label for="1_5_33">产品研发部</label>
 					</li>
 				</ul>
@@ -581,7 +581,7 @@
     	<input name = "m_radio_16" id="4_16_3"  class = "input-3"type = "radio"/><label for="4_16_3">3</label>
     	<input name = "m_radio_16" id="4_16_4"   class = "input-3"type = "radio"/><label for="4_16_4">4</label>
     	<input name = "m_radio_16" id="4_16_5"   class = "input-3"type = "radio"/><label for="4_16_5">5</label>
-    	<input name = "m_radio_16" id="4_16_6"    class = "input-3"type = "radio"/><label for="4_16_">6</label>
+    	<input name = "m_radio_16" id="4_16_6"    class = "input-3"type = "radio"/><label for="4_16_6">6</label>
     	<input name = "m_radio_16" id="4_16_7"   class = "input-3"type = "radio"/><label for="4_16_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
