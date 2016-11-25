@@ -46,7 +46,10 @@ String userId = request.getParameter("userId");
     
     </table>
     </form>
+    <!-- 匿名承诺 -->
+     <div style = "font-size:25px;color:#34352C;font-weight:900;font-family:Microsoft JhengHei;" align = "center"><b>此次调查采用匿名方式收集信息，我们将严格保密您的个人信息，请放心作答。</b></div>
    </div> 
+  
    <div align="center" style = "margin-bottom:20px;font-size:10px;color:#34352C;font-family:Microsoft YaHei;">交付三部<br/>开发人员：王伟 廖旭 沈丞恭 美化：马琦睿</div>
   </body>
 </html>
