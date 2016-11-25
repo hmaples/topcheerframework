@@ -580,7 +580,10 @@
 	
 	<div id="result5" name="resulttable" style="display:none">
     <h2 align="center">
-    <a href="servlet/l_PoiExportTest"><input type="button" name="ExportExcel" value="导出所有数据为Excel文件" style="font-size:20px"></a>
+    <form action="downLoadCommon" method="post">  
+		<input type="hidden" name="actionNum" value = "downLoad">
+		<input type="submit" value="导出数据" />
+	</form> 
     </h2>
 	</div>
 
