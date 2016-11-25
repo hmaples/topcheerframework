@@ -29,19 +29,8 @@ function checkchoice() {
 			$("#3_1_34").prev().css('color','red');
 			return false;
 		}
-		if (t1 == 0) {
-			alert("多选题未选!题目编号:1");
-			$("#3_1_34").focus();
-			$("#3_1_34").prev().css('color','red');
-			return false;
-		}
 		if (t2 > 3) {
 			alert("多选题最多只能选3个!题目编号:2");
-			$("#3_2_34").focus();
-			return false;
-		}
-		if (t2 == 0) {
-			alert("多选题未选!题目编号:2");
 			$("#3_2_34").focus();
 			return false;
 		}
@@ -50,6 +39,19 @@ function checkchoice() {
 			$("#3_3_45").focus();
 			return false;
 		}
+		if (t1 == 0) {
+			alert("多选题未选!题目编号:1");
+			$("#3_1_34").focus();
+			$("#3_1_34").prev().css('color','red');
+			return false;
+		}
+
+		if (t2 == 0) {
+			alert("多选题未选!题目编号:2");
+			$("#3_2_34").focus();
+			return false;
+		}
+
 		if (t3 == 0) {
 			alert("多选题未选!题目编号:3");
 			$("#3_3_45").focus();
