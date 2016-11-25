@@ -45,7 +45,7 @@
 			   <p>
 					亲爱的同事，您好！
 					<br />
-					新的一年即将来临，感谢您在2016年度为公司发展做出的贡献！
+					新的一年即将来临，感谢您在本年度为公司发展做出的贡献！
 					<br />
 					员工是天正最宝贵的财富，公司的业绩提升来源于员工的敬业与勤奋，员工的满意度取决于对公司和就职部门各项工作改善的认可。我们鼓励大家对公司和部门的发展及管理做出及时客观的评价，以使公司和部门与您在事业上共同成长和进步。
 					<br />
@@ -950,7 +950,7 @@
 		</div>
 		<!-- 开发者信息 -->
 			<div style = "background-color:EFF0DC;width:90%;padding:20px; margin: 0 auto;">
-			<div align = center style = "padding-left:10%;color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >匿名承诺<br/>本次调查采取匿名收集数据，我们非常重视您的合理建议，请您不要有任何顾虑配合填写以下内容 </div>
+			<div align = center style = "padding-left:10%;color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >匿名承诺<br/>本次调查采取匿名收集数据，我们非常重视您的合理建议，请您不要有任何顾虑配合填写以上内容 </div>
 			 
 			</div>
 					
