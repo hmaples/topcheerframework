@@ -948,9 +948,7 @@
 				</div> 
 				</form>
 		</div>
-		<!-- 开发者信息 -->
-			<div style = "background-color:EFF0DC;width:90%;padding:20px; margin: 0 auto;">
-			<div align = center style = "padding-left:10%;color:#34352C;font-size:13px;font-family:Microsoft YaHei;width:85%" >匿名承诺<br/>本次调查采取匿名收集数据，我们非常重视您的合理建议，请您不要有任何顾虑配合填写以上内容 </div>
+
 			 
 			</div>
 					
