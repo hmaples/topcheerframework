@@ -1,3 +1,39 @@
+//重置按钮点击事件
+$(function(){
+	$('input[type="reset"]').click(function(){
+		var msg = confirm("本问卷以匿名方式收集,您确认重新填写问卷吗?");
+		if (msg == true) {
+			$("#1_1_6").focus();
+		}
+		else {
+			return false;
+		}
+		
+	})
+})
+
+//填写"其他"一栏的文字框后自动勾选"其他"复选框
+$(function(){
+	$("#else_1").mouseleave(function(){
+		if(document.getElementById('else_1').value !== '') {
+			$("#3_1_0").prop("checked",true);
+		}
+		if(document.getElementById('else_1').value == ''){
+			$("#3_1_0").removeProp("checked");
+		}
+	})
+	
+		$("#else_2").mouseleave(function(){
+		if(document.getElementById('else_2').value !== '') {
+			$("#3_2_0").prop("checked",true);
+		}
+		if(document.getElementById('else_2').value == ''){
+			$("#3_2_0").removeProp("checked");
+		}
+	})
+})
+
+
 function checkchoice() {	
 //个人信息选中判断	
 	for (i = 0; i < 5; i++) {
@@ -150,5 +186,7 @@ function checkchoice() {
 		$("5_1_null").focus();
 		return false;
 	}
+	
+	
 	return true;
 }
