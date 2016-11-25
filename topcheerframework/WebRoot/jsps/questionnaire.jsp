@@ -576,12 +576,12 @@
    </tr>
    <tr>
     <td align = left>16.	我所在的部门会经常开展多样化培训或技术交流活动。</td>
-<td><input name = "m_radio_16" id="4_16_1"  class = "input-3"type = "radio"/><label for="4_15_1">1</label>
-    	<input name = "m_radio_16" id="4_16_2"  class = "input-3"type = "radio"/><label for="4_15_2">2</label>
-    	<input name = "m_radio_16" id="4_16_3"  class = "input-3"type = "radio"/><label for="4_15_3">3</label>
-    	<input name = "m_radio_16" id="4_16_4"   class = "input-3"type = "radio"/><label for="4_15_4">4</label>
-    	<input name = "m_radio_16" id="4_16_5"   class = "input-3"type = "radio"/><label for="4_15_5">5</label>
-    	<input name = "m_radio_16" id="4_16_6"    class = "input-3"type = "radio"/><label for="4_15_">6</label>
+<td><input name = "m_radio_16" id="4_16_1"  class = "input-3"type = "radio"/><label for="4_16_1">1</label>
+    	<input name = "m_radio_16" id="4_16_2"  class = "input-3"type = "radio"/><label for="4_16_2">2</label>
+    	<input name = "m_radio_16" id="4_16_3"  class = "input-3"type = "radio"/><label for="4_16_3">3</label>
+    	<input name = "m_radio_16" id="4_16_4"   class = "input-3"type = "radio"/><label for="4_16_4">4</label>
+    	<input name = "m_radio_16" id="4_16_5"   class = "input-3"type = "radio"/><label for="4_16_5">5</label>
+    	<input name = "m_radio_16" id="4_16_6"    class = "input-3"type = "radio"/><label for="4_16_">6</label>
     	<input name = "m_radio_16" id="4_16_7"   class = "input-3"type = "radio"/><label for="4_16_7">7</label></td>   </tr>
     <!-- 说明输入 -->
    <tr>
