@@ -62,8 +62,9 @@
 				<input type="hidden" id="suggestValue"name="suggestValue"/>
 				<input type="hidden" id="restOne" name="restOne"/>
 				<input type="hidden" id="restTwo"name="restTwo"/>	
-				<input type="hidden" name="userId" value="1"> 		
-				<input type="hidden" name="userName" value="<%=userName%>"> 				
+				<input type="hidden" name="userId" id="userId" value="1">
+				<input type="hidden" name="questionnaireId" id="questionnaireId" value="1">  		
+				<input type="hidden" name="userName" id="userName" value="<%=userName%>"> 				
 			<div
 				class = "div-inside2" style = "color:#34352C;font-family:Microsoft YaHei;">
 				<h2>
