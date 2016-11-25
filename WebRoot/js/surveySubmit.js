@@ -1,25 +1,38 @@
-
-
-function dataHandling() {
-//	if(!checkchoice()){
-//		return false;
-//	}
+// 校验用户信息是否丢失和重复提交
+function userIdJudge(){
+	var userId = document.getElementById('userId').value;
+	if(userId ==null||userId ==""||userId =="null"){
+		alert("信息丢失，请重新进入，谢谢！");
+		return false;
+	}
 	//判断用户是否是第二次提交
 	$.ajax({
-		url : "commonAjax",
+		url : "commonAjax.do",
+		async: true,
 		data : {
 			actionNum : 'userJudge',
-			userID : document.getElementById('userName').value,
-			questionnaireID : document.getElementById('questionnaireId').value
+			userID : userId,
+			questionnaireID : $('#questionnaireId').val()
 		},
 		success : function(result) {
 			if(result.message!=null&&''!=result.message){
-				alert("您已经参与过本次问卷调查");
+				alert("您已经参与过本次问卷调查，感谢您的参与，谢谢！");
 				return false;
 			}
-			dataSubmit();
+			$('#myForm').submit();
+		},
+		failure : function(error){
+			alert("系统错误，请联系管理员！");
+			return false;
 		}
 	});
+}
+
+function dataHandling() {
+	if(!checkchoice()){
+		return false;
+	}
+	dataSubmit();
 };	
 
 

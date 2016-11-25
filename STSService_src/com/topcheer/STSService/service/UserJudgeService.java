@@ -27,7 +27,7 @@ public class UserJudgeService extends BaseService {
 		// 根据员工ID查找对应员工
 		String userID = baseDao.selectStringBySqlId("topcheer.userJudge",
 				answerInfo);
-		if (userID != null && !"".equals(userID)) {
+		if (userID != null && !"".equals(userID)&&userID != "null") {
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("message", userID);
 			context.setMap(map);
