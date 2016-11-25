@@ -140,7 +140,7 @@
 						天正智能<br /><br />
 						 <input type="radio" id="1_5_31" name="depart"><label for="1_5_31">交付一部</label>
 						 <input type="radio" id="1_5_32" name="depart"><label for="1_5_32">交付二部</label>
-						 <input type="radio" id="1_5_23" name="depart"><label for="1_5_33">解决方案部</label>
+						 <input type="radio" id="1_5_65" name="depart"><label for="1_5_65">解决方案部</label><!-- 与天正信息解决方案重复，id为65 -->
 						 <input type="radio" id="1_5_33" name="depart"><label for="1_5_33">产品研发部</label>
 					</li>
 				</ul>
