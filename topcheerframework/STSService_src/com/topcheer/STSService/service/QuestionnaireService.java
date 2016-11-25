@@ -28,6 +28,7 @@ public class QuestionnaireService extends BaseService {
 		String[] subArray = answerInfo.getSubValue().split("#");
 		String userId = answerInfo.getUserId();
 		String userName = answerInfo.getUserName();
+		int questionnaireId=answerInfo.getQuestionnaireId();
 		
 		// submit_id赋值
 		String result_id = UUID.randomUUID().toString().replaceAll("-", "");
@@ -113,7 +114,7 @@ public class QuestionnaireService extends BaseService {
 		UserSubmitInfo userSubmitInfo = new UserSubmitInfo();
 		userSubmitInfo.setUser_id(userId);
 		userSubmitInfo.setUser_name(userName);
-		userSubmitInfo.setQuestionnaire_id(1);
+		userSubmitInfo.setQuestionnaire_id(questionnaireId);
 		userSubmitInfo.setIs_submit("1");
 		baseDao.insertBySqlId("topcheer.userSubmit", userSubmitInfo);
 		// 提交信息表

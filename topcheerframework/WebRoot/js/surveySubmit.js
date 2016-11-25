@@ -1,26 +1,43 @@
+
+
 function dataHandling() {
-	if(!checkchoice()){
-		return false;
-	}
+//	if(!checkchoice()){
+//		return false;
+//	}
+	//判断用户是否是第二次提交
+	$.ajax({
+		url : "commonAjax",
+		data : {
+			actionNum : 'userJudge',
+			userID : document.getElementById('userName').value,
+			questionnaireID : document.getElementById('questionnaireId').value
+		},
+		success : function(result) {
+			if(result.message!=null&&''!=result.message){
+				alert("您已经参与过本次问卷调查");
+				return false;
+			}
+			dataSubmit();
+		}
+	});
+};	
+
+
+function dataSubmit(){
 	var radioValue = null;
 	var checkValue = null;
 	var subValue = null;
 	var suggestValue = null;
+	var restOne=null;
+	var restTwo=null;
 	
-	
-	//判断用户是否是第二次提交
-	
-	
-
 	// 多选题其他取值
 	if (document.getElementById('3_1_0').checked) {
-		var restOne = 3 + "_" + 1 + "_" + 0 + "_"
-				+ document.getElementById('else_1').value;
+		restOne = 3 + "_" + 1 + "_" + 0 + "_"+ document.getElementById('else_1').value;
 
 	}
 	if (document.getElementById('3_2_0').checked) {
-		var restTwo = 3 + "_" + 2 + "_" + 0 + "_"
-				+ document.getElementById('else_2').value;
+		restTwo = 3 + "_" + 2 + "_" + 0 + "_"+ document.getElementById('else_2').value;
 	}
 
 	// 单选题答案
@@ -72,4 +89,6 @@ function dataHandling() {
 	$('#subValue').attr("value", subValue);
 	$('#suggestValue').attr("value", suggestValue);
 	$('#questionnaire').submit();
-};
+}
+	
+

@@ -13,10 +13,31 @@ public class AnswerInfo extends BaseDto {
 	
 	private String userId;//用户编号
 	private String userName;//用户姓名
+	private int questionnaireId;//试卷编号
+	private String submitIs;//提交状态
 	
+	
+	
+	
+	public int getQuestionnaireId() {
+		return questionnaireId;
+	}
 
-	
-	
+
+	public String getSubmitIs() {
+		return submitIs;
+	}
+
+
+	public void setSubmitIs(String submitIs) {
+		this.submitIs = submitIs;
+	}
+
+
+	public void setQuestionnaireId(int questionnaireId) {
+		this.questionnaireId = questionnaireId;
+	}
+
 	public String getUserId() {
 		return userId;
 	}
