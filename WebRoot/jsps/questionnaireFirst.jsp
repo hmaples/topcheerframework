@@ -21,10 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 <style type="text/css">
 
-input{
-width:40px;
-height:20px;
-}
+
 h2{
 font-size:30px;
 }
@@ -35,27 +32,18 @@ font-size:30px;
    <div style = "font-size:25px;"align = "center"> <h2>欢迎进入问卷调查系统</h2> 
    <form method="post" action="jsps/questionnaire.jsp">
      <b>请选择要填写的问卷</b>
-    <table style = "font-family: 微软雅黑; text-align: center; width: 655px; height: 200px;"  height="104">
+    <table style = "font-size:23px;font-family: 微软雅黑; text-align: center; width: 655px; height: 150px;">
     <tr style = "width:300px"><td align ="center">问卷名称</td>
         <td align ="center">调查期限</td>
-        <td align ="right">选择</td>
+        <td align ="center">选择</td>
     </tr>
     <tr >
         <td>上海天正员工满意度调查问卷</td>
-        <td>2016.01.1-2016.03.1</td>
-        <td><input  value="进入"type = "submit"/></td>
+        <td>2016.01.1-2016.12.31</td>
+        <td align = "center"><input  value="开始填写"type = "submit"/></td>
         
     </tr>
-    <tr>
-        <td>上海天正员工年终调查问卷</td>
-        <td>2016.05.1-2016.07.1</td>
-       <td> <input  value="进入"type = "button"/></td>
-    </tr>
-    <tr>
-	        <td align="">上海天正员工调查问卷</td>
-	        <td>2016.08.1-2016.12.1</td>
-	        <td><input  value="进入"type = "button"/></td>
-    </tr>
+    
     </table>
     </form>
     
