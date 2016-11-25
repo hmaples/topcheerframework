@@ -10,8 +10,8 @@ String userId = request.getParameter("userId");
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'questionnaireFirst.jsp' starting page</title>
-    
+    <title>questionnaireFirst.jsp</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/topcheerframework/images/favicon.ico" media="screen" />
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -27,7 +27,7 @@ String userId = request.getParameter("userId");
   </head>
   
   <body style = "background-color:F5F6EB;font-family : Microsoft JhengHei;">
-   <div style = "font-size:25px;"align = "center"> <h2>欢迎进入问卷调查系统</h2> 
+   <div style = "height:500px;font-size:25px;"align = "center"> <h2>欢迎进入问卷调查系统</h2> 
    <form id="myForm" method="post" action="jsps/questionnaire.jsp"">
    	<input type="hidden" id="userId" name="userId" value="<%=userId %>">
    	<input type="hidden" name="questionnaireId" id="questionnaireId" value="1"> 
@@ -46,7 +46,7 @@ String userId = request.getParameter("userId");
     
     </table>
     </form>
-    
    </div> 
+   <div align="center" style = "margin-bottom:20px;font-size:10px;color:#34352C;font-family:Microsoft YaHei;">交付三部<br/>开发人员：王伟 廖旭 沈丞恭 美化：马琦睿</div>
   </body>
 </html>
