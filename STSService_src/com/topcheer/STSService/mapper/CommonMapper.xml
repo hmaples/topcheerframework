@@ -40,7 +40,7 @@
 	</select>
 	<!-- 人事问卷sql -->
 	<select id="userJudge" parameterType="com.topcheer.STSService.dto.AnswerInfo" resultType="String">
-		SELECT user_name FROM user_submit_status WHERE user_id=#{userId} AND questionnaire_id=#{questionnaireId} AND is_submit=1
+		SELECT user_id FROM user_submit_status WHERE user_id=#{userId} AND questionnaire_id=#{questionnaireId} AND is_submit=1
 	</select>
 	
 	<insert id="userSubmit" parameterType="com.topcheer.STSService.dto.UserSubmitInfo">

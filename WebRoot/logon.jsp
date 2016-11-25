@@ -16,7 +16,7 @@ function load(){
 </head>
 <body onload="load()">
 	<input type="hidden" value="${message}" id="errMsg">
-	<form action="commonAction" method="POST">
+	<form action="commonAction.do" method="POST">
 		用户名：<input type="text" name="userName"><br />
 		密     码：<input type="password" name="passWord">
 		<input type="hidden" name="actionNum" value="loginService">
