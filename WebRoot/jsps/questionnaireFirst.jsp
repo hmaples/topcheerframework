@@ -21,26 +21,35 @@ String userId = request.getParameter("userId");
 	h2{
 	font-size:30px;
 	}
+	/*table{
+	*cellpadding:0;
+	 cellspacing:0
+	}*/
+	td{
+	border:1px solid
+	}
 	</style>
 	<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.js" type="text/javascript"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/surveySubmit.js"></script>
   </head>
   
-  <body style = "background-color:F5F6EB;font-family : Microsoft JhengHei;">
+  <body style = "background-color:F5F6EB;font-family : 微软雅黑;">
    <div style = "height:500px;font-size:25px;"align = "center"> <h2>欢迎进入问卷调查系统</h2> 
-        <div style = "font-size:25px;color:#34352C;font-weight:900;font-family:Microsoft JhengHei;" align = "center"><b>本系统采用匿名方式收集信息，我们将严格保密您的个人信息，请放心作答。</b></div>
+        <div style = "font-size:25px;color:#34352C;font-weight:900;font-family:微软雅黑;" align = "center"><font color="#ff0000"><b>本系统采用匿名方式收集信息，我们将严格保密您的个人信息，请放心作答。</b></font></div>
+       <br/>
+       <br/>
+       <br/>
    <form id="myForm" method="post" action="jsps/questionnaire.jsp"">
    	<input type="hidden" id="userId" name="userId" value="<%=userId %>">
-   	<input type="hidden" name="questionnaireId" id="questionnaireId" value="1"> 
-     <b>请选择要填写的问卷</b>
-    <table style = "font-size:23px;font-family: 微软雅黑; text-align: center; width: 655px; height: 150px;">
+   	<input type="hidden" name="questionnaireId" id="questionnaireId" value="1">&nbsp;<b></b>
+    <table cellpadding="0" cellspacing="0" style ="border:1px solid;font-size:23px;font-family: 微软雅黑; text-align: center; width: 860px; height: 150px;">
     <tr style = "width:300px"><td align ="center">问卷名称</td>
         <td align ="center">调查期限</td>
         <td align ="center">选择</td>
     </tr>
     <tr >
-        <td>上海天正员工满意度调查问卷</td>
-        <td>2016.01.1-2016.12.31</td>
+        <td>2016年度上海天正员工满意度调查问卷</td>
+        <td>2016.01.01-2016.12.31</td>
         <td align = "center"><input  value="开始填写" type = "button" onclick="userIdJudge()"/></td>
         
     </tr>
