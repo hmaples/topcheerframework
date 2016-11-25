@@ -1,39 +1,3 @@
-//重置按钮点击事件
-$(function(){
-	$('input[type="reset"]').click(function(){
-		var msg = confirm("本问卷以匿名方式收集,您确认重新填写问卷吗?");
-		if (msg == true) {
-			$("#1_1_6").focus();
-		}
-		else {
-			return false;
-		}
-		
-	})
-})
-
-//填写"其他"一栏的文字框后自动勾选"其他"复选框
-//$(function(){
-//	$("#else_1").blur(function(){
-//		if(document.getElementById('else_1').value !== '') {
-//			$("#3_1_0").prop("checked",true);
-//		}
-//		if(document.getElementById('else_1').value == ''){
-//			$("#3_1_0").removeProp("checked");
-//		}
-//	})
-//	
-//		$("#else_2").blur(function(){
-//		if(document.getElementById('else_2').value !== '') {
-//			$("#3_2_0").prop("checked",true);
-//		}
-//		if(document.getElementById('else_2').value == ''){
-//			$("#3_2_0").removeProp("checked");
-//		}
-//	})
-//})
-
-
 function checkchoice() {	
 //个人信息选中判断	
 	for (i = 0; i < 5; i++) {
@@ -62,11 +26,13 @@ function checkchoice() {
 		if (t1 > 3) {
 			alert("多选题最多只能选3个!题目编号:1");
 			$("#3_1_34").focus();
+			$("#3_1_34").prev().css('color','red');
 			return false;
 		}
 		if (t1 == 0) {
 			alert("多选题未选!题目编号:1");
 			$("#3_1_34").focus();
+			$("#3_1_34").prev().css('color','red');
 			return false;
 		}
 		if (t2 > 3) {
@@ -95,7 +61,7 @@ function checkchoice() {
 	if (checkelse1[0].checked) {
 		if ($.trim(document.getElementById('else_1').value) == '') {
 			alert("请输入注明,多选题号:1");
-			$("#else_1").focus()
+			$("#else_1").focus();
 			return false;
 		}
 		if (document.getElementById('else_1').value.length > 1000) {
