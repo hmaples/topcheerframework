@@ -23,6 +23,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body style = "background-color:F5F6EB;">
-  <div style="padding-top:10%;text-align:center;font-family:微软雅黑;font-size:35px;color:#333333;"> <b>问卷填写完毕，感谢您的配合，您填写的信息将以匿名形式反馈给人事部门</b></div>
+  <div style="height:250px;padding-top:10%;text-align:center;font-family:微软雅黑;font-size:35px;color:#333333;"> <b>问卷填写完毕，感谢您的配合，您填写的信息将以匿名形式反馈给人事部门</b></div>
+  <div style = "text-align:center"><a href="javascript:window.opener=null;window.open('','_self');window.close();"><input type = "button" value = "关闭"/></a></div>
+
+  
   </body>
 </html>
