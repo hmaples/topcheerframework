@@ -13,25 +13,25 @@ $(function(){
 })
 
 //填写"其他"一栏的文字框后自动勾选"其他"复选框
-$(function(){
-	$("#else_1").blur(function(){
-		if(document.getElementById('else_1').value !== '') {
-			$("#3_1_0").prop("checked",true);
-		}
-		if(document.getElementById('else_1').value == ''){
-			$("#3_1_0").removeProp("checked");
-		}
-	})
-	
-		$("#else_2").blur(function(){
-		if(document.getElementById('else_2').value !== '') {
-			$("#3_2_0").prop("checked",true);
-		}
-		if(document.getElementById('else_2').value == ''){
-			$("#3_2_0").removeProp("checked");
-		}
-	})
-})
+//$(function(){
+//	$("#else_1").blur(function(){
+//		if(document.getElementById('else_1').value !== '') {
+//			$("#3_1_0").prop("checked",true);
+//		}
+//		if(document.getElementById('else_1').value == ''){
+//			$("#3_1_0").removeProp("checked");
+//		}
+//	})
+//	
+//		$("#else_2").blur(function(){
+//		if(document.getElementById('else_2').value !== '') {
+//			$("#3_2_0").prop("checked",true);
+//		}
+//		if(document.getElementById('else_2').value == ''){
+//			$("#3_2_0").removeProp("checked");
+//		}
+//	})
+//})
 
 
 function checkchoice() {	
