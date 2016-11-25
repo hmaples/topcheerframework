@@ -66,7 +66,7 @@
 				<input type="hidden" name="questionnaireId" id="questionnaireId" value="1">  		
 				<input type="hidden" name="userName" id="userName"> 				
 			<div
-				class = "div-inside2" style = "color:#34352C;font-family:Microsoft YaHei;">
+				class = "div-inside2" style = "text-align:left;color:#34352C;font-family:Microsoft YaHei;">
 				<h2>
 					回答者信息
 				</h2>
@@ -212,8 +212,8 @@
 			<div  class = "div-inside4" style = " width: 85%;
 					         height: auto;
 					         background-color:#F2F7F9;
-					         margin: 0 auto; " >
-	<b style = "line-height:150%;color:#34352C;">二、偏向选择（分值范围为1-7分，其中1分为“非常满意”，3分为比较满意，5分为“不满意”，7分为“极其不满意”，请在空格内填写具体分值。如果您的打分为5-7分，请务必在说明栏中说明原因，以便我们能做进一步的改善。）</b>
+					         margin: 0 75px; " >
+	<div align="left"><b style = "line-height:150%;color:#34352C;">二、偏向选择（分值范围为1-7分，其中1分为“非常满意”，3分为比较满意，5分为“不满意”，7分为“极其不满意”，请在空格内填写具体分值。如果您的打分为5-7分，请务必在说明栏中说明原因，以便我们能做进一步的改善。）</b></div>
    <table style = " color:#34352C;border-spacing:10px;  font-family:Microsoft YaHei;text-align:center;width:100%" >
    <tr>
     <td   colspan=2 align = center ><b>对工作本身的满意度</b></td>
@@ -931,11 +931,11 @@
    
 			<!-- 最后一题 -->
 			<div class = "lastquestion"style = "color:#34352C;font-family:Microsoft YaHei;" >
-				<b>三、	为了您和公司更好的发展，您对公司有哪些期望和建议？</b><br /><br />
+				<div  style="margin:0 25px"align="left"><b>三、	为了您和公司更好的发展，您对公司有哪些期望和建议？</b><br /><br /></div>
 				<textarea  class = "inpu"  id="5_1_null" ></textarea>
 				</div>
 				<!-- 提交按钮 -->
-				<div style="width: 85%; margin:0 auto;  position: relative; z-index: 5">
+				<div style="width: 85%; margin:0 75px;  position: relative; z-index: 5">
 				<br />
 					<table class="tb"style = "border:none;"align="center">
 						<tr>
