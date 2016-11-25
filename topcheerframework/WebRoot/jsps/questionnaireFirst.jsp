@@ -28,6 +28,7 @@ String userId = request.getParameter("userId");
   
   <body style = "background-color:F5F6EB;font-family : Microsoft JhengHei;">
    <div style = "height:500px;font-size:25px;"align = "center"> <h2>欢迎进入问卷调查系统</h2> 
+        <div style = "font-size:25px;color:#34352C;font-weight:900;font-family:Microsoft JhengHei;" align = "center"><b>本系统采用匿名方式收集信息，我们将严格保密您的个人信息，请放心作答。</b></div>
    <form id="myForm" method="post" action="jsps/questionnaire.jsp"">
    	<input type="hidden" id="userId" name="userId" value="<%=userId %>">
    	<input type="hidden" name="questionnaireId" id="questionnaireId" value="1"> 
@@ -47,9 +48,9 @@ String userId = request.getParameter("userId");
     </table>
     </form>
     <!-- 匿名承诺 -->
-     <div style = "font-size:25px;color:#34352C;font-weight:900;font-family:Microsoft JhengHei;" align = "center"><b>此次调查采用匿名方式收集信息，我们将严格保密您的个人信息，请放心作答。</b></div>
+     
    </div> 
-  
-   <div align="center" style = "margin-bottom:20px;font-size:10px;color:#34352C;font-family:Microsoft YaHei;">交付三部<br/>开发人员：王伟 廖旭 沈丞恭 美化：马琦睿</div>
+  <div>
+   <div align="left" style = "padding-left:550px;padding-right:550px;margin-bottom:20px;font-size:10px;color:#34352C;font-family:Microsoft YaHei;">开发部门：开发交付中心-交付三部<br/>开发人员：王伟 廖旭 沈丞恭 美化：马琦睿</div></div>
   </body>
 </html>
