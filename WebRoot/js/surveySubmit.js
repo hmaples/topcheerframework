@@ -85,10 +85,10 @@ function dataSubmit(){
 	}
 
 	// 单选题答案
-	for (var i = 0; i < $('#questionnaire').find("input[type='radio']").length; i++) {
-		if ($('#questionnaire').find("input[type='radio']")[i].checked) {
-			var radioValueTemp = $('#questionnaire')
-					.find("input[type='radio']")[i].id;
+	var radioArray=$('#questionnaire').find("input[type='radio']");
+	for (var i = 0; i < radioArray.length; i++) {
+		if (radioArray[i].checked) {
+			var radioValueTemp = radioArray[i].id;
 			if (radioValue == null) {
 				radioValue = radioValueTemp;
 			} else {
@@ -97,10 +97,10 @@ function dataSubmit(){
 		}
 	}
 	// 多选题答案
-	for (var j = 0; j < $('#questionnaire').find("input[type='checkbox']").length; j++) {
-		if ($('#questionnaire').find("input[type='checkbox']")[j].checked) {
-				var checkValueTemp = $('#questionnaire').find(
-						"input[type='checkbox']")[j].id;
+	var checkboxArray= $('#questionnaire').find("input[type='checkbox']");
+	for (var j = 0; j < checkboxArray.length; j++) {
+		if (checkboxArray[j].checked) {
+				var checkValueTemp = checkboxArray[j].id;
 				if (checkValue == null) {
 					checkValue = checkValueTemp;
 				} else {
@@ -109,13 +109,11 @@ function dataSubmit(){
 			}
 	}
 	// 偏向选择字符串拼接
-	for (var k = 0; k < $('#questionnaire').find("input[id*='subb']").length; k++) {
-		// alert($('#questionnaire').find("input[id*='subb']")[k].id);
-		if ($('#questionnaire').find("input[id*='subb']")[k].value != null
-				|| $('#questionnaire').find("input[id*='subb']")[k].value != '') {
-			var subValueTemp = $('#questionnaire').find("input[id*='subb']")[k].id
-					+ '_'
-					+ $('#questionnaire').find("input[id*='subb']")[k].value;
+	var subArray=$('#questionnaire').find("input[id*='subb']");
+	for (var k = 0; k < subArray.length; k++) {
+		if (subArray[k].value != null
+				|| subArray[k].value != '') {
+			var subValueTemp = subArray[k].id+'_'+ subArray[k].value;
 			if (subValue == null) {
 				subValue = subValueTemp;
 			} else {
