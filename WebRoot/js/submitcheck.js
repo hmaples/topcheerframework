@@ -142,7 +142,7 @@ function checkchoice() {
 			}
 		};
 		if (document.getElementById('subb_' + (i  + 1)).value.length > 1000) {
-			alert("您输入的字数超过限制啦,感谢您的配合");
+			alert("您在偏向选择说明栏内输入的字数超过限制(最大1000字),请您修改后提交");
 			$("#subb_"+i).focus();
 			return false;
 		}
