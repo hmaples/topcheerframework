@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.topcheer.STSService.dto.AnswerDetailInfo;
 import com.topcheer.STSService.dto.AnswerInfo;
 import com.topcheer.STSService.dto.UserSubmitInfo;
@@ -27,6 +28,13 @@ public class QuestionnaireService extends BaseService {
 		String[] checkArray = answerInfo.getCheckValue().split(",");
 		String[] subArray = answerInfo.getSubValue().split("#");
 		String userId = answerInfo.getUserId();
+		
+		
+		String userID = baseDao.selectStringBySqlId("topcheer.userJudge",
+				answerInfo);
+		if (userID != null && !"".equals(userID)&&userID != "null") {
+			context.createResult(null, "success", "jsps/commonActionQuestionnaire");
+		}else {
 		String userName = answerInfo.getUserName();
 		int questionnaireId=answerInfo.getQuestionnaireId();
 		
@@ -123,6 +131,7 @@ public class QuestionnaireService extends BaseService {
 		baseDao.insertBySqlId("topcheer.submitMessage", userSubmitInfo);
 		
 		context.createResult(null, "success", "jsps/commonActionQuestionnaire");
+	}
 	}
 
 }
