@@ -101,7 +101,7 @@ function checkchoice() {
 		var name = names[i];
 		var infocheck = $("input:radio[name='" +name+"']:checked");
 		if (infocheck.length == 0){
-			alert("您单选题号为:" + (i+1) +"未选择，请重新填写");
+			alert("您单选题号为:" + (i+4) +"未选择，请重新填写");
 			$("input:radio[name='" +name+"']")[0].focus();
 			document.getElementById('resetB').disabled=false;
 			return false;
@@ -135,13 +135,20 @@ function checkchoice() {
 		var intid = parseInt(id.substring(id.length-1,id.length));
 		if(intid>4){
 			if ($.trim(document.getElementById('subb_' + (i + 1)).value) == '') {
-			alert("您选中的偏向选择题:" +(i + 1) + "分数为5-7分，请填写原因后提交");
+			alert("您选中的偏向选择题:" +(i + 1) + "，分数为5-7分，请填写原因后提交");
 			$("#subb_" + (i + 1)).focus();
 			document.getElementById('resetB').disabled=false;
 			return false;
 			}
 		};
+		if (document.getElementById('subb_' + (i  + 1)).value.length > 1000) {
+			alert("您输入的字数超过限制啦,感谢您的配合");
+			$("#subb_"+i).focus();
+			return false;
+		}
 	}
+	
+
 
 	// 判断最后一题是否字数超标
 	if (document.getElementById('5_1_null').value.length > 1000) {
