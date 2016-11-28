@@ -144,6 +144,7 @@ function checkchoice() {
 		if (document.getElementById('subb_' + (i  + 1)).value.length > 1000) {
 			alert("您在偏向选择题号：" + (i+1) + "说明栏内输入的字数超过限制(最大1000字),请您修改后提交");
 			$("#subb_"+i).focus();
+			document.getElementById('resetB').disabled=false;
 			return false;
 		}
 	}
