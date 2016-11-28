@@ -24,9 +24,17 @@
 	<script src="<%=request.getContextPath()%>/js/jquery-1.9.1.js" type="text/javascript"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/surveySubmit.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/submitcheck.js"></script>
+	<script type="text/javascript">
+	function loadMsg(){
+		var errMsg = $('#errMsg').val();
+		if(errMsg!=null&&errMsg!=""){
+			alert("您已经提交过该问卷，请不要重复提交，谢谢！");
+		}
+	}
+	</script>
 	</head>
 
-	<body>
+	<body onload="loadMsg()">
 		<div
 			class = "div-outside">
 			<!-- 调查问卷头 -->
@@ -46,6 +54,7 @@
 				</p>
 			</div>
 			<!--回答者信息 -->
+			<input type="hidden" id="errMsg" value="${flag}">
 			<!-- 提交内容 -->
 			<form id="questionnaire" action="commonAction.do" method="post">
 				<input type="hidden" name="actionNum" value="questionnaireSubmit" />
