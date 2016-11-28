@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.topcheer.STSService.dto.AnswerDetailInfo;
 import com.topcheer.STSService.dto.AnswerInfo;
+import com.topcheer.STSService.dto.ResultDto;
 import com.topcheer.STSService.dto.UserSubmitInfo;
 import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
@@ -33,7 +34,9 @@ public class QuestionnaireService extends BaseService {
 		String userID = baseDao.selectStringBySqlId("topcheer.userJudge",
 				answerInfo);
 		if (userID != null && !"".equals(userID)&&userID != "null") {
-			context.createResult(null, "success", "jsps/commonActionQuestionnaire");
+			ResultDto result = new ResultDto();
+			result.setFlag(false);
+			context.createResult(result, "success", "jsps/questionnaire");
 		}else {
 		String userName = answerInfo.getUserName();
 		int questionnaireId=answerInfo.getQuestionnaireId();
