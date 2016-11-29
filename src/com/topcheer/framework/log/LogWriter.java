@@ -1,4 +1,4 @@
-package com.topcheer.restful.framework.log;
+package com.topcheer.framework.log;
 
 import java.io.File;
 import java.net.MalformedURLException;
