@@ -1,5 +1,4 @@
-package com.topcheer.framework.util;
-
+package com.topcheer.restful.framework.util;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

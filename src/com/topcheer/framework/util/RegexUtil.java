@@ -1,4 +1,4 @@
-package com.topcheer.framework.util;
+package com.topcheer.restful.framework.util;
 
 import java.util.regex.Pattern;
 
