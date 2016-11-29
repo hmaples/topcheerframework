@@ -1,4 +1,4 @@
-package com.topcheer.restful.framework.util;
+package com.topcheer.framework.util;
 
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
