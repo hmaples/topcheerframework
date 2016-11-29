@@ -1,4 +1,4 @@
-package com.topcheer.framework.util;
+package com.topcheer.restful.framework.util;
 
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
@@ -15,7 +15,8 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-import com.topcheer.framework.log.LogWriter;
+import com.topcheer.restful.framework.log.LogWriter;
+
 
 /**
  * @author 
