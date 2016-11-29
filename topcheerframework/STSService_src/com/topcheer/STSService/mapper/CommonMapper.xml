@@ -39,10 +39,13 @@
 		io.sort
 	</select>
 	<!-- 人事问卷sql -->
-	<select id="userJudge" parameterType="com.topcheer.STSService.dto.AnswerInfo" resultType="String">
-		SELECT user_id FROM user_submit_status WHERE user_id=#{userId} AND questionnaire_id=#{questionnaireId} AND is_submit=1
+	<select id="userJudge" parameterType="com.topcheer.STSService.dto.AnswerInfo"
+		resultType="String">
+		SELECT user_id FROM user_submit_status WHERE
+		user_id=#{userId} AND questionnaire_id=#{questionnaireId} AND
+		is_submit=1
 	</select>
-	
+
 	<insert id="userSubmit" parameterType="com.topcheer.STSService.dto.UserSubmitInfo">
 		insert into
 		user_submit_status(user_id,user_name,questionnaire_id,is_submit)
@@ -75,7 +78,8 @@
 		id AS number,
 		user_name AS userName
 		FROM
-		staff_info WHERE
+		staff_info
+		WHERE
 		id = #{Integer}
 	</select>
 	<select id="w_staffManager" parameterType="Integer"
@@ -86,7 +90,8 @@
 		si.dep_name depName,
 		mi.post_name mpostName,
 		mi.manage_coverage mCoverage,
-		si.confirm_date scDate
+		si.confirm_date
+		scDate
 		FROM
 		staff_info AS si,
 		manager_info AS mi
@@ -105,7 +110,8 @@
 		staff_info AS si,
 		staff_project_info AS spi
 		WHERE
-		si.id = spi.user_id
+		si.id =
+		spi.user_id
 		AND si.id = #{Integer}
 		)
 		OR mi.manage_coverage IN (
@@ -118,7 +124,8 @@
 		si.id = spi.user_id
 		AND si.id = #{Integer}
 		)
-		OR mi.manage_coverage = '开发交付中心'
+		OR mi.manage_coverage =
+		'开发交付中心'
 		)AND si.id=mi.user_id GROUP BY user_id
 	</select>
 
@@ -160,4 +167,22 @@
 		VALUES(#{research_id},#{issue_id},#{issue_answer})
 	</select>
 	<!--叶超的sql end -->
+
+	<!--沈丞恭的动态问卷SQL -->
+<select id="selectQuestionnaire" resultType="com.topcheer.STSService.dto.s_dto.QuestionInfo">
+	SELECT
+	ii.id,
+	ii.type,
+	ii.content,
+	ci.`code`,
+	ci.`value`,
+	qi.sort,
+	io.sort
+	FROM
+	questionnaire_issue AS qi
+	LEFT JOIN issue_info AS ii ON ii.id = qi.issue_id
+	LEFT JOIN issue_option AS io ON io.issue_id = ii.id
+	LEFT JOIN code_info AS ci ON ci.`code` = io.option_id
+	</select>
+	<!--沈丞恭的动态问卷SQL END -->
 </mapper>
