@@ -1,20 +1,15 @@
 package com.topcheer.STSService.service;
 
 import java.util.ArrayList;
-
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.topcheer.STSService.dto.IssueInfo;
 import com.topcheer.STSService.dto.IssueObject;
 import com.topcheer.STSService.dto.OptionInfo;
 import com.topcheer.STSService.dto.Questioninfo;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
 
@@ -23,15 +18,11 @@ import com.topcheer.framework.service.BaseService;
 @Service("questionSubmitService")
 public class IssueService extends BaseService {
 
-	
-	@Autowired
-	private BaseDao baseDao;
-	
 	public void doBusiness(ApplicationContext context) throws Exception {
 		// TODO Auto-generated method stub
 		String questionnaireID=context.getPara("questionnaireID");
 		Integer questionnaireid=Integer.parseInt(questionnaireID);	
-		List<Questioninfo> questionList = baseDao.selectListBySqlId(
+		List<Questioninfo> questionList = super.selectListBySqlId(
 				"topcheer.selectQuestionList",questionnaireid );
 		Map<String, Object> questionMap = new HashMap<String, Object>();
 		List<IssueInfo> issueList = new ArrayList<IssueInfo>();

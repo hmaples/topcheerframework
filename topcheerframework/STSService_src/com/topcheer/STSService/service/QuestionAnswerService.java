@@ -4,29 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-
-
-
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.topcheer.STSService.dto.AnswerInsert;
 import com.topcheer.STSService.dto.AnswerList;
 import com.topcheer.STSService.dto.AnswerOption;
 import com.topcheer.STSService.dto.QuestionAnswer;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
 
 @Service("gotoquestionSubmitService")
 public class QuestionAnswerService extends BaseService {
-	
-	@Autowired
-	private BaseDao baseDao;
 
 	@Override
 //	protected void doExecute() {
@@ -95,7 +83,7 @@ public class QuestionAnswerService extends BaseService {
 			answerInsert.setIssue_id(Integer.parseInt(entry.getKey()));
 			answerInsert.setIssue_answer((String) entry.getValue());
 			
-			baseDao.insertBySqlId("topcheer.insertAnswer", answerInsert);
+			super.insert("topcheer.insertAnswer", answerInsert);
 		//	System.out.println(entry.getKey()+":"+entry.getValue());
 		}
 		context.createResult(null,"success", "index");

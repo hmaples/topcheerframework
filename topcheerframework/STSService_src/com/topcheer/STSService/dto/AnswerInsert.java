@@ -1,6 +1,8 @@
 package com.topcheer.STSService.dto;
 
-public class AnswerInsert {
+import com.topcheer.framework.dto.BaseDto;
+
+public class AnswerInsert extends BaseDto{
 	private int id;
 	private int research_id;
 	private int issue_id;

@@ -4,25 +4,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.topcheer.STSService.dto.IssueObject;
 import com.topcheer.STSService.dto.s_dto.IssueInfo;
 import com.topcheer.STSService.dto.s_dto.QuestionInfo;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
 
 @Service("questionview")
 public class Questionnaire extends BaseService {
-	@Autowired
-	
-	private BaseDao baseDao;
 	
 	public void doBusiness(ApplicationContext context){
-		List<QuestionInfo> questionList = baseDao.selectListBySqlId("topcheer.selectQuestionnaire", null);
+		List<QuestionInfo> questionList = super.selectListBySqlId("topcheer.selectQuestionnaire", null);
 		Map<String, Object> questionMap = new HashMap<String,Object>();
 		List<IssueInfo> issueList = new ArrayList<IssueInfo>();
 		IssueObject issueObject = new IssueObject();

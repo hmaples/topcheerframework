@@ -4,17 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import com.topcheer.STSService.dto.QuestionResult;
 import com.topcheer.STSService.dto.Questioninfo;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
-import com.topcheer.framework.service.IService;
+import com.topcheer.framework.service.BaseService;
 
-public class QuestionService implements IService {
-
-	@Autowired
-	private BaseDao baseDao;
+public class QuestionService extends BaseService {
 
 	public void doBusiness(ApplicationContext context) throws Exception {
 
@@ -24,7 +19,7 @@ public class QuestionService implements IService {
 		// 定义一个对象，因为context.createResult(result, "success",
 		// "jsps/questionSurvey");只可以传个对象出去
 		QuestionResult result=new QuestionResult();
-		List<Questioninfo> questionlist = baseDao.selectListBySqlId(
+		List<Questioninfo> questionlist = super.selectListBySqlId(
 				"topcheer.selectQuestionList", null);
 		Map<String, Object> questionMap = new HashMap<String, Object>();
 		List<Questioninfo> resultList = new ArrayList<Questioninfo>();// 定义一个对象的集合

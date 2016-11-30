@@ -4,23 +4,16 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.topcheer.STSService.dto.AnswerDetailInfo;
 import com.topcheer.STSService.dto.AnswerInfo;
 import com.topcheer.STSService.dto.ResultDto;
 import com.topcheer.STSService.dto.UserSubmitInfo;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
 
 @Service("questionnaireSubmit")
 public class QuestionnaireService extends BaseService {
-
-	@Autowired
-	private BaseDao baseDao;
 
 	public void doBusiness(ApplicationContext context) throws Exception {
 		// 取到jsp页面传来所有字符串
@@ -31,7 +24,7 @@ public class QuestionnaireService extends BaseService {
 		String userId = answerInfo.getUserId();
 		
 		
-		String userID = baseDao.selectStringBySqlId("topcheer.userJudge",
+		String userID = super.selectString("topcheer.userJudge",
 				answerInfo);
 		if (userID != null && !"".equals(userID)&&userID != "null") {
 			ResultDto result = new ResultDto();
@@ -65,7 +58,7 @@ public class QuestionnaireService extends BaseService {
 					}
 				}
 			} 
-			baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
+			super.insert("topcheer.AnswerInster", answerDetailInfo);
 		}
 
 		// 多选题以对象为value，题目编号为key放在map中
@@ -108,7 +101,7 @@ public class QuestionnaireService extends BaseService {
 		}
 		//循环map将数据插入数据库
 		for (Map.Entry<String, AnswerDetailInfo> entry : checkMap.entrySet()) {
-			baseDao.insertBySqlId("topcheer.AnswerInster", entry.getValue());
+			super.insert("topcheer.AnswerInster", entry.getValue());
 		}
 		// 建议意见
 		String[] suggestArray = answerInfo.getSuggestValue().split("_");
@@ -119,7 +112,7 @@ public class QuestionnaireService extends BaseService {
 		answerDetailInfo.setContent(suggestArray[3]);
 		}
 		answerDetailInfo.setResult_id(result_id);
-		baseDao.insertBySqlId("topcheer.AnswerInster", answerDetailInfo);
+		super.insert("topcheer.AnswerInster", answerDetailInfo);
 
 		// 用户提交信息状态表插入
 		UserSubmitInfo userSubmitInfo = new UserSubmitInfo();
@@ -127,11 +120,11 @@ public class QuestionnaireService extends BaseService {
 		userSubmitInfo.setUser_name(userName);
 		userSubmitInfo.setQuestionnaire_id(questionnaireId);
 		userSubmitInfo.setIs_submit("1");
-		baseDao.insertBySqlId("topcheer.userSubmit", userSubmitInfo);
+		super.insert("topcheer.userSubmit", userSubmitInfo);
 		// 提交信息表
 		userSubmitInfo.setId(result_id);
 		userSubmitInfo.setSubmit_time(new Date());
-		baseDao.insertBySqlId("topcheer.submitMessage", userSubmitInfo);
+		super.insert("topcheer.submitMessage", userSubmitInfo);
 		
 		context.createResult(null, "success", "jsps/commonActionQuestionnaire");
 	}

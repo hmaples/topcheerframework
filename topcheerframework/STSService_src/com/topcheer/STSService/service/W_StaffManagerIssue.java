@@ -4,24 +4,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.topcheer.STSService.dto.IssueInfo;
 import com.topcheer.STSService.dto.IssueObject;
 import com.topcheer.STSService.dto.OptionInfo;
 import com.topcheer.STSService.dto.Questioninfo;
 import com.topcheer.STSService.dto.W_StaffManagerInfo;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
 
 @Service("staffManagerSelect")
 public class W_StaffManagerIssue extends BaseService{
 	
-	@Autowired
-	public BaseDao baseDao;
 	@Override
 	public void doBusiness(ApplicationContext context) throws Exception{
 		//根据登陆员工ID查出对应领导
