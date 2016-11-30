@@ -23,6 +23,11 @@ public abstract class BaseService implements IService {
 
 		//afterExecute();
 	}
+	
+	public void doBusinessNoTrans(ApplicationContext context) throws Exception{
+		this.context = context;
+		doExecute();
+	}
 
 	private void beforExecute() {
 
