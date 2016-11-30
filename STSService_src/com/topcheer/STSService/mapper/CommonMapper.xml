@@ -61,6 +61,24 @@
 		questionnaire_result(submit_id,type,issue_id,option_id,content)
 		values(#{result_id},#{type},#{number},#{value},#{content})
 	</insert>
+	
+	
+	<!-- 动态人事问卷sql开始 /wangwei-->
+	<select id="selectQuestion" resultType="com.topcheer.STSService.dto.w_dto.QuestionInfo">
+			SELECT
+			ii.id,
+			ii.type,
+			ii.content,
+			ci.`code`,
+			ci.`value`,
+			qi.sort AS issueId
+		FROM
+			questionnaire_issue AS qi
+		LEFT JOIN issue_info AS ii ON ii.id = qi.issue_id
+		LEFT JOIN issue_option AS io ON io.issue_id = ii.id
+		LEFT JOIN code_info AS ci ON ci.`code` = io.option_id
+		ORDER BY ii.id
+	</select>
 	<!-- 人事问卷sql结束 -->
 
 
