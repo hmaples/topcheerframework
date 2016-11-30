@@ -1,18 +1,13 @@
 package com.topcheer.test.service;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
-import com.topcheer.framework.service.IService;
+import com.topcheer.framework.service.BaseService;
 import com.topcheer.test.dto.LinkInfo;
 
 @Service
-public class RegisterSubService implements IService {
-	
-	@Autowired
-	private BaseDao baseDao;
+public class RegisterSubService extends BaseService {
 
 	public void doBusiness(ApplicationContext context) throws Exception {
 //		 LinkInfo insertInfo = new LinkInfo();
@@ -46,7 +41,7 @@ public class RegisterSubService implements IService {
 		// System.out.println("一共有" + linkList.size() + "个");
 		 
 		 // 查询列表对象
-		 List<LinkInfo> linkList = baseDao.selectListBySqlId("topcheer.getLinkList",null);
+		 List<LinkInfo> linkList = super.selectListBySqlId("topcheer.getLinkList",null);
 		 System.out.println("一共有" + linkList.size() + "个");
 //		context.createResult(registerUser, "success", "registerSuccess");
 		

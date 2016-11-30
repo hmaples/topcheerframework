@@ -1,25 +1,18 @@
 package com.topcheer.STSService.service;
 
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.topcheer.STSService.dto.YC_ResultInfo;
 import com.topcheer.STSService.dto.YC_User;
 import com.topcheer.STSService.dto.YC_AnswerInfo;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.BaseDto;
 import com.topcheer.framework.service.BaseService;
 @Service
 public class YcQuestionService extends BaseService{
-	
-	@Autowired
-	private BaseDao baseDao;
 	
 	@Override
 	protected void doExecute() {
@@ -80,7 +73,7 @@ public class YcQuestionService extends BaseService{
 				answerInfo.setResearch_id(1);
 				answerInfo.setIssue_id(Integer.parseInt(entry.getKey()));
 				answerInfo.setIssue_answer(entry.getValue());
-				baseDao.insertBySqlId("insertSanshaoAnswer", answerInfo);
+				super.insert("insertSanshaoAnswer", answerInfo);
 			}
 			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("status", "success");

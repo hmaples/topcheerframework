@@ -1,25 +1,19 @@
 package com.topcheer.STSService.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.topcheer.STSService.dto.W_StaffInfo;
-import com.topcheer.framework.dao.BaseDao;
 import com.topcheer.framework.dto.ApplicationContext;
 import com.topcheer.framework.service.BaseService;
 
 @Service("w_staffLogin")
 public class W_StaffLoginService extends BaseService {
 
-	@Autowired
-	private BaseDao baseDao;
-
 	public void doBusiness(ApplicationContext context) throws Exception {
 		
 		W_StaffInfo w_staffInfo = context.getPara(W_StaffInfo.class);
 		//根据员工ID登陆问卷调查主页
 		if (w_staffInfo != null) {
-			W_StaffInfo w_staff = baseDao.selectObjectBySqlId(
+			W_StaffInfo w_staff = super.selectObject(
 					"topcheer.w_staffLogin", w_staffInfo.getNumber());
 			if (w_staff != null) {
 				context.getSession().setAttribute("staffId",
