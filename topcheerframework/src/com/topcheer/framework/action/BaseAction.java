@@ -26,28 +26,31 @@ public class BaseAction {
 	 * @param responese
 	 * @param session
 	 * @return
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	@RequestMapping("commonAction")
 	public ModelAndView doAction(HttpServletRequest request,
-			HttpServletResponse responese, HttpSession session,String userName) throws Exception {
-		String actionNum = request.getParameter("actionNum");
-		if (actionNum == null || "".equals(actionNum)) {
-			ModelAndView errorModel = new ModelAndView();
-			errorModel.setViewName("error");
-			return errorModel;
-		}
+			HttpServletResponse responese, HttpSession session, String userName)
+			throws Exception {
 		ApplicationContext data = new ApplicationContext(request, responese,
 				session);
+		ModelAndView errorModel = new ModelAndView();
 		try {
+			String actionNum = request.getParameter("actionNum");
+			if (actionNum == null || "".equals(actionNum)) {
+				errorModel.setViewName("error");
+				return errorModel;
+			}
 			IService service = getService(actionNum);
 			service.doBusiness(data);
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			StackTraceElement stackTraceElement = e.getStackTrace()[0];
+			System.out.println("出错文件名：" + stackTraceElement.getFileName());// 打印文件名
+			System.out.println("出错方法名：" + stackTraceElement.getMethodName());// 打印出错方法
+			System.out.println("出错行数：" + stackTraceElement.getLineNumber());// 打印出错行号
+			System.out.println("异常：" + e.getClass().getName());
+			errorModel.setViewName("error");
+			return errorModel;
 		}
 		return data.getModelAndView();
 	}
@@ -58,7 +61,7 @@ public class BaseAction {
 	 * @param request
 	 * @param responese
 	 * @return
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	@RequestMapping("commonAjax")
 	@ResponseBody
@@ -88,7 +91,7 @@ public class BaseAction {
 	 * @param file
 	 * @param request
 	 * @return
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	@RequestMapping("commonUploadFile")
 	public ModelAndView uploadAction(
@@ -122,12 +125,13 @@ public class BaseAction {
 	 * @param request
 	 * @param responese
 	 * @param session
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	@RequestMapping("downLoadCommon")
 	@ResponseBody
 	public void downLoadAction(HttpServletRequest request,
-			HttpServletResponse responese, HttpSession session) throws Exception {
+			HttpServletResponse responese, HttpSession session)
+			throws Exception {
 		String actionNum = request.getParameter("actionNum");
 		ApplicationContext data = new ApplicationContext(request, responese,
 				session);
