@@ -65,7 +65,6 @@ public class ApplicationContext {
 			Field[] fs = c.getDeclaredFields();
 			for (Field f : fs) {
 				String fNmae = f.getName();
-				System.out.println(f.getType().getName());
 				// 如果是数组
 				if(request.getParameterValues(fNmae+"[]")!=null){
 					String[] values = request.getParameterValues(fNmae+"[]");
