@@ -44,6 +44,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<input type="hidden" name="questionnaireID" id="questionnaireID" value="3"> 
 	<input type="submit" value="去问卷调查" onclick="staffIdSelect()" />
   	</form>
+    <form action="commonAction.do"  method="post">
+  		<input type="hidden" name="actionNum" value = "mquestion">
+  		
+	<input type="submit" value="maqirui" />
+  	</form>
   	
   </body>
 </html>
