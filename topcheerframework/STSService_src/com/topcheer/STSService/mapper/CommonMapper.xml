@@ -38,6 +38,25 @@
 		qis.sort,
 		io.sort
 	</select>
+	<!-- maqiruiSQL -->
+	
+	<select id="selectMquestion" resultType="com.topcheer.STSService.dto.mqr.M_IssueInfo">
+	  SELECT	
+	  ii.id,	
+	  ii.type,	
+	  ii.content,	
+	  ci.`code`,	
+	  ci.`value`,	
+	  qi.sort,	
+	  io.sort AS sort1
+	  FROM	
+	  questionnaire_issue AS qi
+	  LEFT JOIN 
+	  issue_info AS ii ON ii.id = qi.issue_id
+	  LEFT JOIN issue_option AS io ON io.issue_id = ii.id
+	  LEFT JOIN code_info AS ci ON ci.`code` = io.option_id
+	  
+	</select>
 	<!-- 人事问卷sql -->
 	<select id="userJudge" parameterType="com.topcheer.STSService.dto.AnswerInfo"
 		resultType="String">
