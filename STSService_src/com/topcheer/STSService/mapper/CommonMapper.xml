@@ -40,7 +40,7 @@
 	</select>
 	<!-- maqiruiSQL -->
 	
-	<select id="selectMquestion" resultType="com.topcheer.STSService.dto.mqr.M_IssueInfo">
+	<select id="selectMquestion" resultType="com.topcheer.STSService.dto.m_dto.suvery">
 	  SELECT	
 	  ii.id,	
 	  ii.type,	
